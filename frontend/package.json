@@ -1,24 +1,42 @@
 {
-  "name": "frontend",
+  "name": "becep",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "export": "next build && next export",
-    "lint": "next lint"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "next": "12.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/vue-fontawesome": "^3.0.0-4",
+    "core-js": "^3.8.3",
+    "file-loader": "^6.2.0",
+    "vue": "^3.2.13",
+    "vue-cookies": "^1.8.1",
+    "vue-meta": "^3.0.0-alpha.7",
+    "vue-router": "^4.0.3",
+    "vue3-carousel": "^0.1.40",
+    "vue3-markdown-it": "^1.0.10"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.12",
-    "eslint": "8.25.0",
-    "eslint-config-next": "12.3.1",
-    "postcss": "^8.4.18",
-    "tailwindcss": "^3.1.8"
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "prettier": "^2.4.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.32.7",
+    "sass-loader": "^12.0.0",
+    "sitemap-webpack-plugin": "^1.1.1"
   }
 }
