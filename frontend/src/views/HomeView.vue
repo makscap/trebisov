@@ -1,10 +1,8 @@
 <template>
   <div>
-    <!-- <HomePageSlider /> -->
-    <!-- <div class="govuk-width-container">
+    <SearchSection />
+    <div class="govuk-width-container">
       <div class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
-        <ActualityComponent></ActualityComponent>
-        <h1 class="govuk-heading-l">Rubriky</h1>
         <section id="products" class="govuk-main-wrapper">
           <div class="govuk-grid-row">
             <div class="govuk-grid-row row-with-boxes">
@@ -36,68 +34,18 @@
             </div>
           </div>
         </section>
-        <div class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
-          <div id="vizia-nula-banner">
-            <div class="squares-desktop-left"></div>
-            <div class="squares-desktop-right"></div>
-            <img
-              class="vizia-nula-logo"
-              src="@/assets/vizia_nula_logo.svg"
-              alt="Logo vízie nula"
-            />
-            <div class="banner-text first">
-              Slovenská republika sa pripojila k medzinárodnej iniciatíve znížiť
-              počet usmrtených a ťažko zranených osôb pri dopravných nehodách na
-              nulový počet do roku 2050.
-            </div>
-            <div class="banner-text">
-              Staňte sa aj Vy súčasťou Vízie nula na slovenských cestách!
-            </div>
-
-            <router-link to="/vizia-nula" @click="top()">
-              <button class="find-out-btn">Zistiť viac</button>
-            </router-link>
-          </div>
-          <div id="vizia-nula-banner-mobile">
-            <img
-              src="@/assets/farebne_stvorce_mobil.svg"
-              class="squares-mobile-top"
-              alt="farebne stvorce"
-            />
-
-            <img
-              class="vizia-nula-logo"
-              src="@/assets/vizia_nula_logo.svg"
-              alt="Logo vízie nula"
-            />
-            <div class="banner-text first">
-              Slovenská republika sa pripojila k medzinárodnej iniciatíve znížiť
-              počet usmrtených a ťažko zranených osôb pri dopravných nehodách na
-              nulový počet do roku 2050.
-            </div>
-            <div class="banner-text">
-              Staňte sa aj Vy súčasťou Vízie nula na slovenských cestách!
-            </div>
-            <router-link to="/vizia-nula" @click="top()">
-              <button class="find-out-btn">Zistiť viac</button>
-            </router-link>
-            <img
-              src="@/assets/farebne_stvorce_mobil.svg"
-              class="squares-mobile-bottom"
-              alt="farebne stvorce"
-            />
-          </div>
-        </div>
+        <div class="govuk-main-wrapper govuk-main-wrapper--auto-spacing"></div>
       </div>
-    </div> -->
-    <!-- <ApplicationBanner /> -->
+    </div>
+    <ApplicationBanner />
   </div>
 </template>
 
 <script>
-// import ApplicationBanner from "@/components/ApplicationBanner";
+import ApplicationBanner from "@/components/ApplicationBanner";
 // import HomePageSlider from "@/components/HomePageSlider";
 // import ActualityComponent from "@/components/ActualityComponent";
+import SearchSection from "@/components/SearchSection";
 import { useMeta } from "vue-meta";
 
 export default {
@@ -121,7 +69,8 @@ export default {
     });
   },
   components: {
-    // ApplicationBanner,
+    SearchSection,
+    ApplicationBanner,
     // HomePageSlider,
     // ActualityComponent,
   },
@@ -129,44 +78,34 @@ export default {
     return {
       rubriky: [
         {
-          title: "Chodci",
-          icon: require("@/assets/chodci.svg"),
+          title: "Primátor mesta",
+          icon: require("@/assets/categories/person.svg"),
           link: "/aktuality/chodci",
         },
         {
-          title: "Deti",
-          icon: require("@/assets/Deti.svg"),
+          title: "Mestské zastupiteľstvo",
+          icon: require("@/assets/categories/people.svg"),
           link: "/aktuality/deti",
         },
         {
-          title: "Seniori",
-          icon: require("@/assets/seniori.svg"),
+          title: "Voľby 2022",
+          icon: require("@/assets/categories/info.svg"),
           link: "/aktuality/seniori",
         },
         {
-          title: "Cyklisti",
-          icon: require("@/assets/cyklisti.svg"),
+          title: "Úradná tabuľa",
+          icon: require("@/assets/categories/assignment.svg"),
           link: "/aktuality/cyklisti",
         },
         {
-          title: "Motocyklisti",
-          icon: require("@/assets/motocyklisti.svg"),
+          title: "Otázky a odpovede",
+          icon: require("@/assets/categories/live_help.svg"),
           link: "/aktuality/motocyklisti",
         },
         {
-          title: "Mladí Vodiči",
-          icon: require("@/assets/mladi-vodici.svg"),
+          title: "Diskusné fórum",
+          icon: require("@/assets/categories/message.svg"),
           link: "/aktuality/mladi-vodici",
-        },
-        {
-          title: "Vodiči",
-          icon: require("@/assets/vodici.svg"),
-          link: "/aktuality/vodici",
-        },
-        {
-          title: "Profesionáli",
-          icon: require("@/assets/profesionali.svg"),
-          link: "/aktuality/profesionali",
         },
       ],
     };
@@ -197,7 +136,7 @@ export default {
 }
 .module-icon > * .govuk-body {
   -webkit-box-flex: 1;
-  color: #00703c;
+  color: #0065b3;
   -ms-flex: 1;
   flex: 1;
   display: -webkit-box;
@@ -253,7 +192,7 @@ export default {
 }
 @media (min-width: 40.0625em) {
   .govuk-grid-column-one-quarter {
-    width: 25%;
+    width: 33.33%;
     float: left;
   }
   .govuk-\!-padding-left-4 {
