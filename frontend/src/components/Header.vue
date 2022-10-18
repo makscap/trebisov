@@ -5,7 +5,7 @@
       class="idsk-cookie-banner"
       data-nosnippet
       role="region"
-      aria-label="Cookies na becep.sk"
+      aria-label="Cookies na trebisov.sk"
       v-if="openBanner && !setCookies"
     >
       <div
@@ -14,7 +14,7 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             <h2 class="idsk-cookie-banner__heading govuk-heading-m">
-              Cookies na becep.sk
+              Cookies na trebisov.sk
             </h2>
             <div class="idsk-cookie-banner__content">
               <p>

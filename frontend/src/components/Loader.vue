@@ -9,7 +9,7 @@ export default { name: "LoadingSpin" };
   border: 16px solid #f3f3f3;
   margin: auto;
   border-radius: 50%;
-  border-top: 16px solid #4f8136;
+  border-top: 16px solid #0065b3;
   width: 120px;
   height: 120px;
   -webkit-animation: spin 2s linear infinite; /* Safari */

@@ -1,44 +1,132 @@
 <template>
+  <!-- <section> -->
   <div class="govuk-width-container">
-    <div class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
-      <section id="products" class="govuk-main-wrapper m-0 p-0">
-        <div class="govuk-grid-row m-0 p-0">
-          <div class="govuk-grid-row row-with-boxes m-0 p-0">
-            <div
-              v-for="item in rubriky"
-              :key="item.name"
-              class="govuk-grid-column-one-quarter"
-              @click="top()"
-            >
-              <router-link
-                :to="item.link"
-                :title="'Odkaz na podstránku s článkami sekcie ' + item.name"
-                class="govuk-!-margin-bottom-6 standards govuk-!-padding-top-4 govuk-!-padding-bottom-2 govuk-!-padding-right-4 govuk-!-padding-left-4 module-icon m-0 p-0"
-              >
-                <div>
-                  <span class="govuk-heading-l govuk-!-margin-bottom-2">
-                    <img
-                      style="width: 60px; height: 60px"
-                      :src="item.icon"
-                      :alt="'Na obrázku je ikona ' + item.name"
-                    />
-                  </span>
-                  <p class="govuk-body">
-                    <strong>{{ item.title }}</strong>
-                  </p>
-                </div>
-              </router-link>
-            </div>
-          </div>
+    <h2 class="govuk-heading-l">Oznamy</h2>
+
+    <div data-module="idsk-crossroad" class="">
+      <div class="idsk-crossroad idsk-crossroad-2">
+        <div class="idsk-crossroad__item">
+          <a
+            href="#"
+            class="govuk-link idsk-crossroad-title"
+            title="Title for 1st element"
+            aria-hidden="false"
+            >Title for 1st element
+          </a>
+          <p class="idsk-crossroad-subtitle" aria-hidden="false">
+            Subtitle for 1st element
+          </p>
+          <hr class="idsk-crossroad-line" aria-hidden="true" />
         </div>
-      </section>
+        <div class="idsk-crossroad__item">
+          <a
+            href="#"
+            class="govuk-link idsk-crossroad-title"
+            title="Title for 2nd element"
+            aria-hidden="false"
+            >Title for 2nd element
+          </a>
+          <p class="idsk-crossroad-subtitle" aria-hidden="false">
+            Subtitle for 2nd element
+          </p>
+          <hr class="idsk-crossroad-line" aria-hidden="true" />
+        </div>
+        <div class="idsk-crossroad__item">
+          <a
+            href="#"
+            class="govuk-link idsk-crossroad-title"
+            title="Title for 3rd element"
+            aria-hidden="false"
+            >Title for 3rd element
+          </a>
+          <p class="idsk-crossroad-subtitle" aria-hidden="false">
+            Subtitle for 3rd element
+          </p>
+          <hr class="idsk-crossroad-line" aria-hidden="true" />
+        </div>
+        <div class="idsk-crossroad__item">
+          <a
+            href="#"
+            class="govuk-link idsk-crossroad-title"
+            title="Title for 4th element"
+            aria-hidden="false"
+            >Title for 4th element
+          </a>
+          <p class="idsk-crossroad-subtitle" aria-hidden="false">
+            Subtitle for 4th element
+          </p>
+          <hr class="idsk-crossroad-line" aria-hidden="true" />
+        </div>
+      </div>
+      <div class="idsk-crossroad idsk-crossroad-2">
+        <div class="idsk-crossroad__item">
+          <a
+            href="#"
+            class="govuk-link idsk-crossroad-title"
+            title="Title for 5th element"
+            aria-hidden="false"
+            >Title for 5th element
+          </a>
+          <p class="idsk-crossroad-subtitle" aria-hidden="false">
+            Subtitle for 5th element
+          </p>
+          <hr class="idsk-crossroad-line" aria-hidden="true" />
+        </div>
+        <div class="idsk-crossroad__item">
+          <a
+            href="#"
+            class="govuk-link idsk-crossroad-title"
+            title="Title for 6th element"
+            aria-hidden="false"
+            >Title for 6th element
+          </a>
+          <p class="idsk-crossroad-subtitle" aria-hidden="false">
+            Subtitle for 6th element
+          </p>
+          <hr class="idsk-crossroad-line" aria-hidden="true" />
+        </div>
+        <div class="idsk-crossroad__item">
+          <a
+            href="#"
+            class="govuk-link idsk-crossroad-title"
+            title="Title for 7th element"
+            aria-hidden="false"
+            >Title for 7th element
+          </a>
+          <p class="idsk-crossroad-subtitle" aria-hidden="false">
+            Subtitle for 7th element
+          </p>
+          <hr class="idsk-crossroad-line" aria-hidden="true" />
+        </div>
+        <div class="idsk-crossroad__item">
+          <a
+            href="#"
+            class="govuk-link idsk-crossroad-title"
+            title="Title for 8th element"
+            aria-hidden="false"
+            >Title for 8th element
+          </a>
+          <p class="idsk-crossroad-subtitle" aria-hidden="false">
+            Subtitle for 8th element
+          </p>
+          <hr class="idsk-crossroad-line" aria-hidden="true" />
+        </div>
+      </div>
     </div>
+    <button
+      type="button"
+      class="idsk-button idsk-header-web__main--login-loginbtn"
+      data-module="idsk-button"
+    >
+      Ďalšie oznamy
+    </button>
   </div>
+  <!-- </section> -->
 </template>
 
 <script>
 export default {
-  name: "CategoryButtons",
+  name: "Actuality",
   data() {
     return {
       rubriky: [
@@ -115,7 +203,7 @@ export default {
 #products .standardsactive,
 #products .other-products:hover,
 #products .other-productsactive {
-  border: 1px solid #0065b3;
+  border: 2px solid #00703c;
 }
 .govuk-heading-l {
   color: #0b0c0c;
@@ -148,13 +236,6 @@ export default {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-
-.govuk-grid-column-one-quarter:nth-child(4),
-.govuk-grid-column-one-quarter:nth-child(5),
-.govuk-grid-column-one-quarter:nth-child(6) {
-  margin-bottom: 0px !important;
-}
-
 @media (min-width: 40.0625em) {
   .govuk-grid-column-one-quarter {
     width: 33.33%;

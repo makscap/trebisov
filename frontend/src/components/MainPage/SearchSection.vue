@@ -10,10 +10,10 @@
               <h2 class="govuk-heading-m white">
                 Oficiálna stránka mesta Trebišov
               </h2>
-              <p class="govuk-body white">Všetko čo potrebujete vedieť</p>
+              <p class="white">Všetko čo potrebujete vedieť</p>
               <div
-                data-module="idsk-search-component"
-                class="idsk-search-component"
+                data-module="idsk-search-component "
+                class="idsk-search-component search"
               >
                 <label class="" for="intro-block-search">
                   Čo potrebujete nájsť?
@@ -152,5 +152,9 @@ export default {
 
 .button {
   padding: 0px !important;
+}
+
+.search {
+  margin-top: 0px !important;
 }
 </style>

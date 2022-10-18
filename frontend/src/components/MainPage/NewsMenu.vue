@@ -113,13 +113,16 @@
         </div>
       </div>
     </div>
-    <button
-      type="button"
-      class="idsk-button idsk-header-web__main--login-loginbtn"
-      data-module="idsk-button"
-    >
-      Ďalšie oznamy
-    </button>
+
+    <div style="display: block; text-align: center">
+      <button
+        type="button"
+        class="idsk-button idsk-header-web__main--login-loginbtn"
+        data-module="idsk-button"
+      >
+        Ďalšie oznamy
+      </button>
+    </div>
   </div>
   <!-- </section> -->
 </template>

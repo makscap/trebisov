@@ -13,7 +13,7 @@
       rozsahu uvedenom v tomto Oznámení o používaní súborov cookies.<br /><br />
       Pokiaľ chcete získať podrobnejšie informácie o súboroch cookies, ktoré
       používame, obrátte sa na našu zodpovednú osobu prostredníctvo e-mailovej
-      adresy <a href="mailto:becep@mindop.sk">becep@mindop.sk</a><br /><br />
+      adresy <a href="mailto:">?????</a><br /><br />
       Návštevou webového sídla súhlasíte s tým, že môžeme do Vášho počítača
       alebo zariadenia umiestniť súbory cookies, tak ako je vysvetlené vyššie.
       Tieto súbory však môžete kontrolovať a spravovať niekoľkými spôsobmi.

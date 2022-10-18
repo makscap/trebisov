@@ -2,8 +2,12 @@
   <div>
     <SearchSection />
     <CategoryButtons />
+    <HelpBanner />
+
     <NewsMenu />
-    <!-- <HelpBanner /> -->
+
+    <ActualityComponent />
+    <PodujatiaComponent />
 
     <!-- <div class="govuk-width-container">
       <div class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
@@ -45,11 +49,13 @@
 </template>
 
 <script>
-// import HelpBanner from "@/components/MainPage/HelpBanner";
+import HelpBanner from "@/components/MainPage/HelpBanner";
 import SearchSection from "@/components/MainPage/SearchSection";
 import { useMeta } from "vue-meta";
 import CategoryButtons from "@/components/MainPage/CategoryButtons.vue";
 import NewsMenu from "../components/MainPage/NewsMenu.vue";
+import ActualityComponent from "../components/MainPage/ActualityComponent.vue";
+import PodujatiaComponent from "@/components/MainPage/PodujatiaComponent.vue";
 
 export default {
   name: "HomeView",
@@ -73,9 +79,11 @@ export default {
   },
   components: {
     SearchSection,
-    // HelpBanner,
+    HelpBanner,
     CategoryButtons,
     NewsMenu,
+    ActualityComponent,
+    PodujatiaComponent,
   },
 
   methods: {
