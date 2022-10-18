@@ -1,7 +1,7 @@
 <template>
-  <div data-module="idsk-footer-extended">
+  <div data-module="idsk-footer-extended ">
     <footer
-      class="idsk-footer-extended idsk-footer-extended--up-button-enabled"
+      class="idsk-footer-extended idsk-footer-extended--up-button-enabled section"
     >
       <div
         class="idsk-footer-extended-up-button-div"
@@ -311,76 +311,36 @@
       <div class="idsk-footer-extended-main-content">
         <div class="govuk-width-container">
           <div class="govuk-grid-column-two-thirds">
-            <h3 class="govuk-heading-m">Navigácia v 2 stĺpcoch (2/3)</h3>
+            <h3 class="govuk-heading-m">O meste</h3>
             <div class="idsk-footer-extended-subtitle">
               <div class="govuk-grid-column-one-half">
                 <ul>
-                  <li class="idsk-footer-extended-list-item">
+                  <li
+                    v-for="(item, index) in menuItems.oMeste.firstBlock"
+                    :key="index"
+                    class="idsk-footer-extended-list-item"
+                  >
                     <a
                       class="govuk-link"
                       title="Link small Regular 12/20"
-                      href="#"
-                      >Link small Regular 12/20</a
-                    >
-                  </li>
-                  <li class="idsk-footer-extended-list-item">
-                    <a
-                      class="govuk-link"
-                      title="Link small Regular 13/20"
-                      href="#"
-                      >Link small Regular 13/20</a
-                    >
-                  </li>
-                  <li class="idsk-footer-extended-list-item">
-                    <a
-                      class="govuk-link"
-                      title="Link small Regular 14/20"
-                      href="#"
-                      >Link small Regular 14/20</a
-                    >
-                  </li>
-                  <li class="idsk-footer-extended-list-item">
-                    <a
-                      class="govuk-link"
-                      title="Link small Regular 15/20"
-                      href="#"
-                      >Link small Regular 15/20</a
+                      :href="item.url"
+                      >{{ item.name }}</a
                     >
                   </li>
                 </ul>
               </div>
               <div class="govuk-grid-column-one-half">
                 <ul>
-                  <li class="idsk-footer-extended-list-item">
+                  <li
+                    v-for="(item, index) in menuItems.oMeste.secondBlock"
+                    :key="index"
+                    class="idsk-footer-extended-list-item"
+                  >
                     <a
                       class="govuk-link"
                       title="Link small Regular 16/20"
-                      href="#"
-                      >Link small Regular 16/20</a
-                    >
-                  </li>
-                  <li class="idsk-footer-extended-list-item">
-                    <a
-                      class="govuk-link"
-                      title="Link small Regular 17/20"
-                      href="#"
-                      >Link small Regular 17/20</a
-                    >
-                  </li>
-                  <li class="idsk-footer-extended-list-item">
-                    <a
-                      class="govuk-link"
-                      title="Link small Regular 18/20"
-                      href="#"
-                      >Link small Regular 18/20</a
-                    >
-                  </li>
-                  <li class="idsk-footer-extended-list-item">
-                    <a
-                      class="govuk-link"
-                      title="Link small Regular 19/20"
-                      href="#"
-                      >Link small Regular 19/20</a
+                      :href="item.url"
+                      >{{ item.name }}</a
                     >
                   </li>
                 </ul>
@@ -388,119 +348,57 @@
             </div>
           </div>
           <div class="govuk-grid-column-one-third">
-            <h3 class="govuk-heading-m">Navigácia v 1 stĺpci (1/3)</h3>
+            <h3 class="govuk-heading-m">Kluby</h3>
             <div
               class="govuk-grid-column-three-thirds idsk-footer-extended-subtitle"
             >
               <ul>
-                <li class="idsk-footer-extended-list-item">
+                <li
+                  v-for="(item, index) in menuItems.kluby"
+                  :key="index"
+                  class="idsk-footer-extended-list-item"
+                >
                   <a
                     class="govuk-link"
                     title="Link small Regular 20/20"
-                    href="#"
-                    >Link small Regular 20/20</a
-                  >
-                </li>
-                <li class="idsk-footer-extended-list-item">
-                  <a
-                    class="govuk-link"
-                    title="Link small Regular 21/20"
-                    href="#"
-                    >Link small Regular 21/20</a
-                  >
-                </li>
-                <li class="idsk-footer-extended-list-item">
-                  <a
-                    class="govuk-link"
-                    title="Link small Regular 22/20"
-                    href="#"
-                    >Link small Regular 22/20</a
-                  >
-                </li>
-                <li class="idsk-footer-extended-list-item">
-                  <a
-                    class="govuk-link"
-                    title="Link small Regular 23/20"
-                    href="#"
-                    >Link small Regular 23/20</a
+                    :href="item.url"
+                    >{{ item.name }}</a
                   >
                 </li>
               </ul>
             </div>
           </div>
           <div class="govuk-grid-column-two-thirds">
-            <h3 class="govuk-heading-m">
-              Dodatočná hyperlinková navigácia (2/3)
-            </h3>
+            <h3 class="govuk-heading-m">Informačný servis</h3>
             <div class="idsk-footer-extended-subtitle">
               <div class="govuk-grid-column-one-half">
                 <ul>
-                  <li class="idsk-footer-extended-list-item">
+                  <li
+                    v-for="(item, index) in menuItems.service.firstBlock"
+                    :key="index"
+                    class="idsk-footer-extended-list-item"
+                  >
                     <a
                       class="govuk-link"
                       title="Link small Regular 12/20"
-                      href="#"
-                      >Link small Regular 12/20</a
-                    >
-                  </li>
-                  <li class="idsk-footer-extended-list-item">
-                    <a
-                      class="govuk-link"
-                      title="Link small Regular 13/20"
-                      href="#"
-                      >Link small Regular 13/20</a
-                    >
-                  </li>
-                  <li class="idsk-footer-extended-list-item">
-                    <a
-                      class="govuk-link"
-                      title="Link small Regular 14/20"
-                      href="#"
-                      >Link small Regular 14/20</a
-                    >
-                  </li>
-                  <li class="idsk-footer-extended-list-item">
-                    <a
-                      class="govuk-link"
-                      title="Link small Regular 15/20"
-                      href="#"
-                      >Link small Regular 15/20</a
+                      :href="item.url"
+                      >{{ item.name }}</a
                     >
                   </li>
                 </ul>
               </div>
               <div class="govuk-grid-column-one-half">
                 <ul>
-                  <li class="idsk-footer-extended-list-item">
+                  <li
+                    v-for="(item, index) in menuItems.service.secondBlock"
+                    :key="index"
+                    class="idsk-footer-extended-list-item"
+                  >
                     <a
                       class="govuk-link"
                       title="Link small Regular 16/20"
-                      href="#"
-                      >Link small Regular 16/20</a
-                    >
-                  </li>
-                  <li class="idsk-footer-extended-list-item">
-                    <a
-                      class="govuk-link"
-                      title="Link small Regular 17/20"
-                      href="#"
-                      >Link small Regular 17/20</a
-                    >
-                  </li>
-                  <li class="idsk-footer-extended-list-item">
-                    <a
-                      class="govuk-link"
-                      title="Link small Regular 18/20"
-                      href="#"
-                      >Link small Regular 18/20</a
-                    >
-                  </li>
-                  <li class="idsk-footer-extended-list-item">
-                    <a
-                      class="govuk-link"
-                      title="Link small Regular 19/20"
-                      href="#"
-                      >Link small Regular 19/20</a
+                      :href="item.url"
+                      >{{ item.name }}</a
                     >
                   </li>
                 </ul>
@@ -508,41 +406,21 @@
             </div>
           </div>
           <div class="govuk-grid-column-one-third">
-            <h3 class="govuk-heading-m">Navigácia v 1 stĺpci (1/3)</h3>
+            <h3 class="govuk-heading-m">Podnety občanov</h3>
             <div
               class="govuk-grid-column-three-thirds idsk-footer-extended-subtitle"
             >
               <ul>
-                <li class="idsk-footer-extended-list-item">
+                <li
+                  v-for="(item, index) in menuItems.obcanov"
+                  :key="index"
+                  class="idsk-footer-extended-list-item"
+                >
                   <a
                     class="govuk-link"
                     title="Link small Regular 28/20"
-                    href="#"
-                    >Link small Regular 28/20</a
-                  >
-                </li>
-                <li class="idsk-footer-extended-list-item">
-                  <a
-                    class="govuk-link"
-                    title="Link small Regular 29/20"
-                    href="#"
-                    >Link small Regular 29/20</a
-                  >
-                </li>
-                <li class="idsk-footer-extended-list-item">
-                  <a
-                    class="govuk-link"
-                    title="Link small Regular 30/20"
-                    href="#"
-                    >Link small Regular 30/20</a
-                  >
-                </li>
-                <li class="idsk-footer-extended-list-item">
-                  <a
-                    class="govuk-link"
-                    title="Link small Regular 31/20"
-                    href="#"
-                    >Link small Regular 31/20</a
+                    :href="item.url"
+                    >{{ item.name }}</a
                   >
                 </li>
               </ul>
@@ -552,41 +430,14 @@
             <div
               class="idsk-footer-extended-description-panel idsk-footer-extended-description-panel-top-border"
             >
-              <div class="idsk-footer-extended-meta-item">
-                <ul class="idsk-footer-extended-inline-list">
-                  <li class="idsk-footer-extended-inline-list-item">
-                    <a class="govuk-link" title="Pomoc" href="#"> Pomoc </a>
-                  </li>
-                  <li class="idsk-footer-extended-inline-list-item">
-                    <a class="govuk-link" title="Cookies" href="#"> Cookies </a>
-                  </li>
-                  <li class="idsk-footer-extended-inline-list-item">
-                    <a class="govuk-link" title="Kontakty" href="#">
-                      Kontakty
-                    </a>
-                  </li>
-                  <li class="idsk-footer-extended-inline-list-item">
-                    <a class="govuk-link" title="Mapa Stránky" href="#">
-                      Mapa Stránky
-                    </a>
-                  </li>
-                  <li class="idsk-footer-extended-inline-list-item">
-                    <a class="govuk-link" title="RSS" href="#"> RSS </a>
-                  </li>
-                  <li class="idsk-footer-extended-inline-list-item">
-                    <a
-                      class="govuk-link"
-                      title="Vyhlásenie o prístupnosti"
-                      href="#"
-                    >
-                      Vyhlásenie o prístupnosti
-                    </a>
-                  </li>
-                </ul>
-              </div>
               <div
                 class="govuk-grid-column-two-thirds idsk-footer-extended-info-links"
               >
+                <p class="idsk-footer-extended-frame">
+                  Prevádzkovateľom služby je Ministerstvo investícií,
+                  regionálneho rozvoja a informatizácie SR.
+                </p>
+
                 <p class="idsk-footer-extended-frame">
                   Vytvorené v súlade s
                   <a
@@ -597,21 +448,19 @@
                     Jednotným dizajn manuálom elektronických služieb.
                   </a>
                 </p>
-                <p class="idsk-footer-extended-frame">
-                  Prevádzkovateľom služby je Ministerstvo investícií,
-                  regionálneho rozvoja a informatizácie SR.
-                </p>
               </div>
-              <div
-                class="govuk-grid-column-one-third idsk-footer-extended-logo-box"
-              >
-                <a href="/" title="domov">
-                  <img
-                    class="idsk-footer-extended-logo"
-                    src="/assets/images/footer-extended-logo.svg"
-                    alt="Ministerstvo investícií, regionálneho rozvoja a informatizácie Slovenskej republiky"
-                  />
-                </a>
+              <div class="idsk-footer-extended-meta-item">
+                <ul class="idsk-footer-extended-inline-list">
+                  <li
+                    v-for="(item, index) in extraLinks"
+                    :key="index"
+                    class="idsk-footer-extended-inline-list-item"
+                  >
+                    <a class="govuk-link" title="Pomoc" :href="item.url">{{
+                      item.name
+                    }}</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -626,13 +475,141 @@ export default {
   name: "FooterComponent",
   data() {
     return {
-      openBanner: false,
+      menuItems: {
+        oMeste: {
+          firstBlock: [
+            {
+              name: "Zákaldné údaje",
+              url: "",
+            },
+            {
+              name: "História mesta",
+              url: "",
+            },
+            {
+              name: "Symboly mesta",
+              url: "",
+            },
+            {
+              name: "Štatút mesta",
+              url: "",
+            },
+          ],
+          secondBlock: [
+            {
+              name: "Meské kultúrne stredisko",
+              url: "",
+            },
+            {
+              name: "Mestská plaváreň",
+              url: "",
+            },
+            {
+              name: "Mapa mesta",
+              url: "",
+            },
+            {
+              name: "Mestský infolist Trebišov",
+              url: "",
+            },
+          ],
+        },
+        kluby: [
+          {
+            name: "Trebišovský umelecký klub",
+            url: "",
+          },
+          {
+            name: "Mestský športový klub mládeže",
+            url: "",
+          },
+          {
+            name: "Centrum voľného času",
+            url: "",
+          },
+        ],
+        service: {
+          firstBlock: [
+            {
+              name: "Mestský úrad",
+              url: "",
+            },
+            {
+              name: "Úradná tabuľa",
+              url: "",
+            },
+            {
+              name: "Zverejňovanie objednávok a faktúr",
+              url: "",
+            },
+            {
+              name: "Interné predpisy",
+              url: "",
+            },
+          ],
+          secondBlock: [
+            {
+              name: "Oznamy",
+              url: "",
+            },
+            {
+              name: "Verejné obstarávanie",
+              url: "",
+            },
+            {
+              name: "Všeobecne záväzné nariadenia",
+              url: "",
+            },
+          ],
+        },
+
+        obcanov: [
+          {
+            name: "Odkaz pre starostu",
+            url: "",
+          },
+          {
+            name: "Hlas občanov",
+            url: "",
+          },
+          {
+            name: "Oznámenia o výsledku vybavenia petícií",
+            url: "",
+          },
+        ],
+      },
+      extraLinks: [
+        {
+          name: "Kontakty",
+          url: "",
+        },
+        {
+          name: "Dôležité čísla",
+          url: "",
+        },
+        {
+          name: "Cookies",
+          url: "",
+        },
+        {
+          name: "Vyhlásenie o prístupnosti",
+          url: "",
+        },
+        {
+          name: "Mapa webovej stránky",
+          url: "",
+        },
+      ],
     };
   },
 };
 </script>
 
 <style scoped>
+.section {
+  padding-top: 35px;
+  padding-bottom: 119px;
+}
 .idsk-footer-extended-description-panel {
   display: flex;
   align-items: center;

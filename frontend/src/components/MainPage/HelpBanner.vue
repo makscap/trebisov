@@ -3,7 +3,7 @@
     <div
       class="govuk-main-wrapper govuk-main-wrapper--auto-spacing padding-bottom-0"
     >
-      <div class="applicationBanner">
+      <div class="banner">
         <h3 class="govuk-heading-l title">POMOC PRE UKRAJINU</h3>
         <p class="label">допомога для україни</p>
       </div>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "ApplicationBannerComponent",
+  name: "HelpBanner",
   data() {
     return {
       openBanner: false,
@@ -30,14 +30,14 @@ export default {
 .label {
   color: #ffdf0f;
 }
-.applicationBanner {
+.banner {
   height: 138px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  background-image: url("../assets/ukraine_bg.jpg");
+  background-image: url("../../assets/ukraine_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -46,7 +46,7 @@ export default {
   padding-bottom: 0 !important;
 }
 @media screen and (max-width: 960px) {
-  .applicationBanner {
+  .banner {
     flex-wrap: wrap;
   }
 }
