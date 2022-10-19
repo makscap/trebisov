@@ -638,6 +638,7 @@ export default {
   padding: 0px;
   margin: 0px;
 }
+
 @media (max-width: 645px) {
   .custom {
     width: 100%;

@@ -16,7 +16,7 @@
                 class="govuk-!-margin-bottom-6 standards govuk-!-padding-top-4 govuk-!-padding-bottom-2 govuk-!-padding-right-4 govuk-!-padding-left-4 module-icon m-0 p-0"
               >
                 <div>
-                  <span class="govuk-heading-l govuk-!-margin-bottom-2">
+                  <span class="govuk-heading-l govuk-!-margin-bottom-2 icon">
                     <img
                       style="width: 40px; height: 40px"
                       :src="item.icon"
@@ -264,6 +264,10 @@ export default {
 
 .pt-pb {
   padding: 30px 0px;
+}
+
+.icon {
+  margin-bottom: 8px !important;
 }
 @media (min-width: 960px) {
   .find-out-btn {
