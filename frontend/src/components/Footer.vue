@@ -431,14 +431,14 @@
               class="idsk-footer-extended-description-panel idsk-footer-extended-description-panel-top-border"
             >
               <div
-                class="govuk-grid-column-two-thirds idsk-footer-extended-info-links"
+                class="govuk-grid-column-two-thirds idsk-footer-extended-info-links third-row"
               >
-                <p class="idsk-footer-extended-frame">
+                <p class="idsk-footer-extended-frame third-row-title">
                   Prevádzkovateľom služby je Ministerstvo investícií,
                   regionálneho rozvoja a informatizácie SR.
                 </p>
 
-                <p class="idsk-footer-extended-frame">
+                <p class="idsk-footer-extended-frame third-row-label">
                   Vytvorené v súlade s
                   <a
                     class="govuk-link"
@@ -449,8 +449,8 @@
                   </a>
                 </p>
               </div>
-              <div class="idsk-footer-extended-meta-item">
-                <ul class="idsk-footer-extended-inline-list">
+              <div class="idsk-footer-extended-meta-item third-row-links">
+                <ul class="idsk-footer-extended-inline-list list-links">
                   <li
                     v-for="(item, index) in extraLinks"
                     :key="index"
@@ -618,6 +618,25 @@ export default {
 .custom {
   width: 60%;
   padding-bottom: 30px;
+}
+
+.third-row {
+  padding-top: 25px !important;
+}
+
+.third-row-title {
+  margin-bottom: 30px !important;
+  height: 100%;
+}
+
+.third-row-label {
+  margin-bottom: 30px !important;
+  height: 100%;
+}
+
+.list-links {
+  padding: 0px;
+  margin: 0px;
 }
 @media (max-width: 645px) {
   .custom {

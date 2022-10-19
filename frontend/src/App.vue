@@ -2,7 +2,7 @@
   <div class="page-container">
     <metainfo>
       <template v-slot:title="{ content }">
-        {{ content ? `${content} | BECEP` : `BECEP` }}
+        {{ content ? `${content} | TREBISOV` : `TREBISOV` }}
       </template>
     </metainfo>
     <Header />
@@ -50,8 +50,8 @@ export default {
     return {
       GOVUKFrontend: require("../node_modules/@id-sk/frontend/idsk/all"),
       metaInfo: {
-        title: "BECEP",
-        titleTemplate: "%s | BECEP",
+        title: "TREBISOV",
+        titleTemplate: "%s | TREBISOV",
       },
     };
   },

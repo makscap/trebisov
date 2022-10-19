@@ -5,9 +5,9 @@
         <div class="idsk-intro-block">
           <div class="govuk-grid-row">
             <div
-              class="govuk-grid-column-full govuk-grid-column-two-thirds-from-desktop"
+              class="govuk-grid-column-full govuk-grid-column-two-thirds-from-desktop serch-text-box"
             >
-              <h2 class="govuk-heading-m white">
+              <h2 class="govuk-heading-m white title">
                 Oficiálna stránka mesta Trebišov
               </h2>
               <p class="white">Všetko čo potrebujete vedieť</p>
@@ -15,7 +15,7 @@
                 data-module="idsk-search-component "
                 class="idsk-search-component search"
               >
-                <label class="" for="intro-block-search">
+                <label class="label" for="intro-block-search">
                   Čo potrebujete nájsť?
                 </label>
                 <input
@@ -143,7 +143,14 @@ export default {
   width: 100%;
 }
 
+.serch-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .idsk-intro-block__side-menu {
+  padding: 30px !important;
   background-color: #024497 !important ;
 }
 .idsk-intro-block__side-menu a {
@@ -157,4 +164,31 @@ export default {
 .search {
   margin-top: 0px !important;
 }
+
+.idsk-search-component__input {
+  height: 51px !important;
+}
+
+.idsk-search-component__button {
+  width: 52px !important;
+  height: 51px !important;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+}
+
+.label {
+  padding-top: 13px !important;
+  padding-left: 24px !important;
+}
+
+/* .govuk-grid-row {
+  margin-right: 0px;
+  margin-left: 0px;
+} */
 </style>

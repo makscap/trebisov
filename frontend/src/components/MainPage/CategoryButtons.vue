@@ -1,6 +1,6 @@
 <template>
   <div class="govuk-width-container">
-    <div class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
+    <div class="govuk-main-wrapper govuk-main-wrapper--auto-spacing pt-pb">
       <section id="products" class="govuk-main-wrapper m-0 p-0">
         <div class="govuk-grid-row m-0 p-0">
           <div class="govuk-grid-row row-with-boxes m-0 p-0">
@@ -18,7 +18,7 @@
                 <div>
                   <span class="govuk-heading-l govuk-!-margin-bottom-2">
                     <img
-                      style="width: 60px; height: 60px"
+                      style="width: 40px; height: 40px"
                       :src="item.icon"
                       :alt="'Na obrázku je ikona ' + item.name"
                     />
@@ -149,6 +149,16 @@ export default {
   flex-wrap: wrap;
 }
 
+.govuk-grid-column-one-quarter {
+  width: calc((100% / 3) - 20px) !important;
+  padding: 0px !important;
+  margin-right: 30px !important;
+}
+
+.govuk-grid-column-one-quarter:nth-child(3n) {
+  margin-right: 0px !important;
+}
+
 .govuk-grid-column-one-quarter:nth-child(4),
 .govuk-grid-column-one-quarter:nth-child(5),
 .govuk-grid-column-one-quarter:nth-child(6) {
@@ -250,6 +260,10 @@ export default {
 
 .govuk-grid-column-one-quarter:nth-last-child(-n + 3) {
   margin-bottom: 0px;
+}
+
+.pt-pb {
+  padding: 30px 0px;
 }
 @media (min-width: 960px) {
   .find-out-btn {

@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container">
     <div
-      class="govuk-main-wrapper govuk-main-wrapper--auto-spacing padding-bottom-0"
+      class="govuk-main-wrapper govuk-main-wrapper--auto-spacing padding-top-0"
     >
       <div class="banner">
         <h3 class="govuk-heading-l title">POMOC PRE UKRAJINU</h3>
@@ -24,11 +24,21 @@ export default {
 
 <style scoped>
 .title {
+  margin-bottom: 4px !important;
   color: #ffffff !important;
+  font-family: "Source Sans Pro";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #ffffff;
 }
 
 .label {
   color: #ffdf0f;
+  margin-bottom: 0px !important;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 25px;
 }
 .banner {
   height: 138px;
@@ -42,9 +52,10 @@ export default {
   background-size: cover;
   background-position: center center;
 }
-.padding-bottom-0 {
-  padding-bottom: 0 !important;
+.padding-top-0 {
+  padding-top: 0 !important;
 }
+
 @media screen and (max-width: 960px) {
   .banner {
     flex-wrap: wrap;

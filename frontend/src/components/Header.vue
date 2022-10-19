@@ -357,14 +357,14 @@
                     <router-link
                       class="govuk-link idsk-header-web__nav-list-item-link"
                       :title="
-                        page.title == 'BECEP'
+                        page.title == 'TREBISOV'
                           ? 'Rozbalit menu položku ' + page.title
                           : 'Otvoriť stránku ' + page.title + ' na tejto karte.'
                       "
                       :to="page.route"
                       @click="falseFunction($event, page.route)"
                       :aria-label="
-                        page.title == 'BECEP'
+                        page.title == 'TREBISOV'
                           ? 'Rozbalit menu položku ' + page.title
                           : 'Otvoriť stránku ' + page.title + ' na tejto karte.'
                       "

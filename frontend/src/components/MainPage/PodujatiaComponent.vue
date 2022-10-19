@@ -6,7 +6,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: 968px;
+        /* min-height: 968px; */
       "
     >
       <h1 class="govuk-heading-l">
@@ -110,7 +110,8 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin-top: 40px;
+          margin-top: 10px;
+          margin-bottom: 8px;
         "
       >
         <button

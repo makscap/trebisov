@@ -1,134 +1,41 @@
 <template>
-  <div class="govuk-width-container">
-    <div
-      class="govuk-main-wrapper"
-      style="
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 1025px;
-      "
-    >
-      <h1 class="govuk-heading-l">{{ vision ? "" : "Aktuality" }}</h1>
-      <LoadingSpin v-if="!loaded"></LoadingSpin>
-      <div v-if="loaded && articles.length > 0">
-        <div class="govuk-grid-row" v-if="page == 1 && !vision">
-          <div class="govuk-grid-column-full">
-            <div class="idsk-card idsk-card-hero">
-              <router-link
-                :to="getCrazyUrl(articles[0])"
-                :title="
-                  'Po kliknutií sa otvorí v tomto okne článok s názvom ' +
-                  articles[0].attributes.name
-                "
-              >
-                <img
-                  style="object-fit: cover"
-                  class="idsk-card-img idsk-card-img-hero hero-img"
-                  width="100%"
-                  :src="
-                    articles[0].attributes.titleImage.data
-                      ? articles[0].attributes.titleImage.data.attributes.url
-                      : require('@/assets/becep_logo.svg')
-                  "
-                  :alt="
-                    articles[0].attributes.titleImage.data
-                      ? 'Alternatívny popis obrázka je nasledujúci. ' +
-                        articles[0].attributes.titleImage.data.attributes.alternativeText.substring(
-                          0,
-                          70
-                        )
-                      : 'placeholder'
-                  "
-                  aria-hidden="true"
-                />
-              </router-link>
-
-              <div class="idsk-card-content idsk-card-content-hero">
-                <div class="idsk-card-meta-container">
-                  <span class="idsk-card-meta idsk-card-meta-date"
-                    ><a
-                      href="#"
-                      class="govuk-link"
-                      @click="falseFunction"
-                      :title="
-                        'Pridané dňa : ' + articles[0].attributes.datetime
-                      "
-                      >{{
-                        // eslint-disable-next-line vue/no-deprecated-filter
-                        formatDate(articles[0].attributes.datetime)
-                      }}</a
-                    ></span
-                  >
-                  <span class="idsk-card-meta idsk-card-meta-tag"
-                    ><a
-                      href="#"
-                      class="govuk-link"
-                      :title="
-                        'Článok patrí do kategórie ' +
-                        articles[0].attributes.categories.data[0].attributes
-                          .name
-                      "
-                      @click="falseFunction"
-                      >{{
-                        articles[0].attributes.categories.data[0].attributes
-                          .name
-                      }}</a
-                    ></span
-                  >
-                </div>
-
-                <div class="idsk-heading idsk-heading-hero">
-                  <router-link
-                    :to="getCrazyUrl(articles[0])"
-                    class="idsk-card-title govuk-link"
-                    :title="
-                      'Po kliknutií sa otvorí v tomto okne článok s názvom ' +
-                      articles[0].attributes.name
-                    "
-                    >{{ articles[0].attributes.name }}</router-link
-                  >
-                </div>
-
-                <p class="idsk-body idsk-body-hero">
-                  [{
-
-                  {{ articles[0].attributes.description.substring(0, 270) }} ...
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div v-if="loaded" class="govuk-grid-row">
-            <div
-              v-for="article in page == 1 && !vision
-                ? articles.slice(1)
-                : articles"
-              :key="article.id"
-              class="govuk-grid-column-one-third"
-            >
-              <div class="idsk-card idsk-card-secondary">
+  <div class="main">
+    <div class="govuk-width-container">
+      <div
+        class="govuk-main-wrapper"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          /* min-height: 1025px; */
+        "
+      >
+        <h1 class="govuk-heading-l">{{ vision ? "" : "Aktuality" }}</h1>
+        <LoadingSpin v-if="!loaded"></LoadingSpin>
+        <div v-if="loaded && articles.length > 0">
+          <div class="govuk-grid-row" v-if="page == 1 && !vision">
+            <div class="govuk-grid-column-full">
+              <div class="idsk-card idsk-card-hero">
                 <router-link
-                  :to="getCrazyUrl(article)"
+                  :to="getCrazyUrl(articles[0])"
                   :title="
                     'Po kliknutií sa otvorí v tomto okne článok s názvom ' +
-                    article.attributes.name
+                    articles[0].attributes.name
                   "
                 >
                   <img
-                    class="idsk-card-img idsk-card-img-secondary item-img"
-                    style="width: 100%; object-fit: cover"
+                    style="object-fit: cover"
+                    class="idsk-card-img idsk-card-img-hero hero-img"
+                    width="100%"
                     :src="
-                      article.attributes.titleImage.data
-                        ? article.attributes.titleImage.data.attributes.url
+                      articles[0].attributes.titleImage.data
+                        ? articles[0].attributes.titleImage.data.attributes.url
                         : require('@/assets/becep_logo.svg')
                     "
                     :alt="
-                      article.attributes.titleImage.data
+                      articles[0].attributes.titleImage.data
                         ? 'Alternatívny popis obrázka je nasledujúci. ' +
-                          article.attributes.titleImage.data.attributes.alternativeText.substring(
+                          articles[0].attributes.titleImage.data.attributes.alternativeText.substring(
                             0,
                             70
                           )
@@ -138,78 +45,177 @@
                   />
                 </router-link>
 
-                <div class="idsk-card-content idsk-card-content-secondary">
+                <div class="idsk-card-content idsk-card-content-hero">
                   <div class="idsk-card-meta-container">
                     <span class="idsk-card-meta idsk-card-meta-date"
                       ><a
                         href="#"
-                        @click="falseFunction"
                         class="govuk-link"
-                        title="Pridané dňa: 1.7.2020"
-                        >{{ formatDate(article.attributes.datetime) }}</a
+                        @click="falseFunction"
+                        :title="
+                          'Pridané dňa : ' + articles[0].attributes.datetime
+                        "
+                        >{{
+                          // eslint-disable-next-line vue/no-deprecated-filter
+                          formatDate(articles[0].attributes.datetime)
+                        }}</a
                       ></span
                     >
                     <span class="idsk-card-meta idsk-card-meta-tag"
                       ><a
-                        :href="none"
+                        href="#"
                         class="govuk-link"
                         :title="
                           'Článok patrí do kategórie ' +
-                          article.attributes.categories.data[0].attributes.name
+                          articles[0].attributes.categories.data[0].attributes
+                            .name
                         "
                         @click="falseFunction"
                         >{{
-                          article.attributes.categories.data[0].attributes.name
+                          articles[0].attributes.categories.data[0].attributes
+                            .name
                         }}</a
                       ></span
                     >
                   </div>
 
-                  <div class="idsk-heading idsk-heading-secondary">
+                  <div class="idsk-heading idsk-heading-hero">
                     <router-link
-                      :to="getCrazyUrl(article)"
+                      :to="getCrazyUrl(articles[0])"
+                      class="idsk-card-title govuk-link"
                       :title="
                         'Po kliknutií sa otvorí v tomto okne článok s názvom ' +
-                        article.attributes.name
+                        articles[0].attributes.name
                       "
-                      class="idsk-card-title govuk-link"
-                    >
-                      {{ article.attributes.name }}</router-link
+                      >{{ articles[0].attributes.name }}</router-link
                     >
                   </div>
 
-                  <p class="idsk-body idsk-body-secondary">
-                    {{ article.attributes.description.substring(0, 270) }} ...
+                  <p class="idsk-body idsk-body-hero">
+                    [{
+
+                    {{ articles[0].attributes.description.substring(0, 270) }}
+                    ...
                   </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div v-else>
-        <h1 v-if="loaded" class="govuk-heading-m">
-          V tejto kategórii zatiaľ nemáme žiadne články
-        </h1>
-      </div>
 
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin-top: 40px;
-        "
-      >
-        <button
-          type="button"
-          class="idsk-button idsk-header-web__main--login-loginbtn"
-          data-module="idsk-button"
+          <div>
+            <div v-if="loaded" class="govuk-grid-row">
+              <div
+                v-for="article in page == 1 && !vision
+                  ? articles.slice(1)
+                  : articles"
+                :key="article.id"
+                class="govuk-grid-column-one-third mb-0"
+              >
+                <div class="idsk-card idsk-card-secondary">
+                  <router-link
+                    :to="getCrazyUrl(article)"
+                    :title="
+                      'Po kliknutií sa otvorí v tomto okne článok s názvom ' +
+                      article.attributes.name
+                    "
+                  >
+                    <img
+                      class="idsk-card-img idsk-card-img-secondary item-img"
+                      style="width: 100%; object-fit: cover"
+                      :src="
+                        article.attributes.titleImage.data
+                          ? article.attributes.titleImage.data.attributes.url
+                          : require('@/assets/becep_logo.svg')
+                      "
+                      :alt="
+                        article.attributes.titleImage.data
+                          ? 'Alternatívny popis obrázka je nasledujúci. ' +
+                            article.attributes.titleImage.data.attributes.alternativeText.substring(
+                              0,
+                              70
+                            )
+                          : 'placeholder'
+                      "
+                      aria-hidden="true"
+                    />
+                  </router-link>
+
+                  <div class="idsk-card-content idsk-card-content-secondary">
+                    <div class="idsk-card-meta-container">
+                      <span class="idsk-card-meta idsk-card-meta-date"
+                        ><a
+                          href="#"
+                          @click="falseFunction"
+                          class="govuk-link"
+                          title="Pridané dňa: 1.7.2020"
+                          >{{ formatDate(article.attributes.datetime) }}</a
+                        ></span
+                      >
+                      <span class="idsk-card-meta idsk-card-meta-tag"
+                        ><a
+                          :href="none"
+                          class="govuk-link"
+                          :title="
+                            'Článok patrí do kategórie ' +
+                            article.attributes.categories.data[0].attributes
+                              .name
+                          "
+                          @click="falseFunction"
+                          >{{
+                            article.attributes.categories.data[0].attributes
+                              .name
+                          }}</a
+                        ></span
+                      >
+                    </div>
+
+                    <div class="idsk-heading idsk-heading-secondary">
+                      <router-link
+                        :to="getCrazyUrl(article)"
+                        :title="
+                          'Po kliknutií sa otvorí v tomto okne článok s názvom ' +
+                          article.attributes.name
+                        "
+                        class="idsk-card-title govuk-link"
+                      >
+                        {{ article.attributes.name }}</router-link
+                      >
+                    </div>
+
+                    <p class="idsk-body idsk-body-secondary">
+                      {{ article.attributes.description.substring(0, 270) }} ...
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-else>
+          <h1 v-if="loaded" class="govuk-heading-m">
+            V tejto kategórii zatiaľ nemáme žiadne články
+          </h1>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 38px;
+            margin-bottom: 0px;
+          "
         >
-          Ďalšie aktuality
-        </button>
-      </div>
-      <!-- <div
+          <button
+            type="button"
+            class="idsk-button idsk-header-web__main--login-loginbtn"
+            data-module="idsk-button"
+            style="margin-bottom: 0px"
+          >
+            Ďalšie aktuality
+          </button>
+        </div>
+        <!-- <div
         style="
           width: 100%;
           display: flex;
@@ -226,6 +232,7 @@
           >Ďalšie aktuality</router-link
         >
       </div> -->
+      </div>
     </div>
   </div>
 </template>
@@ -1546,6 +1553,10 @@ export default {
 };
 </script>
 <style>
+.main {
+  background-color: #f3f2f1;
+  padding-bottom: 23px;
+}
 .idsk-card-meta .govuk-link:visited {
   color: #626a6e;
   text-decoration: none;
@@ -1640,6 +1651,11 @@ export default {
 .height-grid {
   height: 400px;
 }
+
+.govuk-heading-l {
+  margin-bottom: 40px !important;
+}
+
 @media (max-width: 960px) {
   .hero-img {
     height: 200px;
