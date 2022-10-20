@@ -607,8 +607,9 @@ export default {
 
 <style scoped>
 .section {
-  padding-top: 35px;
+  padding-top: 15px;
   padding-bottom: 119px;
+  border: 1px solid rgba(11, 12, 12, 0.25);
 }
 .idsk-footer-extended-description-panel {
   display: flex;
@@ -621,6 +622,7 @@ export default {
 }
 
 .third-row {
+  width: 100% !important;
   padding-top: 25px !important;
 }
 
@@ -637,6 +639,14 @@ export default {
 .list-links {
   padding: 0px;
   margin: 0px;
+}
+
+.govuk-heading-m {
+  padding-top: 35px !important;
+}
+
+.idsk-footer-extended-subtitle {
+  border-top: 1px solid rgba(11, 12, 12, 0.38) !important;
 }
 
 @media (max-width: 645px) {

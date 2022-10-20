@@ -1,5 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import SubMenuView from "../views/SubMenuView.vue";
+import ZakladneUdajeView from "../views/ZakladneUdajeView.vue";
+import HistoriaMestaTrebisovView from "../views/HistoriaMestaTrebisovView.vue";
+import SymbolyMestaView from "../views/SymbolyMestaView.vue";
+import StatutMestaView from "../views/StatutMestaView.vue";
+import InfolistMestaView from "../views/InfolistMestaView.vue";
 // import AboutView from "../views/AboutView.vue";
 // import DocumentsView from "../views/DocumentsView.vue";
 // import LegislationView from "../views/LegislationView.vue";
@@ -132,6 +138,72 @@ export const routes = [
     name: "home",
     title: "Domov",
     component: HomeView,
+  },
+  {
+    path: "/o-meste",
+    name: "O meste",
+    title: "O meste",
+    component: SubMenuView,
+  },
+  // {
+  //   path: "/o-meste/:id",
+  //   name: "Archív",
+  //   title: "Archív-typ",
+  //   component: Omeste,
+  // },
+  {
+    path: "/samosprava-mesta",
+    name: "Samospráva mesta",
+    title: "Samospráva mesta",
+    component: SubMenuView,
+  },
+  {
+    path: "/mestsky-urad",
+    name: "Mestský úrad",
+    title: "Mestský úrad",
+    component: SubMenuView,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Pre občanov",
+    title: "Pre občanov",
+    component: SubMenuView,
+  },
+  {
+    path: "/zivot-v-meste",
+    name: "Život v meste",
+    title: "Život v meste",
+    component: SubMenuView,
+  },
+  {
+    path: "/o-meste/zakladne-udaje",
+    name: "Základné údaje",
+    title: "Základné údaje",
+    component: ZakladneUdajeView,
+  },
+  {
+    path: "/o-meste/historia-mesta",
+    name: "História mesta Trebišov",
+    title: "História mesta Trebišov",
+    component: HistoriaMestaTrebisovView,
+  },
+  {
+    path: "/o-meste/symboly-mesta",
+    name: "Symboly mesta",
+    title: "Symboly mesta",
+    component: SymbolyMestaView,
+  },
+  {
+    path: "/o-meste/statut-mesta",
+    name: "Štatút mesta",
+    title: "Štatút mesta",
+    component: StatutMestaView,
+  },
+  {
+    path: "/o-meste/infolist-mesta",
+    name: "Infolist mesta Trebišov",
+    title: "Infolist mesta Trebišov",
+    component: InfolistMestaView,
   },
 ];
 

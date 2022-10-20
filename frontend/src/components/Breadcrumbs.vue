@@ -40,17 +40,24 @@ export default {
       article: {},
       home: false,
       types: [
-        { name: "aktivity", title: "Aktivity" },
-        { name: "chodci", title: "Chodci" },
-        { name: "cyklisti", title: "Cyklisti" },
-        { name: "deti", title: "Deti" },
-        { name: "mladi-vodici", title: "Mladí vodiči" },
-        { name: "motocyklisti", title: "Motocyklisti" },
-        { name: "profesionali", title: "Profesionáli" },
-        { name: "seniori", title: "Seniori" },
-        { name: "vizia-nula", title: "Vízia nula" },
-        { name: "vodici", title: "Vodiči" },
-        { name: "becep", title: "BECEP" },
+        {
+          name: "o-meste",
+          title: "O meste",
+          children: [{ name: "1111", title: "1111" }],
+        },
+        { name: "samosprava-mesta", title: "Samospráva mesta" },
+        { name: "o-meste/samosprava-mesta", title: "" },
+        { name: "", title: "" },
+        { name: "", title: "" },
+        // { name: "cyklisti", title: "Cyklisti" },
+        // { name: "deti", title: "Deti" },
+        // { name: "mladi-vodici", title: "Mladí vodiči" },
+        // { name: "motocyklisti", title: "Motocyklisti" },
+        // { name: "profesionali", title: "Profesionáli" },
+        // { name: "seniori", title: "Seniori" },
+        // { name: "vizia-nula", title: "Vízia nula" },
+        // { name: "vodici", title: "Vodiči" },
+        // { name: "becep", title: "BECEP" },
       ],
     };
   },
@@ -66,6 +73,8 @@ export default {
       // console.log("sth");
       this.getArticle();
     }
+
+    console.log(this.$route.path.split("/"));
   },
   watch: {
     // eslint-disable-next-line no-unused-vars
@@ -109,6 +118,7 @@ export default {
           title: this.article.name,
         };
       }
+
       return route ? route.title : "null";
     },
     getBackUrl(index) {
