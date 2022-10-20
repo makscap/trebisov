@@ -446,11 +446,14 @@ export default {
         {
           title: "O meste",
           subpages: [
-            { title: "Základné údaje", route: "zakladne-udaje" },
-            { title: "História mesta", route: "historia-mesta" },
-            { title: "Symboly mesta", route: "symboly-mesta" },
-            { title: "Štatút mesta", route: "statut-mesta" },
-            { title: "Infolist mesta Trebišov", route: "infolist-mesta" },
+            { title: "Základné údaje", route: "o-meste/zakladne-udaje" },
+            { title: "História mesta", route: "o-meste/historia-mesta" },
+            { title: "Symboly mesta", route: "o-meste/symboly-mesta" },
+            { title: "Štatút mesta", route: "o-meste/statut-mesta" },
+            {
+              title: "Infolist mesta Trebišov",
+              route: "o-meste/infolist-mesta",
+            },
           ],
           route: "",
         },
