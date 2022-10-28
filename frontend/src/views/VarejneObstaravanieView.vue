@@ -1,0 +1,80 @@
+<template>
+  <div class="govuk-width-container">
+    <div class="content">
+      <h2 class="govuk-heading-l title">Verejné obstarávanie</h2>
+      <p>
+        Verejným obstarávaním sú pravidlá a postupy podľa zákona č. 25/2006 Z.
+        z. o verejnom obstarávaní a o zmene a doplnení niektorých zákonov v
+        znení neskorších predpisov, ktorými sa zadávajú zákazky na dodanie
+        tovaru, zákazky na uskutočnenie stavebných prác, zákazky na poskytnutie
+        služieb a súťaž návrhov.
+      </p>
+    </div>
+    <div class="w-75">
+      <ListLinks title="" :links="links" />
+    </div>
+  </div>
+</template>
+
+<script>
+import { useMeta } from "vue-meta";
+import ListLinks from "../components/ListLinks.vue";
+
+export default {
+  name: "VarejneObstaravanieView",
+  data() {
+    return {
+      links: [
+        { name: "Mesto Trebišov", url: "/mesto-trebisov" },
+        {
+          name: "Technické služby mesta Trebišov",
+          url: "/technicke-sluzby-mesta",
+        },
+        {
+          name: "MESTSKÝ ŠPORTOVÝ KLUB MLÁDEŽE TREBIŠOV",
+          url: "/mestsky-sportovy-klub-mladeze",
+        },
+        {
+          name: "Základná umelecká škola",
+          url: "/zakladna-umelecka-skola",
+        },
+      ],
+    };
+  },
+  setup() {
+    useMeta({
+      title: "Domov",
+      htmlAttrs: { lang: "sk", amp: true },
+      meta: [
+        { charset: "utf-8" },
+        {
+          name: "description",
+          content:
+            "Národný kooridnátor pre zvyšovanie bezpečnosti cestnej premávky",
+        },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1",
+        },
+      ],
+    });
+  },
+
+  mounted() {},
+  components: { ListLinks },
+  methods: {
+    falseFunction(e, route) {
+      if (!route) e.preventDefault();
+    },
+    top() {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    },
+  },
+};
+</script>
+<style lang="scss" scoped>
+.title {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+</style>

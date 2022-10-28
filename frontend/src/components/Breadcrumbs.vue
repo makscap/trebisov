@@ -40,24 +40,129 @@ export default {
       article: {},
       home: false,
       types: [
+        { name: "o-meste", title: "O meste" },
+        { name: "zakladne-udaje", title: "Základné údaje" },
+        { name: "historia-mesta", title: "História mesta Trebišov" },
+        { name: "symboly-mesta", title: "Symboly mesta" },
+        { name: "statut-mesta", title: "Štatút mesta" },
+        { name: "infolist-mesta", title: "Infolist mesta Trebišov" },
+        { name: "mestske-zastupitelstvo", title: "Mestské zastupiteľstvo" },
         {
-          name: "o-meste",
-          title: "O meste",
-          children: [{ name: "1111", title: "1111" }],
+          name: "o-mestskom-zastupitelstve",
+          title: "O mestskom zastupiteľstve",
         },
+        { name: "poslanci-msz-v-trebisove", title: "Poslanci MsZ v Trebišove" },
+        {
+          name: "prehlad-poslancov-volebnych-obdobi",
+          title: "Prehľad poslancov volebných období ",
+        },
+        {
+          name: "poslanci-za-volebne-obdobie-2018-2022",
+          title: "Poslanci za volebné obdobie 2018-2022",
+        },
+        {
+          name: "interpelacie-poslancov-msz",
+          title: "Interpelácie poslancov MsZ v Trebišove",
+        },
+        {
+          name: "podnety-poslancov-msz-v-trebisove",
+          title: "Podnety poslancov MsZ v Trebišove",
+        },
+        {
+          name: "oznamenia-funkcii-poslanci",
+          title:
+            "Oznámenia funkcií, zamestnaní, činností a majetkových pomerov verejného funkcionára - poslanci",
+        },
+        {
+          name: "oznamenia-funkcii-tlaciva",
+          title:
+            "Oznámenia funkcií, zamestnaní, činností a majetkových pomerov verejného funkcionára - tlačivá",
+        },
+        { name: "dokumenty", title: "Dokumenty" },
+        { name: "zasadnutia", title: "Zasadnutia MsZ v Trebišove" },
+        { name: "projekty", title: "Projekty" },
+        { name: "mestska-rada", title: "Mestská rada" },
+        { name: "clenovia-mestskej-rady", title: "Členovia mestskej rady" },
+        {
+          name: "zasadnutia-mestskej-rady",
+          title: "Zasadnutia mestskej rady MsZ ",
+        },
+        { name: "komisie", title: "Komisie" },
         { name: "samosprava-mesta", title: "Samospráva mesta" },
-        { name: "o-meste/samosprava-mesta", title: "" },
+        { name: "primator", title: "Primátor mesta" },
+        { name: "zastupcovia-primatora", title: "Zástupcovia primátora" },
+        { name: "mestsky-urad", title: "Mestský úrad" },
+        { name: "hlavny-kontrolor", title: "Hlavný kontrolór" },
+        { name: "o-hlavnom-kontrolorovi", title: "O hlavnom kontrolórovi" },
+        {
+          name: "plany-kontrolnej-cinnosti",
+          title: "Plány kontrolnej činnosti",
+        },
+        {
+          name: "spravy-z-kontrolnej-cinnosti",
+          title: "Správy z kontrolnej činnosti",
+        },
+        { name: "ostatne-dokumenty", title: "Ostatné dokumenty" },
+        { name: "uradna-tabula", title: "Úradná tabuľa" },
+        { name: "rozpocet-mesta", title: "Rozpočet mesta Trebišov" },
+        {
+          name: "2010-2022",
+          title: "Rozpočet mesta Trebišov 2022-2010",
+        },
+        {
+          name: "zaverecny-ucet-mesta-2010-2021",
+          title: "Záverečný účet mesta Trebišov 2021-2010",
+        },
+        { name: "dotacie", title: "Dotácie" },
+        { name: "verejne-obstaravanie", title: "Verejné obstarávanie" },
+        {
+          name: "mesto-trebisov",
+          title: "Profil verejného obstarávateľa mesto Trebišov",
+        },
+        {
+          name: "technicke-sluzby-mesta",
+          title:
+            "Profil verejného obstarávateľa Technické služby mesta Trebišov",
+        },
+        {
+          name: "mestsky-sportovy-klub-mladeze",
+          title: "Profil verejného obstarávateľa MESTSKÝ ŠPORTOVÝ KLUB ",
+        },
+        {
+          name: "zakladna-umelecka-skola",
+          title: "Profil verejného obstarávateľa Základná umelecká škola",
+        },
+        { name: "zmluvy-faktury", title: "Zmluvy, faktúry, objednávky" },
+        { name: "interne-predpisy", title: "Interné predpisy" },
         { name: "", title: "" },
         { name: "", title: "" },
-        // { name: "cyklisti", title: "Cyklisti" },
-        // { name: "deti", title: "Deti" },
-        // { name: "mladi-vodici", title: "Mladí vodiči" },
-        // { name: "motocyklisti", title: "Motocyklisti" },
-        // { name: "profesionali", title: "Profesionáli" },
-        // { name: "seniori", title: "Seniori" },
-        // { name: "vizia-nula", title: "Vízia nula" },
-        // { name: "vodici", title: "Vodiči" },
-        // { name: "becep", title: "BECEP" },
+        { name: "", title: "" },
+        { name: "", title: "" },
+        { name: "", title: "" },
+        { name: "", title: "" },
+
+        { name: "o-mestskom-urade", title: "O mestskom úrade" },
+        { name: "", title: "" },
+        { name: "", title: "" },
+        { name: "", title: "" },
+        { name: "", title: "" },
+        { name: "", title: "" },
+        { name: "prednosta", title: "Prednosta MsÚ" },
+
+        { name: "oddelenia", title: "Oddelenia MsÚ v Trebišove" },
+        { name: "kancelaria-primatora", title: "Kancelária primátora" },
+        { name: "oddelenie-financne", title: "Oddelenie finančné" },
+        { name: "", title: "" },
+        { name: "strediska", title: "Strediská" },
+        { name: "mestska-vnutorna-ochrana", title: "Mestská vnútorná ochrana" },
+        {
+          name: "mestske-kulturne-stredisko",
+          title: "Mestské kultúrne stredisko",
+        },
+        { name: "oznamy", title: "Oznamy" },
+        { name: "oznamy-o-umrtiach", title: "Oznamy o úmrtiach" },
+        { name: "strategicke-dokumenty", title: "Strategické dokumenty" },
+        { name: "cenniky", title: "Cenníky" },
       ],
     };
   },
@@ -119,6 +224,8 @@ export default {
         };
       }
 
+      console.log("🍅", "hit the target!", route);
+
       return route ? route.title : "null";
     },
     getBackUrl(index) {
@@ -128,6 +235,7 @@ export default {
       });
       if (!url) url = "/";
       // console.log("final url", url);
+
       return url;
     },
     async getArticle() {

@@ -1,13 +1,13 @@
 <template>
   <div class="govuk-width-container box">
-    <h2 class="govuk-heading-l title">O meste</h2>
+    <h2 class="govuk-heading-l title">{{ title }}</h2>
 
     <ul class="list">
       <li v-for="(sub, ind) in this.subpages" :key="ind" class="item">
         <div class="idsk-crossroad idsk-crossroad-2">
           <div class="idsk-crossroad__item">
             <router-link
-              :to="'o-meste/' + sub.route"
+              :to="url_main + sub.route"
               class="govuk-link idsk-crossroad-title"
               title="Title for 1st element"
               aria-hidden="false"
@@ -28,6 +28,8 @@ export default {
     return {};
   },
   props: {
+    title: String,
+    url_main: String,
     subpages: Array,
   },
 };

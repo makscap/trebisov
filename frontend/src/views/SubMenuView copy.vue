@@ -195,6 +195,11 @@ export default {
                   },
                 ],
               },
+              { title: "Uznesenia", route: "mestske-zastupitelstvo/uznesenia" },
+              { title: "Priamy prenos zo zasadnutia", route: "/" },
+              { title: "Mestská rada", route: "/" },
+              { title: "Komisie", route: "mestske-zastupitelstvo/komisie" },
+              { title: "Dokumenty", route: "mestske-zastupitelstvo/dokumenty" },
             ],
           },
           {
@@ -203,6 +208,40 @@ export default {
           },
           { title: "Úradná tabuľa", route: "samosprava-mesta/uradna-tabula" },
           { title: "Rozpočet", route: "samosprava-mesta/rozpocet-mesta" },
+          {
+            title: "Dotácie",
+            route: "samosprava-mesta/dotacie",
+            children_two: [
+              {
+                title: "Dotácie poskytnuté v roku 2021",
+                route: "",
+              },
+              {
+                title: "Dotácie poskytnuté v roku 2020",
+                route: "",
+              },
+              {
+                title: "Dotácie poskytnuté v roku 2019",
+                route: "",
+              },
+              {
+                title: "Dotácie poskytnuté v roku 2018",
+                route: "",
+              },
+              {
+                title: "Dotácie poskytnuté v roku 2017",
+                route: "",
+              },
+              {
+                title: "Dotácie poskytnuté v roku 2016",
+                route: "",
+              },
+              {
+                title: "Dotácie poskytnuté v roku 2015",
+                route: "",
+              },
+            ],
+          },
           {
             title: "Verejné obstarávanie",
             route: "samosprava-mesta/verejne-obstaravanie",

@@ -446,13 +446,13 @@ export default {
         {
           title: "O meste",
           subpages: [
-            { title: "Základné údaje", route: "o-meste/zakladne-udaje" },
-            { title: "História mesta", route: "o-meste/historia-mesta" },
-            { title: "Symboly mesta", route: "o-meste/symboly-mesta" },
-            { title: "Štatút mesta", route: "o-meste/statut-mesta" },
+            { title: "Základné údaje", route: "/o-meste/zakladne-udaje" },
+            { title: "História mesta", route: "/o-meste/historia-mesta" },
+            { title: "Symboly mesta", route: "/o-meste/symboly-mesta" },
+            { title: "Štatút mesta", route: "/o-meste/statut-mesta" },
             {
               title: "Infolist mesta Trebišov",
-              route: "o-meste/infolist-mesta",
+              route: "/o-meste/infolist-mesta",
             },
           ],
           route: "",
@@ -461,16 +461,37 @@ export default {
         {
           title: "Samospráva mesta",
           subpages: [
-            { title: "Primátor", route: "/" },
-            { title: "Zástupcovia primátora", route: "/" },
-            { title: "Mestské zastupiteľstvo", route: "/" },
-            { title: "Hlavný kontrolór", route: "/" },
-            { title: "Úradná tabuľa", route: "/" },
-            { title: "Rozpočet", route: "/" },
-            { title: "Dotácie", route: "/" },
-            { title: "Verejné obstarávanie", route: "/" },
-            { title: "Interné predpisy", route: "/" },
-            { title: "Zmluvy, faktúry, objednávky", route: "/" },
+            { title: "Primátor", route: "/samosprava-mesta/primator" },
+            {
+              title: "Zástupcovia primátora",
+              route: "/samosprava-mesta/zastupcovia-primatora",
+            },
+            {
+              title: "Mestské zastupiteľstvo",
+              route: "/samosprava-mesta/mestske-zastupitelstvo",
+            },
+            {
+              title: "Hlavný kontrolór",
+              route: "/samosprava-mesta/hlavny-kontrolor",
+            },
+            {
+              title: "Úradná tabuľa",
+              route: "/samosprava-mesta/uradna-tabula",
+            },
+            { title: "Rozpočet", route: "/samosprava-mesta/rozpocet-mesta" },
+            { title: "Dotácie", route: "/samosprava-mesta/dotacie" },
+            {
+              title: "Verejné obstarávanie",
+              route: "/samosprava-mesta/verejne-obstaravanie",
+            },
+            {
+              title: "Interné predpisy",
+              route: "/samosprava-mesta/interne-predpisy",
+            },
+            {
+              title: "Zmluvy, faktúry, objednávky",
+              route: "/samosprava-mesta/zmluvy-faktury",
+            },
           ],
           route: "",
         },
@@ -478,15 +499,27 @@ export default {
         {
           title: "Mestský úrad",
           subpages: [
-            { title: "O mestskom úrade", route: "/" },
-            { title: "Prednosta", route: "/" },
-            { title: "Oddelenia", route: "/" },
-            { title: "Strediská", route: "/" },
-            { title: "Oznamy", route: "/" },
-            { title: "Oznamy o úmrtiach", route: "/" },
-            { title: "Strategické dokumenty", route: "/" },
-            { title: "Všeobecne záväzné nariadenia", route: "/" },
-            { title: "Cenník", route: "/" },
+            {
+              title: "O mestskom úrade",
+              route: "/mestsky-urad/o-mestskom-urade",
+            },
+            { title: "Prednosta", route: "/mestsky-urad/prednosta" },
+            { title: "Oddelenia", route: "/mestsky-urad/oddelenia" },
+            { title: "Strediská", route: "/mestsky-urad/strediska" },
+            { title: "Oznamy", route: "/mestsky-urad/oznamy" },
+            {
+              title: "Oznamy o úmrtiach",
+              route: "/mestsky-urad/oznamy-o-umrtiach",
+            },
+            {
+              title: "Strategické dokumenty",
+              route: "/mestsky-urad/strategicke-dokumenty",
+            },
+            {
+              title: "Všeobecne záväzné nariadenia",
+              route: "/mestsky-urad/vseobecne-zavazne-nariadenia",
+            },
+            { title: "Cenník", route: "/mestsky-urad/cenniky" },
           ],
           route: "",
         },
@@ -513,14 +546,20 @@ export default {
         {
           title: "Život v meste",
           subpages: [
-            { title: "Aktuality", route: "/" },
-            { title: "Historické a kultúrne pamiatky", route: "/" },
-            { title: "Podujatia", route: "/" },
-            { title: "Fotogaléria", route: "/" },
+            { title: "Aktuality", route: "/zivot-v-meste/aktuality" },
+            {
+              title: "Historické a kultúrne pamiatky",
+              route: "/zivot-v-meste/historicke-a-kulturne-pamiatky",
+            },
+            { title: "Podujatia", route: "/zivot-v-meste/podujatia" },
+            { title: "Fotogaléria", route: "/zivot-v-meste/fotogaleria" },
             { title: "Kam do mesta", route: "/" },
-            { title: "Školstvo", route: "/" },
-            { title: "Mestský športový klub mládeže", route: "/" },
-            { title: "Polícia", route: "/" },
+            { title: "Školstvo", route: "/zivot-v-meste/skolstvo" },
+            {
+              title: "Mestský športový klub mládeže",
+              route: "/zivot-v-meste/mestsky-sportovy-klub-mladeze",
+            },
+            { title: "Polícia", route: "/zivot-v-meste/policia" },
           ],
           route: "",
         },

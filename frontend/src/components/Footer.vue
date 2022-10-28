@@ -321,7 +321,7 @@
                     class="idsk-footer-extended-list-item"
                   >
                     <a
-                      class="govuk-link"
+                      class="govuk-link-custom"
                       title="Link small Regular 12/20"
                       :href="item.url"
                       >{{ item.name }}</a
@@ -337,7 +337,7 @@
                     class="idsk-footer-extended-list-item"
                   >
                     <a
-                      class="govuk-link"
+                      class="govuk-link-custom"
                       title="Link small Regular 16/20"
                       :href="item.url"
                       >{{ item.name }}</a
@@ -359,7 +359,7 @@
                   class="idsk-footer-extended-list-item"
                 >
                   <a
-                    class="govuk-link"
+                    class="govuk-link-custom"
                     title="Link small Regular 20/20"
                     :href="item.url"
                     >{{ item.name }}</a
@@ -379,7 +379,7 @@
                     class="idsk-footer-extended-list-item"
                   >
                     <a
-                      class="govuk-link"
+                      class="govuk-link-custom"
                       title="Link small Regular 12/20"
                       :href="item.url"
                       >{{ item.name }}</a
@@ -395,7 +395,7 @@
                     class="idsk-footer-extended-list-item"
                   >
                     <a
-                      class="govuk-link"
+                      class="govuk-link-custom"
                       title="Link small Regular 16/20"
                       :href="item.url"
                       >{{ item.name }}</a
@@ -417,7 +417,7 @@
                   class="idsk-footer-extended-list-item"
                 >
                   <a
-                    class="govuk-link"
+                    class="govuk-link-custom"
                     title="Link small Regular 28/20"
                     :href="item.url"
                     >{{ item.name }}</a
@@ -441,7 +441,7 @@
                 <p class="idsk-footer-extended-frame third-row-label">
                   Vytvorené v súlade s
                   <a
-                    class="govuk-link"
+                    class="govuk-link-custom"
                     title="Jednotným dizajn manuálom elektronických služieb."
                     href="#"
                   >
@@ -456,9 +456,12 @@
                     :key="index"
                     class="idsk-footer-extended-inline-list-item"
                   >
-                    <a class="govuk-link" title="Pomoc" :href="item.url">{{
-                      item.name
-                    }}</a>
+                    <a
+                      class="govuk-link-custom"
+                      title="Pomoc"
+                      :href="item.url"
+                      >{{ item.name }}</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -647,6 +650,16 @@ export default {
 
 .idsk-footer-extended-subtitle {
   border-top: 1px solid rgba(11, 12, 12, 0.38) !important;
+}
+
+li:hover .govuk-link-custom {
+  color: #003078 !important;
+}
+li:visited .govuk-link-custom {
+  color: #003078 !important;
+}
+li:focus .govuk-link-custom {
+  background-color: #ffdf0f !important;
 }
 
 @media (max-width: 645px) {

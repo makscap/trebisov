@@ -10,6 +10,12 @@ $govuk-global-styles: true;
 // @import  '@id-sk/frontend/idsk/extended';
 @import  '@id-sk/frontend/idsk/all';
 
+.body {
+    font-family: 'Source Sans Pro', sans-serif ;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
 .idsk-button {
     background-color: #0065B3 !important;
 }
@@ -64,18 +70,21 @@ $govuk-global-styles: true;
 }
 
 .govuk-link-custom {
-    color: #00703c !important;
+    color: #0B0C0C !important;
 }
 a:hover, .govuk-link-custom:hover {
-    color: #006b39;
+    color: #003078;
   }
   a:visited, .govuk-link-custom:visited {
-    color: #006b39;
+    color: #003078;
   }
   a:visited, .govuk-link-custom:focus {
 
     background-color: #ffdf0f;
   }
+
+//   Custom tailwind
+  
 .green {
     color: #4F8136 !important;
 }
@@ -104,6 +113,72 @@ a:hover, .govuk-link-custom:hover {
     padding: 0px !important;
 }
 
+.w-75 {
+    width: 75% !important;
+}
+
+
+// Settings for text sections on pages
+
+.content {
+//    max-width: 75%;
+}
+
+.content a {
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 25px;
+    text-decoration: underline;
+    color: #0065b3 !important;
+}
+
+.content li {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 25px;
+    color: #0b0c0c;
+    margin-bottom: 5px;
+}
+
+.content .item_link {
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+.content li:last-child {
+    margin-bottom: 0px;
+    margin: 0px;
+}
+
+.content p {
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 25px;
+    color: #0b0c0c;
+}
+
+.content > span {
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 25px;
+    color: #0b0c0c;
+}
+
+.parent {
+    margin-bottom: 50px !important;
+}
+
+.title {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
 @media (max-width: 48.0525em) and (min-width: 40.0625em){
 .idsk-body-secondary {
     font-size: 1rem;
@@ -130,10 +205,6 @@ a:hover, .govuk-link-custom:hover {
 .govuk-grid-column-one-third{
     margin-bottom: 20px;
 }
-body{
-    overflow-x: hidden;
-}
-
 .markdown a,
 p a {
     color: #00703c !important;
