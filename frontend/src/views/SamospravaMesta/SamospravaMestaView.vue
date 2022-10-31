@@ -1,7 +1,8 @@
 <template>
   <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">Samospráva mesta</h2>
-    <SubPagesMenu :subpages="subpages" />
+    <div class="content">
+      <SubPagesMenu :subpages="subpages" title="Samospráva mesta" />
+    </div>
   </div>
 </template>
 

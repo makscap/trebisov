@@ -1,9 +1,11 @@
 <template>
   <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">
-      Interpelácie poslancov MsZ v Trebišove
-    </h2>
-    <SubPagesMenu :subpages="subpages" />
+    <div class="content">
+      <SubPagesMenu
+        :subpages="subpages"
+        title="Interpelácie poslancov MsZ v Trebišove"
+      />
+    </div>
   </div>
 </template>
 

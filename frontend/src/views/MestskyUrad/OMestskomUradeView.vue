@@ -1,6 +1,7 @@
 <template>
   <div class="govuk-width-container parent">
     <h2 class="govuk-heading-l title">Mestský úrad</h2>
+    <MapComponent :dataMap="dataMap" />
 
     <div class="content">
       <div class="">
@@ -17,11 +18,18 @@
 
 <script>
 import { useMeta } from "vue-meta";
+import MapComponent from "../../components/MapComponent.vue";
 
 export default {
   name: "MestskeUradView",
   data() {
     return {
+      dataMap: {
+        name: "Mestská polícia Trebišov",
+        street: "M. R. Štefánika 862/204",
+        city: "075 25 Trebišov",
+        text: "Prízemie v budove Mestského úradu v Trebišove",
+      },
       subpages: [
         {
           title: "O mestskom úrade",
@@ -44,7 +52,7 @@ export default {
       ],
     };
   },
-  components: {},
+  components: { MapComponent },
   setup() {
     useMeta({
       title: "Domov",

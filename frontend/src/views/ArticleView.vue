@@ -1,6 +1,6 @@
 <template>
   <div class="govuk-width-container">
-    <LoadingSpin v-if="!loaded"></LoadingSpin>
+    <Loader v-if="!loaded"></Loader>
     <div v-else style="padding-bottom: 50px">
       <span class="govuk-caption-xl idsk-article-pattern__subtitle">{{
         title
@@ -11,7 +11,7 @@
       </p>
       <hr class="idsk-crossroad-line" aria-hidden="true" />
       <Markdown :source="article.body" :html="true" class="markdown" />
-      <!-- <ArticleGallerySlider
+      <ArticleGallerySlider
         v-if="
           article.photoGallery[0] &&
           article.photoGallery[0].images.data.length > 0
@@ -22,9 +22,9 @@
             ? article.photoGallery[0].images.data
             : []
         "
-      ></ArticleGallerySlider> -->
+      ></ArticleGallerySlider>
 
-      <!--      <h3 class="govuk-heading-s black">Zdieľať tento článok:</h3>-->
+      <!-- <h3 class="govuk-heading-s black">Zdieľať tento článok:</h3>-->
       <!--      <div-->
       <!--        class="ss-box"-->
       <!--        data-ss-social="facebook"-->
@@ -35,7 +35,7 @@
       <!--        class="idsk-crossroad-line"-->
       <!--        style="background-color: black"-->
       <!--        aria-hidden="true"-->
-      <!--      />-->
+      <!--      /> -->
       <h3 class="govuk-heading-s black">Súvisiace témy:</h3>
       <div v-for="(similar, index) in similarArticles" :key="index">
         <router-link :to="getCrazyUrl(similar)" class="govuk-link-custom">
@@ -48,8 +48,8 @@
 
 <script>
 import Markdown from "vue3-markdown-it";
-import LoadingSpin from "@/components/Loader";
-// import ArticleGallerySlider from "@/components/ArticleGallerySlider";
+import Loader from "@/components/Loader";
+import ArticleGallerySlider from "@/components/ArticleGallerySlider";
 import { useMeta } from "vue-meta";
 
 export default {
@@ -97,8 +97,8 @@ export default {
   },
   components: {
     Markdown,
-    LoadingSpin,
-    // ArticleGallerySlider,
+    Loader,
+    ArticleGallerySlider,
   },
   beforeMount() {
     this.articleId = this.$route.query.id;
@@ -112,7 +112,8 @@ export default {
   methods: {
     async getArticle() {
       const res = await fetch(
-        process.env.VUE_APP_API_URL +
+        // process.env.VUE_APP_API_URL +
+        "https://strapi.becep.sk/api" +
           `/articles/${this.articleId}/?populate=deep`
       );
       const jsonData = await res.json();
@@ -124,7 +125,8 @@ export default {
     },
     async getCategories() {
       // console.log("toto su typy before", this.types);
-      const res = await fetch(process.env.VUE_APP_API_URL + `/categories`);
+      // const res = await fetch(process.env.VUE_APP_API_URL + `/categories`);
+      const res = await fetch("https://strapi.becep.sk/api" + `/categories`);
       const jsonData = await res.json();
       this.types = this.types.map((type) => {
         const data = jsonData.data.find((d) => {
@@ -135,7 +137,8 @@ export default {
     },
     async getSimilarArticles() {
       const res = await fetch(
-        process.env.VUE_APP_API_URL +
+        // process.env.VUE_APP_API_URL +
+        "https://strapi.becep.sk/api" +
           "/articles/?populate[0]=categories&populate[1]=titleImage&populate[2]=photoGallery.images&sort[0]=datetime%3Adesc"
       );
       const jsonData = await res.json();
@@ -166,7 +169,7 @@ export default {
       );
     },
     getCrazyUrl(article) {
-      return `/aktuality/${
+      return `/${
         this.types.find(
           (t) => t.id === article.attributes.categories.data[0].id
         )?.slug

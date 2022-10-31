@@ -1,10 +1,7 @@
 <template>
-  <div class="govuk-width-container parent">
+  <div class="govuk-width-container">
     <div class="content">
-      <SubPagesMenu
-        :subpages="subpages"
-        title="Mestský športový klub mládeže"
-      />
+      <SubPagesMenu :subpages="subpages" title="O meste" />
     </div>
   </div>
 </template>
@@ -14,38 +11,15 @@ import SubPagesMenu from "@/components/SubPagesMenu.vue";
 import { useMeta } from "vue-meta";
 
 export default {
-  name: "MestskySportovyKlubView",
+  name: "OMesteView",
   data() {
     return {
       subpages: [
-        {
-          title: "O klube",
-          route: "/o-klube",
-        },
-        {
-          title: "Aktuality",
-          route: "/aktuality-klubu",
-        },
-        {
-          title: "Fotogaléria",
-          route: "/fotogaleria",
-        },
-        {
-          title: "Rozpis ľadovej plochy a tréningov",
-          route: "/rozpis-ladovej-plochy",
-        },
-        {
-          title: "Prenájom ihriska s umelou trávou",
-          route: "/prenajom-ihriska",
-        },
-        {
-          title: "Program zápasov",
-          route: "/program-zapasov",
-        },
-        {
-          title: "Dokumenty",
-          route: "/dokumenty",
-        },
+        { title: "Základné údaje", route: "/zakladne-udaje" },
+        { title: "História mesta", route: "/historia-mesta" },
+        { title: "Symboly mesta", route: "/symboly-mesta" },
+        { title: "Štatút mesta", route: "/statut-mesta" },
+        { title: "Infolist mesta Trebišov", route: "/infolist-mesta" },
       ],
     };
   },

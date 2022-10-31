@@ -1,7 +1,7 @@
 <template>
-  <div class="govuk-width-container main-box">
+  <div class="govuk-width-container">
     <div class="content w-75">
-      <h2 class="govuk-heading-l title">Štatút mesta</h2>
+      <h1 class="govuk-heading-l title">Štatút mesta</h1>
       <p>
         Štatút mesta Trebišov upravuje v súlade so všeobecne záväznými právnymi
         predpismi najmä postavenie a pôsobnosť mesta, práva a povinnosti
@@ -27,7 +27,7 @@
         title="Štatút mesta Trebišov"
         class="govuk-link-custom"
         >Štatút mesta Trebišov </a
-      ><span class="no-link">(PDF, 502.63 kB)</span>
+      ><span class="no-link"> (PDF, 502.63 kB)</span>
     </div>
   </div>
 </template>
@@ -74,11 +74,6 @@ export default {
 <style lang="scss" scoped>
 .main-box {
   margin-bottom: 50px;
-}
-
-.title {
-  margin-top: 30px !important;
-  margin-bottom: 30px !important;
 }
 .hero-img {
   width: 100% !important;

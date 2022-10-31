@@ -24,6 +24,8 @@
         <li>evidencia samostatne hospodáriacich roľníkov.</li>
       </ul>
       <hr class="idsk-crossroad-line" aria-hidden="true" />
+      <MapComponent :dataMap="dataMap" />
+      <h4 class="label">Kontaktné informácie</h4>
 
       <!-- <div>
         <h4 class="label">Kontaktné informácie</h4>
@@ -49,11 +51,19 @@
 <script>
 import { useMeta } from "vue-meta";
 import ContactCard from "../../components/ContactCard.vue";
+import MapComponent from "../../components/MapComponent.vue";
 
 export default {
   name: "OddelenieFinancneView",
   data() {
     return {
+      dataMap: {
+        name: "Mestská polícia Trebišov",
+        street: "M. R. Štefánika 862/204",
+        city: "075 25 Trebišov",
+        text: "Prízemie v budove Mestského úradu v Trebišove",
+        img: "mestsky-urad.jpg",
+      },
       contactsData: [
         {
           name: "JUDr. Martin Galgoczy",
@@ -110,7 +120,7 @@ export default {
   },
 
   mounted() {},
-  components: { ContactCard },
+  components: { ContactCard, MapComponent },
   methods: {
     falseFunction(e, route) {
       if (!route) e.preventDefault();

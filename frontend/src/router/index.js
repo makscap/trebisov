@@ -49,6 +49,9 @@ import RozpocetMesta2010_2022View from "../views/RozpocetMesta2010_2022View.vue"
 import ZaverecnyUcetMesta2010_2021View from "../views/ZaverecnyUcetMesta2010_2021View.vue";
 import DotacieDataView from "../views/SamospravaMesta/DotacieDataView.vue";
 
+// O Meste
+import OMesteView from "../views/OMeste/OMesteView.vue";
+
 // Mestsky Urad
 import MestskyUradView from "../views/MestskyUrad/MestskyUradView.vue";
 import OMestskomUradeView from "../views/MestskyUrad/OMestskomUradeView.vue";
@@ -70,7 +73,7 @@ import ZivotVMesteView from "../views/ZivotVMeste/ZivotVMesteView.vue";
 import HistorickeAKulturnePamiatkyView from "../views/ZivotVMeste/HistorickeAKulturnePamiatkyView.vue";
 import PodujatiaView from "../views/ZivotVMeste/PodujatiaView.vue";
 import FotogaleriaView from "../views/ZivotVMeste/FotogaleriaView.vue";
-import AktualityView from "../views/ZivotVMeste/AktualityView.vue";
+// import AktualityView from "../views/ZivotVMeste/AktualityView.vue";
 import MestskySportovyKlubView from "../views/ZivotVMeste/MestskySportovyKlubView.vue";
 import OKlubeView from "../views/ZivotVMeste/OKlubeView.vue";
 import AktualityKlubuView from "../views/ZivotVMeste/AktualityKlubuView.vue";
@@ -81,6 +84,8 @@ import ProgramZapasovView from "../views/ZivotVMeste/ProgramZapasovView.vue";
 import DokumetyKlubView from "../views/ZivotVMeste/DokumetyKlubView.vue";
 import SkolstvoView from "../views/ZivotVMeste/Skolstvo/SkolstvoView.vue";
 import PoliciaView from "../views/ZivotVMeste/Policia/PoliciaView.vue";
+
+import ActivitiesView from "../views/ActivitiesView.vue";
 
 export const routes = [
   {
@@ -93,7 +98,7 @@ export const routes = [
     path: "/o-meste",
     name: "O meste",
     title: "O meste",
-    component: SubMenuView,
+    component: OMesteView,
   },
   {
     path: "/samosprava-mesta",
@@ -270,13 +275,15 @@ export const routes = [
     path: "/zivot-v-meste/aktuality",
     name: "Aktuality",
     title: "Aktuality",
-    component: AktualityView,
+    // component: AktualityView,
+    component: ActivitiesView,
   },
   {
-    path: "/zivot-v-meste/aktuality/:article",
-    name: "",
-    title: "",
+    path: "/zivot-v-meste/aktuality/:type",
+    name: "1",
+    title: "1",
     // component: AktualityView,
+    component: ActivitiesView,
   },
   {
     path: "/zivot-v-meste/mestsky-sportovy-klub-mladeze",

@@ -1,42 +1,44 @@
 <template>
   <div class="govuk-width-container">
-    <div class="box">
-      <img class="hero-img" src="../../assets/trebisov_house.jpg" alt="house" />
-      <h2 class="govuk-heading-l title">Mesto Trebišov</h2>
-    </div>
+    <div class="content">
+      <div class="image_box relative image_mt">
+        <img class="image" src="../../assets/trebisov_house.jpg" alt="house" />
+        <h1 class="govuk-heading-l title_abs">Mesto Trebišov</h1>
+      </div>
 
-    <div class="info-box">
-      <p class="text">
-        <span class="text-bold">Kraj:</span> Košický kraj I
-        <span class="text-bold">Okres:</span> Trebišov
-      </p>
-      <p class="text">
-        <span class="text-bold">Počet obyvateľov:</span> 23 223
-      </p>
-      <p class="text">
-        <span class="text-bold">Smerové telefónne číslo:</span> 056
-      </p>
-      <p class="text"><span class="text-bold">PSČ:</span> 075 01</p>
-    </div>
+      <div class="info_box w-75">
+        <p class="text">
+          <span class="bold blue">Kraj:</span> Košický kraj I
+          <span class="bold blue">Okres:</span> Trebišov
+        </p>
+        <p class="text">
+          <span class="bold blue">Počet obyvateľov:</span> 23 223
+        </p>
+        <p class="text">
+          <span class="bold blue">Smerové telefónne číslo:</span> 056
+        </p>
+        <p class="text"><span class="bold blue">PSČ:</span> 075 01</p>
+      </div>
 
-    <p class="content">
-      Okres Trebišov je prevažne poľnohospodársky kraj. Dominantami sú úrodné
-      lány, ovocné sady, zelené záhrady, lužné lesy s prírodnými rezerváciami a
-      malebné pahorkatiny so scenériou Slanských vrchov, ktoré poskytujú
-      možnosti pre rekreáciu a oddych. Súčasťou regiónu je tokajská
-      vinohradnícka oblasť, ktorá má vynikajúce vína najvyššej kvality.
-      <br /><br />Kultúrno-historické pamiatky tvoria súčasť nášho národného
-      kultúrneho dedičstva. V Trebišove sa nachádza kaštieľ postavený Grófom
-      Imrichom Csákym v roku 1786 v neskorobarokovom slohu, ktorý potom
-      prebudovala rodina Andrassyovcov momentálne slúži ako vlastivedné múzeum.
-      <br /><br />Gotický kostol s neskoršou barokovou úpravou, postavený pred
-      rokom 1404. <br /><br />Hrad Parič a panstvo dostali po magistrovi
-      Michalovi z rodu Aba (1280) Drugethovci (1319). <br /><br />Ochotnícke
-      divadlo má v Trebišove bohatú tradíciu. Dlhé roky šíril slávu
-      trebišovského ochotníckeho divadla divadelný súbor Potravinár. Je
-      potešiteľné, že na túto tradíciu plynule nadviazal ochotnícky divadelný
-      súbor, ktorý nesie názov Divadlo „G“.
-    </p>
+      <p class="content w-75">
+        Okres Trebišov je prevažne poľnohospodársky kraj. Dominantami sú úrodné
+        lány, ovocné sady, zelené záhrady, lužné lesy s prírodnými rezerváciami
+        a malebné pahorkatiny so scenériou Slanských vrchov, ktoré poskytujú
+        možnosti pre rekreáciu a oddych. Súčasťou regiónu je tokajská
+        vinohradnícka oblasť, ktorá má vynikajúce vína najvyššej kvality.
+        <br /><br />Kultúrno-historické pamiatky tvoria súčasť nášho národného
+        kultúrneho dedičstva. V Trebišove sa nachádza kaštieľ postavený Grófom
+        Imrichom Csákym v roku 1786 v neskorobarokovom slohu, ktorý potom
+        prebudovala rodina Andrassyovcov momentálne slúži ako vlastivedné
+        múzeum. <br /><br />Gotický kostol s neskoršou barokovou úpravou,
+        postavený pred rokom 1404. <br /><br />Hrad Parič a panstvo dostali po
+        magistrovi Michalovi z rodu Aba (1280) Drugethovci (1319).
+        <br /><br />Ochotnícke divadlo má v Trebišove bohatú tradíciu. Dlhé roky
+        šíril slávu trebišovského ochotníckeho divadla divadelný súbor
+        Potravinár. Je potešiteľné, že na túto tradíciu plynule nadviazal
+        ochotnícky divadelný súbor, ktorý nesie názov Divadlo „G“.
+      </p>
+    </div>
   </div>
 </template>
 
@@ -80,21 +82,12 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.hero-img {
-  width: 100% !important;
+.image_mt {
+  margin-top: 30px !important;
 }
-
-.box {
-  position: relative;
-  margin-bottom: 35px;
-  margin-top: 30px;
-}
-
-.box img {
-  height: 100%;
-}
-
-.title {
+.title_abs {
+  padding: 0 !important;
+  margin: 0 !important;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -102,22 +95,10 @@ export default {
   color: #ffffff !important;
 }
 
-.info-box {
+.info_box {
   margin-bottom: 30px;
 }
 .text {
-  font-weight: 400 !important;
-  font-size: 19px !important;
-  line-height: 25px !important;
   margin-bottom: 2px !important;
-}
-
-.text-bold {
-  font-weight: 700 !important;
-  color: #024497;
-}
-
-.content {
-  margin-bottom: 50px;
 }
 </style>

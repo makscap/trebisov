@@ -1,6 +1,6 @@
 <template>
   <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">TOPIC ???????</h2>
+    <h2 class="govuk-heading-l title">TOPIC ??????? title in menu comp!</h2>
     <div>Dátum konania: 20.06.2022 o 09.00 h</div>
     <div>Predsedajúci: PhDr. Marek Čižmár</div>
 

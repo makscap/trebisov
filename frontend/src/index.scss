@@ -54,6 +54,10 @@ $govuk-global-styles: true;
 .idsk-hr-separator{
     background-color: #DEE0E2;
 }
+
+.govuk-heading-l {
+    margin-bottom: 30px !important;
+}
 .govuk-heading-l, .govuk-heading-m, .govuk-heading-s, .govuk-heading-xs, .govuk-heading-xl  {
     font-family: 'Source Sans Pro', sans-serif;
     color: #024497 !important ;
@@ -85,8 +89,8 @@ a:hover, .govuk-link-custom:hover {
 
 //   Custom tailwind
   
-.green {
-    color: #4F8136 !important;
+.blue {
+    color: #024497 !important;
 }
 
 .white {
@@ -113,20 +117,32 @@ a:hover, .govuk-link-custom:hover {
     padding: 0px !important;
 }
 
+.mb-end {
+margin-bottom: 50px !important;
+}
+
 .w-75 {
     width: 75% !important;
 }
 
 
+
+
 // Settings for text sections on pages
 
 .content {
-//    max-width: 75%;
+margin-bottom: 50px;
+font-family: 'Source Sans Pro', sans-serif;
+font-style: normal;
+}
+
+.content h1 {
+    margin-top: 30px !important;
+        margin-bottom: 30px !important;
 }
 
 .content a {
-    font-family: "Source Sans Pro";
-    font-weight: 400;
+      font-weight: 400;
     font-size: 19px;
     line-height: 25px;
     text-decoration: underline;
@@ -134,8 +150,6 @@ a:hover, .govuk-link-custom:hover {
 }
 
 .content li {
-    font-family: "Source Sans Pro";
-    font-style: normal;
     font-weight: 400;
     font-size: 19px;
     line-height: 25px;
@@ -143,41 +157,62 @@ a:hover, .govuk-link-custom:hover {
     margin-bottom: 5px;
 }
 
-.content .item_link {
-    list-style: none;
-    padding: 0px;
+.content ul {
     margin-bottom: 20px;
 }
 
-.content li:last-child {
+.content ul:not(.menu) li:last-child {
     margin-bottom: 0px;
     margin: 0px;
 }
 
-.content p {
-    font-family: "Source Sans Pro";
+li:not(.active)>a {
+    color: grey;
+}
+
+.content  p {
     font-weight: 400;
     font-size: 19px;
     line-height: 25px;
     color: #0b0c0c;
 }
 
-.content > span {
-    font-family: "Source Sans Pro";
+.content  span {
     font-weight: 700;
     font-size: 19px;
     line-height: 25px;
     color: #0b0c0c;
 }
 
-.parent {
+.content .label {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color: #024497;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.box {
     margin-bottom: 50px !important;
 }
 
-.title {
-    margin-top: 30px !important;
-    margin-bottom: 30px !important;
+.image_box {
+    margin-bottom: 30px;
 }
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+
 
 @media (max-width: 48.0525em) and (min-width: 40.0625em){
 .idsk-body-secondary {

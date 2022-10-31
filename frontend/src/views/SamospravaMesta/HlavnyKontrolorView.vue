@@ -1,7 +1,8 @@
 <template>
   <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">Hlavný kontrolór</h2>
-    <SubPagesMenu :subpages="subpages" />
+    <div class="content">
+      <SubPagesMenu :subpages="subpages" title="Hlavný kontrolór" />
+    </div>
   </div>
 </template>
 

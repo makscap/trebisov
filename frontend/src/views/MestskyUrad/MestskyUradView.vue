@@ -1,7 +1,8 @@
 <template>
   <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">Mestský úrad</h2>
-    <SubPagesMenu :subpages="subpages" />
+    <div class="content">
+      <SubPagesMenu :subpages="subpages" title="Mestský úrad" />
+    </div>
   </div>
 </template>
 

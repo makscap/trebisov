@@ -1,7 +1,8 @@
 <template>
   <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">Oddelenia MsÚ v Trebišove</h2>
-    <SubPagesMenu :subpages="subpages" />
+    <div class="content">
+      <SubPagesMenu :subpages="subpages" title="Oddelenia MsÚ v Trebišove" />
+    </div>
   </div>
 </template>
 

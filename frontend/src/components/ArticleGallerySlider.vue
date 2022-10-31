@@ -164,7 +164,7 @@ export default {
     height: 175px;
   }
 }
-@media screen and(min-width: 960px) {
+@media screen and (min-width: 960px) {
   .article-gallery-slid .slide {
     // left: -30px !important;
     height: 250px;

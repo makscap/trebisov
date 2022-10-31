@@ -4,13 +4,13 @@
     <div v-if="!articleId" class="govuk-width-container">
       <div class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
         <h1 class="govuk-heading-l">{{ type ? type.value : "Aktuality" }}</h1>
-        <LoadingSpin v-if="!loaded"></LoadingSpin>
+        <Loader v-if="!loaded"></Loader>
         <div v-if="loaded && articles.length > 0">
           <div class="govuk-grid-row height-grid" v-if="page == 1">
             <div class="govuk-grid-column-full">
               <div class="idsk-card idsk-card-hero">
                 <router-link
-                  :to="getCrazyUrl(articles[0])"
+                  :to="this.$route.path + getCrazyUrl(articles[0])"
                   :title="
                     'Po kliknutií sa otvorí v tomto okne článok s názvom ' +
                     articles[0].attributes.name
@@ -22,7 +22,8 @@
                     width="100%"
                     :src="
                       articles[0].attributes.titleImage.data
-                        ? articles[0].attributes.titleImage.data.attributes.url
+                        ? 'https://strapi.becep.sk/' +
+                          articles[0].attributes.titleImage.data.attributes.url
                         : require('@/assets/becep_logo.svg')
                     "
                     :alt="
@@ -76,7 +77,7 @@
 
                   <div class="idsk-heading idsk-heading-hero">
                     <router-link
-                      :to="getCrazyUrl(articles[0])"
+                      :to="this.$route.path + getCrazyUrl(articles[0])"
                       class="idsk-card-title govuk-link"
                       :title="
                         'Po kliknutií sa otvorí v tomto okne článok s názvom ' +
@@ -104,7 +105,7 @@
               >
                 <div class="idsk-card idsk-card-secondary">
                   <router-link
-                    :to="getCrazyUrl(article)"
+                    :to="this.$route.path + getCrazyUrl(article)"
                     :title="
                       'Po kliknutií sa otvorí v tomto okne článok s názvom ' +
                       article.attributes.name
@@ -115,7 +116,8 @@
                       style="width: 100%; object-fit: cover"
                       :src="
                         article.attributes.titleImage.data
-                          ? article.attributes.titleImage.data.attributes.url
+                          ? 'https://strapi.becep.sk/' +
+                            article.attributes.titleImage.data.attributes.url
                           : require('@/assets/becep_logo.svg')
                       "
                       :alt="
@@ -165,7 +167,7 @@
 
                     <div class="idsk-heading idsk-heading-secondary">
                       <router-link
-                        :to="getCrazyUrl(article)"
+                        :to="this.$route.path + getCrazyUrl(article)"
                         class="idsk-card-title govuk-link"
                         :title="
                           'Po kliknutií sa otvorí v tomto okne článok s názvom ' +
@@ -190,7 +192,7 @@
                 class="page-link"
                 href="#"
                 @click="
-                  falseFunction;
+                  falseFunction();
                   setPageFunction(-1);
                 "
                 >«</a
@@ -201,7 +203,7 @@
                 :class="i === page ? 'activated' : 'page-link'"
                 href="#"
                 @click="
-                  falseFunction;
+                  falseFunction();
                   setPage(i);
                 "
                 >{{ i }}</a
@@ -214,7 +216,7 @@
                 :class="page == pages ? 'disabled ' : ''"
                 href="#"
                 @click="
-                  falseFunction;
+                  falseFunction();
                   setPageFunction(1);
                 "
                 >»</a
@@ -233,7 +235,7 @@
   </div>
 </template>
 <script>
-import LoadingSpin from "@/components/Loader";
+import Loader from "@/components/Loader";
 import ArticleView from "../views/ArticleView.vue";
 import { useMeta } from "vue-meta";
 
@@ -258,7 +260,7 @@ export default {
     });
   },
   components: {
-    LoadingSpin,
+    Loader,
     ArticleView,
   },
   data() {
@@ -343,7 +345,10 @@ export default {
       }
     },
     async getCategories() {
-      const res = await fetch(process.env.VUE_APP_API_URL + `/categories`);
+      // const res = await fetch(process.env.VUE_APP_API_URL + `/categories`);
+      const res = await fetch(
+        "        https://strapi.becep.sk/api" + `/categories`
+      );
       const jsonData = await res.json();
       this.types = this.types.map((type) => {
         const data = jsonData.data.find((d) => {
@@ -356,7 +361,8 @@ export default {
       this.articles = [];
       this.loaded = false;
       fetch(
-        process.env.VUE_APP_API_URL +
+        // process.env.VUE_APP_API_URL +
+        "https://strapi.becep.sk/api" +
           `/articles?populate[0]=categories&populate[1]=titleImage&populate[2]=photoGallery.images&sort=datetime:desc&filters[$or][0][archive][$eq]=false&filters[$or][1][archive][$null]=true${
             this.type
               ? "&filters[categories][name][$contains]=" + this.type.value
@@ -394,7 +400,7 @@ export default {
       );
     },
     getCrazyUrl(article) {
-      return `/aktuality/${
+      return `/${
         this.types.find(
           (t) => t.id === article.attributes.categories.data[0].id
         )?.slug
