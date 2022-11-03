@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container">
     <div class="content">
-      <div class="image_box relative image_mt">
+      <div class="image_box relative">
         <img class="image" src="../../assets/trebisov_house.jpg" alt="house" />
         <h1 class="govuk-heading-l title_abs">Mesto Trebišov</h1>
       </div>
@@ -82,9 +82,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.image_mt {
-  margin-top: 30px !important;
-}
+// .image_mt {
+// margin-top: 30px !important;
+// }
 .title_abs {
   padding: 0 !important;
   margin: 0 !important;

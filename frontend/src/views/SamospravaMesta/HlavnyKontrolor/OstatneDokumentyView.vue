@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container">
     <div class="content">
-      <h2 class="govuk-heading-l title">Ostatné dokumenty</h2>
+      <h1 class="govuk-heading-l">Ostatné dokumenty</h1>
 
       <LinksAndSizeComponent :files="files" />
     </div>
@@ -65,9 +65,4 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-.title {
-  margin-top: 30px !important;
-  margin-bottom: 30px !important;
-}
-</style>
+<style lang="scss" scoped></style>

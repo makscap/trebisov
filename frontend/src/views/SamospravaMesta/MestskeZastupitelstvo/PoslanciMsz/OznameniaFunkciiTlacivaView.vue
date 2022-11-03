@@ -1,11 +1,12 @@
 <template>
-  <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">
-      Oznámenia funkcií, zamestnaní, činností a majetkových pomerov verejného
-      funkcionára - tlačivá
-    </h2>
+  <div class="govuk-width-container">
+    <div class="content">
+      <h1 class="govuk-heading-l">
+        Oznámenia funkcií, zamestnaní, činností a majetkových pomerov verejného
+        funkcionára - tlačivá
+      </h1>
 
-    <div v-for="link in data" :key="link.id" class="govuk-accordion__section">
+      <!-- <div v-for="link in data" :key="link.id" class="govuk-accordion__section">
       <a
         :href="require('@/assets/pdf/test.pdf')"
         target="_blank"
@@ -15,12 +16,16 @@
       ><span class="no-link"> ({{ link.ext }}, {{ link.size }})</span>
 
       <p class="govuk-body"></p>
+    </div> -->
+
+      <LinksAndSizeComponent :files="data" />
     </div>
   </div>
 </template>
 
 <script>
 import { useMeta } from "vue-meta";
+import LinksAndSizeComponent from "@/components/LinksAndSizeComponent.vue";
 
 export default {
   name: "OznameniaFunkciiTlacivaView",
@@ -74,6 +79,9 @@ export default {
   },
 
   mounted() {},
+  components: {
+    LinksAndSizeComponent,
+  },
   methods: {
     falseFunction(e, route) {
       if (!route) e.preventDefault();

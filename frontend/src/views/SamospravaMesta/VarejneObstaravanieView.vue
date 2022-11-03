@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container">
-    <div class="content">
-      <h2 class="govuk-heading-l title">Verejné obstarávanie</h2>
+    <div class="content w-75">
+      <h1 class="govuk-heading-l">Verejné obstarávanie</h1>
       <p>
         Verejným obstarávaním sú pravidlá a postupy podľa zákona č. 25/2006 Z.
         z. o verejnom obstarávaní a o zmene a doplnení niektorých zákonov v
@@ -9,8 +9,11 @@
         tovaru, zákazky na uskutočnenie stavebných prác, zákazky na poskytnutie
         služieb a súťaž návrhov.
       </p>
-    </div>
-    <div class="w-75">
+
+      <h3 class="idsk-crossroad__item label govuk-heading-m">
+        Profil verejného obstarávateľa
+      </h3>
+
       <ListLinks title="" :links="links" />
     </div>
   </div>
@@ -18,7 +21,7 @@
 
 <script>
 import { useMeta } from "vue-meta";
-import ListLinks from "../components/ListLinks.vue";
+import ListLinks from "../../components/ListLinks.vue";
 
 export default {
   name: "VarejneObstaravanieView",
@@ -72,9 +75,4 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-.title {
-  margin-top: 30px !important;
-  margin-bottom: 30px !important;
-}
-</style>
+<style lang="scss" scoped></style>

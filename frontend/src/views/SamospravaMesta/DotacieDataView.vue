@@ -1,8 +1,9 @@
 <template>
-  <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">Dotácie poskytnuté v roku 2021</h2>
-
-    <TableComponent :tableData="tableData" />
+  <div class="govuk-width-container">
+    <div class="content">
+      <h1 class="govuk-heading-l">Dotácie poskytnuté v roku 2021</h1>
+      <TableComponent :tableData="tableData" />
+    </div>
   </div>
 </template>
 

@@ -1,8 +1,7 @@
 <template>
   <div class="govuk-width-container main-box">
-    <h2 class="govuk-heading-l title">Oddelenie finančné</h2>
-
-    <div class="content">
+    <div class="content w-75">
+      <h2 class="govuk-heading-l title">Oddelenie finančné</h2>
       <p>Oddelenie finančné zabezpečuje činnosti najmä v oblastiach:</p>
       <ul>
         <li>rozpočet a záverečný účet,</li>

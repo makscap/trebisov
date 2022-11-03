@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container">
     <div class="content w-75">
-      <h2 class="govuk-heading-l title">Mestské kultúrne stredisko</h2>
+      <h1 class="govuk-heading-l">Primátor mesta</h1>
 
       <div class="textbox">
         <div class="textbox_child_first">
@@ -15,6 +15,12 @@
               Telefón:
               <a href="tel:+421566722665" className="phone">
                 +421 56 672 26 65
+              </a>
+            </li>
+            <li>
+              Fax:
+              <a href="tel:+421566726668" className="phone">
+                +421 56 672 66 68
               </a>
             </li>
             <li>
@@ -190,7 +196,7 @@
 import { useMeta } from "vue-meta";
 
 export default {
-  name: "MestskeKulturneStrediskoView",
+  name: "StatutMestaView",
   data() {
     return {};
   },

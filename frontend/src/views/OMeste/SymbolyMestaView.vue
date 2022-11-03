@@ -1,8 +1,7 @@
 <template>
-  <div class="govuk-width-container w-75">
-    <div class="content">
-      <h1 class="govuk-heading-l title">Symboly mesta</h1>
-
+  <div class="govuk-width-container">
+    <div class="content w-75">
+      <h1 class="govuk-heading-l">Symboly mesta</h1>
       <p>Mestské symboly sú:</p>
 
       <h2 class="label">Erb mesta</h2>

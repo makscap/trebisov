@@ -1,43 +1,44 @@
 <template>
-  <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">Interpelácie poslancov 2022</h2>
-
-    <div data-module="idsk-table" id="priklad-1">
-      <table class="idsk-table">
-        <thead class="idsk-table__head">
-          <tr class="idsk-table__row">
-            <th scope="col" class="idsk-table__header">
-              <span class="th-span">Číslo</span>
-            </th>
-            <th scope="col" class="idsk-table__header">
-              <span class="th-span">Dátum</span>
-            </th>
-            <th scope="col" class="idsk-table__header">
-              <span class="th-span">Poslanec</span>
-            </th>
-            <th scope="col" class="idsk-table__header">
-              <span class="th-span"> </span>
-            </th>
-          </tr>
-        </thead>
-        <tbody class="idsk-table__body">
-          <tr class="idsk-table__row" v-for="(item, i) in tableData" :key="i">
-            <td class="idsk-table__cell">{{ item.number }}</td>
-            <td class="idsk-table__cell">{{ item.date }}</td>
-            <td class="idsk-table__cell">{{ item.name }}</td>
-            <td class="idsk-table__cell">
-              <a
-                :href="item.url"
-                target="_blank"
-                :title="item.doc_name"
-                class="govuk-link-custom link"
-              >
-                {{ item.doc_name }} ({{ item.doc_size }} {{ item.doc_ext }})
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="govuk-width-container">
+    <div class="content">
+      <h2 class="govuk-heading-l">Interpelácie poslancov 2022</h2>
+      <div data-module="idsk-table" id="priklad-1">
+        <table class="idsk-table">
+          <thead class="idsk-table__head">
+            <tr class="idsk-table__row">
+              <th scope="col" class="idsk-table__header">
+                <span class="th-span">Číslo</span>
+              </th>
+              <th scope="col" class="idsk-table__header">
+                <span class="th-span">Dátum</span>
+              </th>
+              <th scope="col" class="idsk-table__header">
+                <span class="th-span">Poslanec</span>
+              </th>
+              <th scope="col" class="idsk-table__header">
+                <span class="th-span"> </span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="idsk-table__body">
+            <tr class="idsk-table__row" v-for="(item, i) in tableData" :key="i">
+              <td class="idsk-table__cell">{{ item.number }}</td>
+              <td class="idsk-table__cell">{{ item.date }}</td>
+              <td class="idsk-table__cell">{{ item.name }}</td>
+              <td class="idsk-table__cell">
+                <a
+                  :href="item.url"
+                  target="_blank"
+                  :title="item.doc_name"
+                  class="govuk-link-custom link"
+                >
+                  {{ item.doc_name }} ({{ item.doc_size }} {{ item.doc_ext }})
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </template>

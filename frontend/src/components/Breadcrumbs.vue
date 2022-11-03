@@ -253,6 +253,7 @@ export default {
 <style scoped>
 .breadcrumbs {
   width: 100%;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 1020px) {
   .breadcrumbs {

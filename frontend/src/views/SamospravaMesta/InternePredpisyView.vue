@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container">
     <div class="content">
-      <h2 class="govuk-heading-l title">Interné predpisy</h2>
+      <h1 class="govuk-heading-l">Interné predpisy</h1>
 
       <LinksAndSizeComponent :files="files" />
     </div>
@@ -10,7 +10,7 @@
 
 <script>
 import { useMeta } from "vue-meta";
-import LinksAndSizeComponent from "../../components/LinksAndSizeComponent.vue";
+import LinksAndSizeComponent from "@/components/LinksAndSizeComponent.vue";
 
 export default {
   name: "InertnePredpisyView",
@@ -65,9 +65,4 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-.title {
-  margin-top: 30px !important;
-  margin-bottom: 30px !important;
-}
-</style>
+<style lang="scss" scoped></style>

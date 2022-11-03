@@ -28,7 +28,10 @@ export default {
           route: "/zasadnutia",
         },
         { title: "Uznesenia", route: "/uznesenia" },
-        { title: "Priamy prenos zo zasadnutia", route: "/" },
+        {
+          title: "Priamy prenos zo zasadnutia",
+          route: "/priamy-prenos-zo-zasadnutia",
+        },
         { title: "Mestská rada", route: "/mestska-rada" },
         { title: "Komisie", route: "/komisie" },
         { title: "Dokumenty", route: "/dokumenty" },

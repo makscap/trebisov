@@ -6,14 +6,14 @@ import HistoriaMestaTrebisovView from "../views/OMeste/HistoriaMestaTrebisovView
 import SymbolyMestaView from "../views/OMeste/SymbolyMestaView.vue";
 import StatutMestaView from "../views/OMeste/StatutMestaView.vue";
 import InfolistMestaView from "../views/OMeste/InfolistMestaView.vue";
-import PrimatorView from "../views/PrimatorView.vue";
-import ZastupcoviaPrimatora from "../views/ZastupcoviaPrimatora.vue";
-import OZastupitelstveView from "../views/OZastupitelstveView.vue";
-import Poslanci18_20View from "../views/Poslanci18_20View.vue";
+import PrimatorView from "../views/SamospravaMesta/PrimatorView.vue";
+import ZastupcoviaPrimatora from "../views/SamospravaMesta/ZastupcoviaPrimatora.vue";
+import OZastupitelstveView from "../views/SamospravaMesta/MestskeZastupitelstvo/OZastupitelstveView.vue";
+import Poslanci18_20View from "../views/SamospravaMesta/MestskeZastupitelstvo/PoslanciMsz/Poslanci18_20View.vue";
 // import LinksComponent from "../views/LinksComponent.vue";
-import UradnaTabulaView from "../views/UradnaTabulaView.vue";
-import RozpocetMestaView from "../views/RozpocetMestaView.vue";
-import VarejneObstaravanieView from "../views/VarejneObstaravanieView.vue";
+import UradnaTabulaView from "../views/SamospravaMesta/UradnaTabulaView.vue";
+import RozpocetMestaView from "../views/SamospravaMesta/RozpocetMestaView.vue";
+import VarejneObstaravanieView from "../views/SamospravaMesta/VarejneObstaravanieView.vue";
 import MestoTrebisovView from "../views/SamospravaMesta/MestoTrebisovView.vue";
 import TechnickeSluzbyMestaView from "../views/SamospravaMesta/TechnickeSluzbyMestaView.vue";
 import MestskySportovyKlubMladezeView from "../views/SamospravaMesta/MestskySportovyKlubMladezeView.vue";
@@ -26,12 +26,12 @@ import HlavnyKontrolorView from "../views/SamospravaMesta/HlavnyKontrolorView.vu
 import MestskeZastupitelstvoView from "../views/SamospravaMesta/MestskeZastupitelstvoView.vue";
 import DotacieView from "../views/SamospravaMesta/DotacieView.vue";
 import PoslanciVTrebisoveView from "../views/SamospravaMesta/MestskeZastupitelstvo/PoslanciVTrebisoveView.vue";
-import PrehladPoslancovVolebnzchObdobiView from "../views/SamospravaMesta/PrehladPoslancovVolebnzchObdobiView.vue";
-import InterpelaciePoslancovMszView from "../views/SamospravaMesta/InterpelaciePoslancovMszView.vue";
-import PodnetyPoslancovMszView from "../views/SamospravaMesta/PodnetyPoslancovMszView.vue";
-import InterpelaciePoslancovRokView from "../views/SamospravaMesta/InterpelaciePoslancovRokView.vue";
-import OznameniaFunkciiTlacivaView from "../views/SamospravaMesta/OznameniaFunkciiTlacivaView.vue";
-import OznameniaFunkciiPoslanciView from "../views/SamospravaMesta/OznameniaFunkciiPoslanciView.vue";
+import PrehladPoslancovVolebnzchObdobiView from "../views/SamospravaMesta/MestskeZastupitelstvo/PoslanciMsz/PrehladPoslancovVolebnzchObdobiView.vue";
+import InterpelaciePoslancovMszView from "../views/SamospravaMesta/MestskeZastupitelstvo/PoslanciMsz/InterpelaciePoslancovMszView.vue";
+import PodnetyPoslancovMszView from "../views/SamospravaMesta/MestskeZastupitelstvo/PoslanciMsz/PodnetyPoslancovMszView.vue";
+import InterpelaciePoslancovRokView from "../views/SamospravaMesta/MestskeZastupitelstvo/PoslanciMsz/InterpelaciePoslancovRokView.vue";
+import OznameniaFunkciiTlacivaView from "../views/SamospravaMesta/MestskeZastupitelstvo/PoslanciMsz/OznameniaFunkciiTlacivaView.vue";
+import OznameniaFunkciiPoslanciView from "../views/SamospravaMesta/MestskeZastupitelstvo/PoslanciMsz/OznameniaFunkciiPoslanciView.vue";
 import ZasadnutiaView from "../views/SamospravaMesta/MestskeZastupitelstvo/ZasadnutiaView.vue";
 import ZasadnutiaSubPageView from "../views/SamospravaMesta/ZasadnutiaSubPageView.vue";
 import VideozaznamView from "../views/SamospravaMesta/VideozaznamView.vue";
@@ -45,9 +45,14 @@ import ProjektyView from "../views/SamospravaMesta/ProjektyView.vue";
 import MestskaRadaView from "../views/SamospravaMesta/MestskeZastupitelstvo/MestskaRadaView.vue";
 import ClenoviaMestskejRadyView from "../views/SamospravaMesta/ClenoviaMestskejRadyView.vue";
 import ZasadnutiaMestskejRadyView from "../views/SamospravaMesta/ZasadnutiaMestskejRadyView.vue";
-import RozpocetMesta2010_2022View from "../views/RozpocetMesta2010_2022View.vue";
-import ZaverecnyUcetMesta2010_2021View from "../views/ZaverecnyUcetMesta2010_2021View.vue";
+import RozpocetMesta2010_2022View from "../views/SamospravaMesta/RozpocetMesta2010_2022View.vue";
+import ZaverecnyUcetMesta2010_2021View from "../views/SamospravaMesta/ZaverecnyUcetMesta2010_2021View.vue";
 import DotacieDataView from "../views/SamospravaMesta/DotacieDataView.vue";
+import KomisieView from "../views/SamospravaMesta/MestskeZastupitelstvo/KomisieView.vue";
+import ZasadnutiaKomisiiView from "../views/SamospravaMesta/MestskeZastupitelstvo/ZasadnutiaKomisiiView.vue";
+import KomisieFinancnejView from "../views/SamospravaMesta/MestskeZastupitelstvo/KomisieFinancnejView.vue";
+import PriamyPrenosView from "../views/SamospravaMesta/MestskeZastupitelstvo/PriamyPrenosView.vue";
+import RevitalizaciaHraduView from "../views/SamospravaMesta/RevitalizaciaHraduView.vue";
 
 // O Meste
 import OMesteView from "../views/OMeste/OMesteView.vue";
@@ -475,6 +480,12 @@ export const routes = [
     title: "Projekty",
     component: ProjektyView,
   },
+  {
+    path: "/samosprava-mesta/projekty/revitalizacia-hradu-paric",
+    name: "Revitalizácia hradu Parič (RePar)",
+    title: "Revitalizácia hradu Parič (RePar)",
+    component: RevitalizaciaHraduView,
+  },
 
   {
     path: "/samosprava-mesta/verejne-obstaravanie",
@@ -587,6 +598,12 @@ export const routes = [
     component: MestskaRadaView,
   },
   {
+    path: "/samosprava-mesta/mestske-zastupitelstvo/priamy-prenos-zo-zasadnutia",
+    name: "Priamy prenos zo zasadnutia MsZ v Trebišove",
+    title: "Priamy prenos zo zasadnutia MsZ v Trebišove",
+    component: PriamyPrenosView,
+  },
+  {
     path: "/samosprava-mesta/mestske-zastupitelstvo/mestska-rada/clenovia-mestskej-rady",
     name: "Členovia mestskej rady",
     title: "Členovia mestskej rady",
@@ -603,7 +620,19 @@ export const routes = [
     path: "/samosprava-mesta/mestske-zastupitelstvo/komisie",
     name: "Komisie",
     title: "Komisie",
-    // component: UzneseniaView,
+    component: KomisieView,
+  },
+  {
+    path: "/samosprava-mesta/mestske-zastupitelstvo/komisie/zasadnutia-komisii",
+    name: "Zasadnutia komisií ",
+    title: "Zasadnutia komisií ",
+    component: ZasadnutiaKomisiiView,
+  },
+  {
+    path: "/samosprava-mesta/mestske-zastupitelstvo/komisie/zasadnutia-komisii/komisia-financna",
+    name: "Zasadnutia komisie finančnej",
+    title: "Zasadnutia komisie finančnej",
+    component: KomisieFinancnejView,
   },
   {
     path: "/samosprava-mesta/mestske-zastupitelstvo/dokumenty",

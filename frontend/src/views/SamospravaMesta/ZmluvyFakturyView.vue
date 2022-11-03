@@ -55,7 +55,13 @@
             <p>Organizácia:</p>
             <p>{{ el.organization }}</p>
             <p>{{ el.text }}</p>
-            <p>Odkaz na Centrálny register zmlúv:</p>
+            <p>
+              {{
+                indx === 0
+                  ? "Odkaz na Centrálny register zmlúv:"
+                  : "Aktuálne zverejňované faktúry nájdete na stránke:"
+              }}
+            </p>
             <a target="_blank" class="govuk-link-custom">{{ el.site }}</a>
 
             <p class="govuk-body"></p>
@@ -85,7 +91,7 @@ export default {
                   organization:
                     "Mesto Trebišov, M. R. Štefánika 862/204, 075 25 Trebišov",
                   text: "Povinne zverejňované zmluvy sú od 31.03.2022 v zmysle § 5a ods. 6 zákona č. 211/2000 Z. z. o slobodnom prístupe k informáciám a o zmene a doplnení niektorých zákonov (zákon o slobode informácií) v znení neskorších predpisov zverejňované v Centrálnom registri zmlúv.",
-                  site: "https://crz.gov.sk",
+                  site: "www.crz.gov.sk/6275911-sk/mesto-trebisov/?order=32",
                 },
               ],
             },
@@ -96,8 +102,8 @@ export default {
                 {
                   organization:
                     "Mesto Trebišov, M. R. Štefánika 862/204, 075 25 Trebišov",
-                  text: "Povinne zverejňované zmluvy sú od 31.03.2022 v zmysle § 5a ods. 6 zákona č. 211/2000 Z. z. o slobodnom prístupe k informáciám a o zmene a doplnení niektorých zákonov (zákon o slobode informácií) v znení neskorších predpisov zverejňované v Centrálnom registri zmlúv.",
-                  site: "https://crz.gov.sk",
+                  text: "Povinne zverejňované údaje o faktúrach za tovary, služby a práce v zmysle § 5b zákona č. 211/2000 Z. z. o slobodnom prístupe k informáciám a o zmene a doplnenní niektorých zákonov (zákon o slobode informácií) v znení neskorších predpisov.",
+                  site: "www.egov.trebisov.sk",
                 },
               ],
             },
@@ -108,8 +114,8 @@ export default {
                 {
                   organization:
                     "Mesto Trebišov, M. R. Štefánika 862/204, 075 25 Trebišov",
-                  text: "Povinne zverejňované zmluvy sú od 31.03.2022 v zmysle § 5a ods. 6 zákona č. 211/2000 Z. z. o slobodnom prístupe k informáciám a o zmene a doplnení niektorých zákonov (zákon o slobode informácií) v znení neskorších predpisov zverejňované v Centrálnom registri zmlúv.",
-                  site: "https://crz.gov.sk",
+                  text: "Povinne zverejňované údaje o vyhotovených objednávkach tovarov, služieb a prác v zmysle § 5b zákona č. 211/2000 Z. z. o slobodnom prístupe k informáciám a o zmene a doplnenní niektorých zákonov (zákon o slobode informácií) v znení neskorších predpisov.",
+                  site: "www.egov.trebisov.sk",
                 },
               ],
             },
@@ -146,50 +152,6 @@ export default {
             {
               name: "Objednávky",
               isOpen: false,
-              info: [
-                {
-                  organization:
-                    "Mesto Trebišov, M. R. Štefánika 862/204, 075 25 Trebišov",
-                  text: "Povinne zverejňované zmluvy sú od 31.03.2022 v zmysle § 5a ods. 6 zákona č. 211/2000 Z. z. o slobodnom prístupe k informáciám a o zmene a doplnení niektorých zákonov (zákon o slobode informácií) v znení neskorších predpisov zverejňované v Centrálnom registri zmlúv.",
-                  site: "https://crz.gov.sk",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          title: "Mestské kultúrne stredisko",
-          children: [
-            {
-              name: "Zmluvy",
-              isOpen: false,
-
-              info: [
-                {
-                  organization:
-                    "Mesto Trebišov, M. R. Štefánika 862/204, 075 25 Trebišov",
-                  text: "Povinne zverejňované zmluvy sú od 31.03.2022 v zmysle § 5a ods. 6 zákona č. 211/2000 Z. z. o slobodnom prístupe k informáciám a o zmene a doplnení niektorých zákonov (zákon o slobode informácií) v znení neskorších predpisov zverejňované v Centrálnom registri zmlúv.",
-                  site: "https://crz.gov.sk",
-                },
-              ],
-            },
-            {
-              name: "Faktúry",
-              isOpen: false,
-
-              info: [
-                {
-                  organization:
-                    "Mesto Trebišov, M. R. Štefánika 862/204, 075 25 Trebišov",
-                  text: "Povinne zverejňované zmluvy sú od 31.03.2022 v zmysle § 5a ods. 6 zákona č. 211/2000 Z. z. o slobodnom prístupe k informáciám a o zmene a doplnení niektorých zákonov (zákon o slobode informácií) v znení neskorších predpisov zverejňované v Centrálnom registri zmlúv.",
-                  site: "https://crz.gov.sk",
-                },
-              ],
-            },
-            {
-              name: "Objednávky",
-              isOpen: false,
-
               info: [
                 {
                   organization:

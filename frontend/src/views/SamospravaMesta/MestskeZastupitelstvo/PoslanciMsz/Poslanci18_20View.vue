@@ -1,77 +1,38 @@
 <template>
-  <div class="govuk-width-container main-box">
-    <h2 class="govuk-heading-l title">Poslanci za volebné obdobie 2018-2022</h2>
+  <div class="govuk-width-container">
+    <div class="content w-75">
+      <h1 class="govuk-heading-l">Poslanci za volebné obdobie 2018-2022</h1>
 
-    <div
-      class="textbox"
-      v-for="{ id, name, email, kandoloval, imgUrl, obvod, text } in persons"
-      :key="id"
-    >
-      <div class="textbox_child_first">
-        <img class="card-img" :src="imgUrl" alt="house" />
-      </div>
-      <div class="textbox_child_second">
-        <div class="idsk-crossroad__item label">{{ name }}</div>
-
-        <ul class="contact_list">
-          <li>
-            E-mail:
-            <a href="mailto:primator@trebisov.sk" className="email">
-              {{ email }}
-            </a>
-          </li>
-          <li>Kandidoval za: {{ kandoloval }}</li>
-          <li>Volebný obvod: {{ obvod }}</li>
-        </ul>
-
-        <div class="content">
-          <p>{{ text }}</p>
+      <div
+        class="textbox"
+        v-for="{ id, name, email, kandoloval, imgUrl, obvod, text } in persons"
+        :key="id"
+      >
+        <div class="textbox_child_first">
+          <img class="card-img" :src="imgUrl" alt="house" />
         </div>
-      </div>
+        <div class="textbox_child_second">
+          <div class="idsk-crossroad__item label">{{ name }}</div>
 
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
+          <ul class="contact_list">
+            <li>
+              E-mail:
+              <a href="mailto:primator@trebisov.sk" className="email">
+                {{ email }}
+              </a>
+            </li>
+            <li>Kandidoval za: {{ kandoloval }}</li>
+            <li>Volebný obvod: {{ obvod }}</li>
+          </ul>
+
+          <div class="content">
+            <p>{{ text }}</p>
+          </div>
+        </div>
+
+        <hr class="idsk-crossroad-line" aria-hidden="true" />
+      </div>
     </div>
-    <!-- <div class="textbox">
-      <div class="textbox_child_first">
-        <img class="card-img" src="../assets/primator.jpg" alt="house" />
-      </div>
-      <div class="textbox_child_second">
-        <div class="idsk-crossroad__item label">PhDr. Marek Čižmár</div>
-
-        <ul class="contact_list">
-          <li>
-            Telefón:
-            <a href="tel:+421566722665" className="phone">
-              +421 56 672 26 65
-            </a>
-          </li>
-          <li>
-            Fax:
-            <a href="tel:+421566726668" className="phone">
-              +421 56 672 66 68
-            </a>
-          </li>
-          <li>
-            E-mail:
-            <a href="mailto:primator@trebisov.sk" className="email">
-              primator@trebisov.sk
-            </a>
-          </li>
-        </ul>
-
-        <a
-          :href="require('@/assets/pdf/test.pdf')"
-          target="_blank"
-          title="Štatút mesta Trebišov"
-          class="govuk-link-custom link"
-        >
-          Štruktúrovaný životopis primátora
-        </a>
-        <div class="link_size">(PDF, 619,7 kB)</div>
-      </div>
-
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-    </div> -->
   </div>
 </template>
 
@@ -90,7 +51,7 @@ export default {
           kandidoval: "Trebišov nahlas",
           obvod: 1,
           text: "Komisia bytová - člen",
-          imgUrl: require("../assets/primator.jpg"),
+          imgUrl: require("@/assets/primator.jpg"),
         },
         {
           id: 2,
@@ -99,7 +60,7 @@ export default {
           kandidoval: "Kresťanskodemokratické hnutie",
           obvod: 2,
           text: "Mestská rada - člen Komisia výstavby a majetku - predseda Komisia na ochranu verejného záujmu pri výkone funkcií verejných funkcionárov - člen",
-          imgUrl: require("../assets/primator.jpg"),
+          imgUrl: require("@/assets/primator.jpg"),
         },
         {
           id: 3,
@@ -108,7 +69,7 @@ export default {
           kandidoval: "Trebišov nahlas",
           obvod: 1,
           text: "Komisia bytová - člen",
-          imgUrl: require("../assets/primator.jpg"),
+          imgUrl: require("@/assets/primator.jpg"),
         },
         {
           id: 4,
@@ -117,7 +78,7 @@ export default {
           kandidoval: "Kresťanskodemokratické hnutie",
           obvod: 2,
           text: "Mestská rada - člen Komisia výstavby a majetku - predseda Komisia na ochranu verejného záujmu pri výkone funkcií verejných funkcionárov - člen",
-          imgUrl: require("../assets/primator.jpg"),
+          imgUrl: require("@/assets/primator.jpg"),
         },
         {
           id: 5,
@@ -126,7 +87,7 @@ export default {
           kandidoval: "Trebišov nahlas",
           obvod: 1,
           text: "Komisia bytová - člen",
-          imgUrl: require("../assets/primator.jpg"),
+          imgUrl: require("@/assets/primator.jpg"),
         },
       ],
     };

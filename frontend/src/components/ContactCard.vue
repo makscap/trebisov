@@ -1,6 +1,5 @@
 <template>
   <div>
-    <hr class="idsk-crossroad-line" aria-hidden="true" />
     <ul class="list">
       <li v-for="(item, i) in contactsData" :key="i" class="item">
         <div class="name bold">{{ item.name }}</div>
@@ -41,7 +40,6 @@
             </ul>
           </li>
         </ul>
-        <hr class="idsk-crossroad-line" aria-hidden="true" />
       </li>
     </ul>
   </div>
@@ -60,12 +58,12 @@ export default {
 </script>
 
 <style scoped>
+.card {
+}
 .location {
   margin-bottom: 16px;
 }
 
-.phone {
-}
 .list {
   list-style: none;
   padding: 0;
@@ -74,6 +72,16 @@ export default {
   font-size: 19px;
   line-height: 25px;
   color: #0b0c0c;
+}
+
+.item {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border-bottom: 1px solid #bfc1c3;
+}
+
+.item:first-child {
+  border-top: 1px solid #bfc1c3;
 }
 .list_contact {
   list-style: none;

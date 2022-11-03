@@ -49,31 +49,33 @@
             </span>
           </h2>
         </div>
-        <div
-          v-for="(link, i) in item.children"
-          :key="i"
-          :class="
-            item.isOpen
-              ? 'govuk-accordion__section'
-              : 'govuk-accordion__section-content'
-          "
-        >
-          <div class="links_group">
-            <div class="date" v-if="link.date">{{ link.date }}</div>
-            <div>
-              <a
-                :href="link.url"
-                target="_blank"
-                :title="link.name"
-                class="govuk-link-custom link"
-              >
-                {{ link.name }}
-              </a>
-              <span> ({{ link.ext }}, {{ link.size }})</span>
+        <div>
+          <div
+            v-for="(link, i) in item.children"
+            :key="i"
+            :class="
+              item.isOpen
+                ? 'govuk-accordion__section'
+                : 'govuk-accordion__section-content'
+            "
+          >
+            <div class="links_group">
+              <div class="date" v-if="link.date">{{ link.date }}</div>
+              <div>
+                <a
+                  :href="link.url"
+                  target="_blank"
+                  :title="link.name"
+                  class="govuk-link-custom link"
+                >
+                  {{ link.name }}
+                </a>
+                <span> ({{ link.ext }}, {{ link.size }})</span>
+              </div>
             </div>
-          </div>
 
-          <p class="govuk-body"></p>
+            <p class="govuk-body"></p>
+          </div>
         </div>
       </div>
     </div>
@@ -94,7 +96,16 @@ export default {
   methods: {
     toggle() {},
     toggleAccordion(item) {
-      item.isOpen = !item.isOpen;
+      if (item.isOpen) {
+        this.archive.forEach((el) => {
+          el.isOpen = false;
+        });
+      } else {
+        this.archive.forEach((el) => {
+          el.isOpen = false;
+        });
+        item.isOpen = true;
+      }
     },
 
     falseFunction(e, route) {

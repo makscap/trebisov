@@ -1,22 +1,24 @@
 <template>
-  <div class="content">
-    <h1 v-if="title" class="govuk-heading-l title">{{ title }}</h1>
-    <ul class="list menu">
-      <li v-for="(sub, ind) in this.subpages" :key="ind" class="item">
-        <div class="idsk-crossroad idsk-crossroad-2">
-          <div class="idsk-crossroad__item">
-            <router-link
-              :to="this.$route.path + sub.route"
-              class="govuk-link idsk-crossroad-title"
-              title="Title for 1st element"
-              aria-hidden="false"
-              >{{ sub.title }}
-            </router-link>
-            <hr class="idsk-crossroad-line" aria-hidden="true" />
+  <div>
+    <h1 v-if="title" class="govuk-heading-l">{{ title }}</h1>
+    <div class="content">
+      <ul class="list menu">
+        <li v-for="(sub, ind) in this.subpages" :key="ind" class="item">
+          <div class="idsk-crossroad idsk-crossroad-2">
+            <div class="idsk-crossroad__item">
+              <router-link
+                :to="this.$route.path + sub.route"
+                class="govuk-link idsk-crossroad-title"
+                title="Title for 1st element"
+                aria-hidden="false"
+                >{{ sub.title }}
+              </router-link>
+              <hr class="idsk-crossroad-line" aria-hidden="true" />
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -56,7 +58,6 @@ export default {
 
 .item {
   width: calc((100% / 2) - 23px);
-  margin-top: 23px;
   margin-right: 23px;
 }
 
@@ -67,9 +68,5 @@ export default {
 .idsk-crossroad-2 {
   width: 100% !important;
   padding-right: 0px !important;
-}
-
-.title {
-  margin-bottom: 15px !important;
 }
 </style>

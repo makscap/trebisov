@@ -1,55 +1,48 @@
 <template>
-  <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">
-      Oznámenia funkcií, zamestnaní, činností a majetkových pomerov verejného
-      funkcionára - poslanci
-    </h2>
+  <div class="govuk-width-container">
+    <div class="content">
+      <h1 class="govuk-heading-l">
+        Oznámenia funkcií, zamestnaní, činností a majetkových pomerov verejného
+        funkcionára - poslanci
+      </h1>
 
-    <div
-      class="govuk-accordion"
-      data-module="idsk-accordion"
-      id="2"
-      data-attribute="value"
-    >
-      <div
-        v-for="(item, ind) in archive"
-        :key="ind"
-        class="govuk-accordion__section list"
-      >
-        <div class="idsk-crossroad__item label govuk-heading-m">
-          {{ item.title }}
-        </div>
-
-        <div v-for="(child, indx) in item.children" :key="indx" class="">
-          <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading">
-              <button
-                type="button"
-                id="2-heading-1"
-                aria-controls="2-content-1"
-                class="govuk-accordion__section-button"
-                aria-expanded="false"
-                @click="toggleAccordion(child)"
-              >
-                {{ child.name }}</button
-              ><span class="govuk-accordion__icon" aria-hidden="true"></span>
-            </h2>
+      <!-- <div class="govuk-accordion">
+        <div
+          v-for="(item, ind) in archive"
+          :key="ind"
+          class="govuk-accordion__section list"
+        >
+          <div class="idsk-crossroad__item label govuk-heading-m">
+            {{ item.title }}
           </div>
-          <div
-            v-for="(el, i) in child.info"
-            :key="i"
-            id="2-content-1"
-            :class="
-              child.isOpen
-                ? 'govuk-accordion__section'
-                : 'govuk-accordion__section-content'
-            "
-            aria-labelledby="2-heading-1"
-          >
-            <p class="govuk-body"></p>
+
+          <div v-for="(child, indx) in item.children" :key="indx" class="">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <button
+                  type="button"
+                  class="govuk-accordion__section-button"
+                  aria-expanded="false"
+                  @click="toggleAccordion(child)"
+                >
+                  {{ child.name }}</button
+                ><span class="govuk-accordion__icon" aria-hidden="true"></span>
+              </h2>
+            </div>
+            <div
+              v-for="(el, i) in child.info"
+              :key="i"
+              :class="
+                child.isOpen
+                  ? 'govuk-accordion__section'
+                  : 'govuk-accordion__section-content'
+              "
+            >
+              <p class="govuk-body"></p>
+            </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -112,9 +105,21 @@ export default {
       ],
     });
   },
-
+  components: {},
   mounted() {},
   methods: {
+    toggleAccordion(item) {
+      if (item.isOpen) {
+        this.archive.forEach((el) => {
+          el.isOpen = false;
+        });
+      } else {
+        this.archive.forEach((el) => {
+          el.isOpen = false;
+        });
+        item.isOpen = true;
+      }
+    },
     falseFunction(e, route) {
       if (!route) e.preventDefault();
     },

@@ -8,13 +8,13 @@
         id="example-table-2-filter"
         class="idsk-table-filter"
       >
-        <div class="idsk-table-filter__panel idsk-table-filter__inputs">
+        <div class="idsk-table-filter__panel idsk-table-filter__inputs filter">
           <div class="idsk-table-filter__title govuk-heading-m">
             Filtrovať obsah
           </div>
           <button
             @click="toggle"
-            class="govuk-body govuk-link idsk-filter-menu__toggle"
+            class="govuk-body govuk-link idsk-filter-menu__toggle button_open"
             tabindex="0"
             type="button"
           >
@@ -71,10 +71,13 @@
                 </div>
               </div>
             </div>
-            <button type="submit" class="idsk-button submit-table-filter">
+            <button type="submit" class="idsk-button submit-table-filter btn1">
               Vyhľadať
             </button>
-            <button type="submit" class="idsk-button submit-table-filter">
+            <button
+              type="submit"
+              class="idsk-button idsk-button--secondary btn2"
+            >
               Zrušiť filter
             </button>
           </form>
@@ -235,5 +238,22 @@ export default {
 }
 .column_2 {
   flex: 1;
+}
+
+.filter {
+  background-color: #ffffff !important;
+  border: 2px solid #024497 !important;
+  border-radius: 4px !important;
+}
+
+.button_open {
+  background-color: #ffffff !important;
+}
+.btn1 {
+  margin-right: 18px;
+}
+
+.btn2 {
+  background-color: #f3f2f1 !important;
 }
 </style>

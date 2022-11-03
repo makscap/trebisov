@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container">
-    <div class="content">
-      <h2 class="govuk-heading-l title">Dokumenty</h2>
+    <div class="content w-75">
+      <h1 class="govuk-heading-l">Dokumenty</h1>
 
       <LinksAndSizeComponent :files="files" />
     </div>

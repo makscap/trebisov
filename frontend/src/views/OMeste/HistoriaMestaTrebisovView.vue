@@ -1,8 +1,7 @@
 <template>
   <div class="govuk-width-container">
     <div class="content w-75">
-      <h1 class="govuk-heading-l title">História mesta Trebišov</h1>
-
+      <h1 class="govuk-heading-l">História mesta Trebišov</h1>
       <div class="image_box">
         <img class="image" src="../../assets/trebisov2.jpg" alt="house" />
       </div>

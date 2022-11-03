@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container">
     <div class="content w-75">
-      <h1 class="govuk-heading-l title">Štatút mesta</h1>
+      <h1 class="govuk-heading-l">Štatút mesta</h1>
       <p>
         Štatút mesta Trebišov upravuje v súlade so všeobecne záväznými právnymi
         predpismi najmä postavenie a pôsobnosť mesta, práva a povinnosti
@@ -86,8 +86,5 @@ export default {
 
 .box img {
   height: 100%;
-}
-
-.content {
 }
 </style>

@@ -406,7 +406,7 @@
             </div>
           </div>
           <div class="govuk-grid-column-one-third">
-            <h3 class="govuk-heading-m">Podnety občanov</h3>
+            <h3 class="govuk-heading-m">Pre občanov</h3>
             <div
               class="govuk-grid-column-three-thirds idsk-footer-extended-subtitle"
             >
@@ -567,6 +567,10 @@ export default {
         },
 
         obcanov: [
+          {
+            name: "Občianska inzercia",
+            url: "",
+          },
           {
             name: "Odkaz pre starostu",
             url: "",

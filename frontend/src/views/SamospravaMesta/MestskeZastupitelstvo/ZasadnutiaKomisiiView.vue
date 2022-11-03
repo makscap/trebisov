@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container parent">
     <div class="content">
-      <SubPagesMenu :subpages="subpages" title="Projekty" />
+      <SubPagesMenu :subpages="subpages" title="Zasadnutia komisií" />
     </div>
   </div>
 </template>
@@ -11,16 +11,42 @@ import SubPagesMenu from "@/components/SubPagesMenu.vue";
 import { useMeta } from "vue-meta";
 
 export default {
-  name: "ProjektyView",
+  name: "ZasadnutiaKomisiiView",
   data() {
     return {
       subpages: [
         {
-          title: "Revitalizácia hradu Parič (RePar)",
-          route: "/revitalizacia-hradu-paric",
+          title: "Komisia finančná",
+          route: "/komisia-financna",
         },
         {
-          title: "Revitalisation of the Parič (RePar)",
+          title: "Komisia výstavby a majetku",
+          route: "/",
+        },
+        {
+          title: "Komisia sociálna",
+          route: "/",
+        },
+        {
+          title: "Komisia bytová",
+          route: "/",
+        },
+        {
+          title: "Komisia školstva, kultúry a športu",
+          route: "/",
+        },
+        {
+          title:
+            "Komisia na riešenie problémov marginalizovanej rómskej komunity",
+          route: "/",
+        },
+        {
+          title:
+            "Komisia na ochranu verejného záujmu pri výkone funkcií verejných funkcionárov",
+          route: "/",
+        },
+        {
+          title: "Komisia pre časť mesta Milhostov",
           route: "/",
         },
       ],

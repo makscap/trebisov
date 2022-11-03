@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container">
-    <div class="content">
-      <h2 class="govuk-heading-l title">Uznesenia</h2>
+    <div class="content w-75">
+      <h1 class="govuk-heading-l">Uznesenia</h1>
 
       <div data-module="idsk-table" id="priklad-1">
         <table class="idsk-table">
@@ -178,9 +178,4 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-.title {
-  margin-top: 30px !important;
-  margin-bottom: 30px !important;
-}
-</style>
+<style lang="scss" scoped></style>

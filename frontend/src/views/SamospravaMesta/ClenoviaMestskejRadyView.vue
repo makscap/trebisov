@@ -1,8 +1,7 @@
 <template>
-  <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">Členovia mestskej rady</h2>
-
-    <div class="content">
+  <div class="govuk-width-container">
+    <div class="content w-75">
+      <h2 class="govuk-heading-l">Členovia mestskej rady</h2>
       <ul class="list">
         <li v-for="(person, i) in persons" :key="i" class="item">
           {{ person }}

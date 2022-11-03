@@ -4,8 +4,8 @@
       Profil verejného obstarávateľa
     </div> -->
 
-    <ul class="p-0">
-      <li class="item_link" v-for="(file, i) in files" :key="i">
+    <ul class="p-0 list">
+      <li class="item" v-for="(file, i) in files" :key="i">
         <a
           :href="file.urlFile"
           target="_blank"
@@ -41,6 +41,20 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.item:last-child {
+  margin-bottom: 0px;
+}
+
 .link {
   font-family: "Source Sans Pro";
   font-weight: 400;
