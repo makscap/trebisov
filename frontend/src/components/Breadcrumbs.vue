@@ -169,6 +169,17 @@ export default {
         { name: "mestska-policia", title: "Mestská polícia" },
         { name: "pravne-predpisy", title: "Právne predpisy" },
         { name: "rozdelenie-sektorov", title: "Rozdelenie sektorov" },
+
+        // PRE OBCANOV
+
+        {
+          name: "pre-obcanov",
+          title: "Pre občanov",
+        },
+        {
+          name: "/pre-obcanov/evidencia-obyvatelov",
+          title: "Evidencia obyvateľov",
+        },
       ],
     };
   },

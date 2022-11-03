@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container parent">
     <div class="content">
-      <SubPagesMenu :subpages="subpages" title="Polícia" />
+      <SubPagesMenu :subpages="subpages" title="Pre občanov" />
     </div>
   </div>
 </template>

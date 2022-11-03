@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import SubMenuView from "../views/SubMenuView.vue";
 import ZakladneUdajeView from "../views/OMeste/ZakladneUdajeView.vue";
 import HistoriaMestaTrebisovView from "../views/OMeste/HistoriaMestaTrebisovView.vue";
 import SymbolyMestaView from "../views/OMeste/SymbolyMestaView.vue";
@@ -848,7 +847,7 @@ export const routes = [
     component: SeniorKartaView,
   },
   {
-    path: "/pre-obcanov",
+    path: "/pre-obcanov/socialna-pomoc",
     name: "Sociálna pomoc",
     title: "Sociálna pomoc",
     component: SocialnaPomocView,

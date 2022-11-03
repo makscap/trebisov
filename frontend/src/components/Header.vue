@@ -527,11 +527,14 @@ export default {
         {
           title: "Pre občanov",
           subpages: [
-            { title: "Evidencia obyvateľov", route: "/evidencia-obyvatelov" },
-            { title: "Matrika", route: "/matrika" },
-            { title: "Karty", route: "/karty" },
+            {
+              title: "Evidencia obyvateľov",
+              route: "/pre-obcanov/evidencia-obyvatelov",
+            },
+            { title: "Matrika", route: "/pre-obcanov/matrika" },
+            { title: "Karty", route: "/pre-obcanov/karty" },
             { title: "Stavebný úrad", route: "/" },
-            { title: "Sociálna pomoc", route: "/" },
+            { title: "Sociálna pomoc", route: "/pre-obcanov/socialna-pomoc" },
             { title: "Komunálny odpad", route: "/" },
             { title: "Miestne dane a poplatky", route: "/" },
             { title: "Doprava a komunikácie", route: "/" },

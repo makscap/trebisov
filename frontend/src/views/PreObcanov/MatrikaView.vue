@@ -11,7 +11,7 @@ import SubPagesMenu from "@/components/SubPagesMenu.vue";
 import { useMeta } from "vue-meta";
 
 export default {
-  name: "Matrika",
+  name: "MatrikaView",
   data() {
     return {
       subpages: [
