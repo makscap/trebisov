@@ -1,40 +1,28 @@
 <template>
-  <div class="govuk-width-container">
-    <div class="content">
-      <h1 class="govuk-heading-l">Cenníky</h1>
+  <div class="govuk-width-container parent">
+    <div class="content w-75">
+      <h1 class="govuk-heading-l">Rozdelenie sektorov</h1>
 
-      <LinksAndSizeComponent :files="files" />
+      <div class="image_box">
+        <img
+          class="image"
+          src="@/assets/mestska_policia_rozdelenie_sektorov.jpg"
+          alt="Rozdelenie sektorov"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import { useMeta } from "vue-meta";
-import LinksAndSizeComponent from "../../components/LinksAndSizeComponent.vue";
 
 export default {
-  name: "CennikyView",
+  name: "RozdelenieSektorovView",
   data() {
-    return {
-      files: [
-        {
-          name: "Cenník služieb poskytovaných mestom a mestskými organizáciami - účinný od 01.07.2022",
-          size: "299.15kB",
-          ext: "PDF",
-          urlFile: "/",
-        },
-        {
-          name: "Cenník služieb poskytovaných Technickými službami mesta Trebišov - účinný od 01.07.2022",
-          size: "534 kB",
-          ext: "PDF",
-          urlFile: "/",
-        },
-      ],
-    };
+    return {};
   },
-  components: {
-    LinksAndSizeComponent,
-  },
+  components: {},
   setup() {
     useMeta({
       title: "Domov",

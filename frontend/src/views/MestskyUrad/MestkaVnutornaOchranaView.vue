@@ -1,8 +1,7 @@
 <template>
-  <div class="govuk-width-container main-box">
-    <h2 class="govuk-heading-l title">Mestská vnútorná ochrana</h2>
-
+  <div class="govuk-width-container">
     <div class="content">
+      <h1 class="govuk-heading-l">Mestská vnútorná ochrana</h1>
       <p>Mestská vnútorná ochrana zabezpečuje činnosti najmä v oblastiach:</p>
       <ul>
         <li>kontrola stavu majetku v dôležitých objektoch a zariadeniach,</li>
@@ -84,24 +83,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.main-box {
-  margin-bottom: 50px;
-}
-
-.textbox {
-  display: flex;
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-  border-bottom: 3px solid #bfc1c3;
-}
-.textbox_child_first {
-  width: 300px;
-}
-
-.textbox_child_second {
-  padding-left: 30px;
-}
-
 .label {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
@@ -109,37 +90,6 @@ export default {
   line-height: 30px;
   margin-bottom: 20px;
   color: #024497;
-}
-.contact_list {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  margin-bottom: 20px;
-}
-
-.phone,
-.email {
-  display: inline-block;
-  font-size: 19px;
-  line-height: 25px;
-  color: #0065b3;
-}
-
-.link {
-  font-family: "Source Sans Pro";
-  font-weight: 400;
-  font-size: 19px;
-  line-height: 25px;
-  text-decoration: underline;
-  color: #0065b3 !important;
-}
-
-.link_size {
-  font-family: "Source Sans Pro";
-  font-weight: 400;
-  font-size: 19px;
-  line-height: 25px;
-  text-decoration: underline;
 }
 
 .info {

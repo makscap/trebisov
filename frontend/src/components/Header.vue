@@ -527,9 +527,9 @@ export default {
         {
           title: "Pre občanov",
           subpages: [
-            { title: "Evidencia obyvateľov", route: "/" },
-            { title: "Matrika", route: "/" },
-            { title: "Karty", route: "/" },
+            { title: "Evidencia obyvateľov", route: "/evidencia-obyvatelov" },
+            { title: "Matrika", route: "/matrika" },
+            { title: "Karty", route: "/karty" },
             { title: "Stavebný úrad", route: "/" },
             { title: "Sociálna pomoc", route: "/" },
             { title: "Komunálny odpad", route: "/" },

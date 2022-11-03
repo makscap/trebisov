@@ -116,7 +116,7 @@ import { useMeta } from "vue-meta";
 import MapComponent from "../../components/MapComponent.vue";
 
 export default {
-  name: "MestskeUradView",
+  name: "DomacaOpatrovatelskaSluzbaView",
   data() {
     return {
       dataMap: {

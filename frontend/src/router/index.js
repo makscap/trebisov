@@ -72,6 +72,8 @@ import OznamySubPageView from "../views/MestskyUrad/OznamySubPageView.vue";
 import OznamyOUmrtiachView from "../views/MestskyUrad/OznamyOUmrtiachView.vue";
 import StrategickeDokumentyView from "../views/MestskyUrad/StrategickeDokumentyView.vue";
 import CennikyView from "../views/MestskyUrad/CennikyView.vue";
+import VseobecneZavazneView from "../views/MestskyUrad/VseobecneZavazneView.vue";
+import VseobecneZavazneDetailView from "../views/MestskyUrad/VseobecneZavazneDetailView.vue";
 
 // Zivot V Meste
 import ZivotVMesteView from "../views/ZivotVMeste/ZivotVMesteView.vue";
@@ -89,8 +91,40 @@ import ProgramZapasovView from "../views/ZivotVMeste/ProgramZapasovView.vue";
 import DokumetyKlubView from "../views/ZivotVMeste/DokumetyKlubView.vue";
 import SkolstvoView from "../views/ZivotVMeste/Skolstvo/SkolstvoView.vue";
 import PoliciaView from "../views/ZivotVMeste/Policia/PoliciaView.vue";
+import MestskaPoliciaVIew from "../views/ZivotVMeste/Policia/MestskaPoliciaVIew.vue";
+import PravnePredpisyView from "../views/ZivotVMeste/Policia/PravnePredpisyView.vue";
+import RozdelenieSektorovView from "../views/ZivotVMeste/Policia/RozdelenieSektorovView.vue";
+import MestskyKamerovySystemView from "../views/ZivotVMeste/Policia/MestskyKamerovySystemView.vue";
+import RadyAInformacieView from "../views/ZivotVMeste/Policia/RadyAInformacieView.vue";
+import PolicajneAktualityView from "../views/ZivotVMeste/Policia/PolicajneAktualityView.vue";
+import OkresneRiaditelstvoView from "../views/ZivotVMeste/Policia/OkresneRiaditelstvoView.vue";
 
 import ActivitiesView from "../views/ActivitiesView.vue";
+
+// Pre Obcanov
+import PreObcanovView from "../views/PreObcanov/PreObcanovView.vue";
+import EvidenciaObyvatelovView from "../views/PreObcanov/EvidenciaObyvatelovView.vue";
+import PodtvrdenieOTrvalomPobyteVIew from "../views/PreObcanov/PodtvrdenieOTrvalomPobyteVIew.vue";
+import PrihlasenieKPrechodnemuPobytuView from "../views/PreObcanov/PrihlasenieKPrechodnemuPobytuView.vue";
+import PrihlasenieNaTrvalyPobytVIew from "../views/PreObcanov/PrihlasenieNaTrvalyPobytVIew.vue";
+import VydaniePrvehoObcianskehoPreukazuView from "../views/PreObcanov/VydaniePrvehoObcianskehoPreukazuView.vue";
+import MatrikaView from "../views/PreObcanov/MatrikaView.vue";
+import ZapisNovorodencaView from "../views/PreObcanov/ZapisNovorodencaView.vue";
+import OpravaRodnehoCislaView from "../views/PreObcanov/OpravaRodnehoCislaView.vue";
+import KartyVIew from "../views/PreObcanov/KartyVIew.vue";
+import RezidencnaKartaNaRokView from "../views/PreObcanov/RezidencnaKartaNaRokView.vue";
+import SeniorKartaView from "../views/PreObcanov/SeniorKartaView.vue";
+import SocialnaPomocView from "../views/PreObcanov/SocialnaPomocView.vue";
+import FinancnaPomocView from "../views/PreObcanov/FinancnaPomocView.vue";
+import AkoZiadatOFinancnuPomocView from "../views/PreObcanov/AkoZiadatOFinancnuPomocView.vue";
+import FinancnaPomoc2018_2022View from "../views/PreObcanov/FinancnaPomoc2018-2022View.vue";
+import DenneCentraView from "../views/PreObcanov/DenneCentraView.vue";
+import DomacaOpatrovatelskaSluzbaView from "../views/PreObcanov/DomacaOpatrovatelskaSluzbaView.vue";
+import InstitutOsobitnehoPijemcuView from "../views/PreObcanov/InstitutOsobitnehoPijemcuView.vue";
+import MestskaSocialnaUbytovnaView from "../views/PreObcanov/MestskaSocialnaUbytovnaView.vue";
+import MestskyUtulokVIew from "../views/PreObcanov/MestskyUtulokVIew.vue";
+import SocialneSluzbyVIew from "../views/PreObcanov/SocialneSluzbyVIew.vue";
+import StrediskoOsobnejHygienyVIew from "../views/PreObcanov/StrediskoOsobnejHygienyVIew.vue";
 
 export const routes = [
   {
@@ -197,12 +231,17 @@ export const routes = [
     title: "Cenníky",
     component: CennikyView,
   },
-
   {
-    path: "/pre-obcanov",
-    name: "Pre občanov",
-    title: "Pre občanov",
-    component: SubMenuView,
+    path: "/mestsky-urad/vseobecne-zavazne-nariadenia",
+    name: "Všeobecne záväzné nariadenia",
+    title: "Všeobecne záväzné nariadenia",
+    component: VseobecneZavazneView,
+  },
+  {
+    path: "/mestsky-urad/vseobecne-zavazne-nariadenia/:id",
+    name: "",
+    title: "",
+    component: VseobecneZavazneDetailView,
   },
 
   // {
@@ -349,6 +388,48 @@ export const routes = [
     name: "Školstvo",
     title: "Školstvo",
     component: PoliciaView,
+  },
+  {
+    path: "/zivot-v-meste/policia/mestska-policia",
+    name: "Mestská polícia",
+    title: "Mestská polícia",
+    component: MestskaPoliciaVIew,
+  },
+  {
+    path: "/zivot-v-meste/policia/pravne-predpisy",
+    name: "Právne predpisy",
+    title: "Právne predpisy",
+    component: PravnePredpisyView,
+  },
+  {
+    path: "/zivot-v-meste/policia/rozdelenie-sektorov",
+    name: "Rozdelenie sektorov",
+    title: "Rozdelenie sektorov",
+    component: RozdelenieSektorovView,
+  },
+  {
+    path: "/zivot-v-meste/policia/mestsky-kamerovy-system",
+    name: "Mestský kamerový systém",
+    title: "Mestský kamerový systém",
+    component: MestskyKamerovySystemView,
+  },
+  {
+    path: "/zivot-v-meste/policia/rady-a-informacie",
+    name: "Mestský kamerový systém",
+    title: "Mestský kamerový systém",
+    component: RadyAInformacieView,
+  },
+  {
+    path: "/zivot-v-meste/policia/policajne-aktuality",
+    name: "Policajné aktuality",
+    title: "Policajné aktuality",
+    component: PolicajneAktualityView,
+  },
+  {
+    path: "/zivot-v-meste/policia/okresne-riaditelstvo-policajneho-zboru",
+    name: "Okresné riaditeľstvo policajného zboru v Trebišove",
+    title: "Okresné riaditeľstvo policajného zboru v Trebišove",
+    component: OkresneRiaditelstvoView,
   },
 
   // ====
@@ -689,6 +770,148 @@ export const routes = [
     title:
       "Oznámenia funkcií, zamestnaní, činností a majetkových pomerov verejného funkcionára - tlačivá",
     component: OznameniaFunkciiTlacivaView,
+  },
+
+  // Pre Obcanov
+  // 🍋🍋🍋🍋🍋🍋🍋🍋
+
+  {
+    path: "/pre-obcanov",
+    name: "Pre občanov",
+    title: "Pre občanov",
+    component: PreObcanovView,
+  },
+  {
+    path: "/pre-obcanov/evidencia-obyvatelov",
+    name: "Evidencia obyvateľov",
+    title: "Evidencia obyvateľov",
+    component: EvidenciaObyvatelovView,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Potvrdenie o trvalom pobyte",
+    title: "Potvrdenie o trvalom pobyte",
+    component: PodtvrdenieOTrvalomPobyteVIew,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Prihlásenie k prechodnému pobytu",
+    title: "Prihlásenie k prechodnému pobytu",
+    component: PrihlasenieKPrechodnemuPobytuView,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Prihlásenie na trvalý pobyt",
+    title: "Prihlásenie na trvalý pobyt",
+    component: PrihlasenieNaTrvalyPobytVIew,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Vydanie prvého občianského preukazu pri dovŕšení 15. roku",
+    title: "Vydanie prvého občianského preukazu pri dovŕšení 15. roku",
+    component: VydaniePrvehoObcianskehoPreukazuView,
+  },
+  {
+    path: "/pre-obcanov/matrika",
+    name: "Matrika",
+    title: "Matrika",
+    component: MatrikaView,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Zápis novorodenca a rodný list",
+    title: "Zápis novorodenca a rodný list",
+    component: ZapisNovorodencaView,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Oprava rodného čísla",
+    title: "Oprava rodného čísla",
+    component: OpravaRodnehoCislaView,
+  },
+  {
+    path: "/pre-obcanov/karty",
+    name: "Karty",
+    title: "Karty",
+    component: KartyVIew,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Rezidenčná karta na rok 2022",
+    title: "Rezidenčná karta na rok 2022",
+    component: RezidencnaKartaNaRokView,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Senior karta",
+    title: "Senior karta",
+    component: SeniorKartaView,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Sociálna pomoc",
+    title: "Sociálna pomoc",
+    component: SocialnaPomocView,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Finančná pomoc primátora a zástupcu primátora",
+    title: "Finančná pomoc primátora a zástupcu primátora",
+    component: FinancnaPomocView,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Ako žiadať o finančnú pomoc primátora a zástupcu primátora",
+    title: "Ako žiadať o finančnú pomoc primátora a zástupcu primátora",
+    component: AkoZiadatOFinancnuPomocView,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Finančná pomoc primátora a zástupcu primátora 2018 – 2022",
+    title: "Finančná pomoc primátora a zástupcu primátora 2018 – 2022",
+    component: FinancnaPomoc2018_2022View,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Denné centrá",
+    title: "Denné centrá",
+    component: DenneCentraView,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Domáca opatrovateľská služba",
+    title: "Domáca opatrovateľská služba",
+    component: DomacaOpatrovatelskaSluzbaView,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Inštitút osobitného príjemcu",
+    title: "Inštitút osobitného príjemcu",
+    component: InstitutOsobitnehoPijemcuView,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Mestská sociálna ubytovňa",
+    title: "Mestská sociálna ubytovňa",
+    component: MestskaSocialnaUbytovnaView,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Mestský útulok",
+    title: "Mestský útulok",
+    component: MestskyUtulokVIew,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Sociálne služby s použitím telekomunikačných technológií",
+    title: "Sociálne služby s použitím telekomunikačných technológií",
+    component: SocialneSluzbyVIew,
+  },
+  {
+    path: "/pre-obcanov",
+    name: "Stredisko osobnej hygieny a práčovne",
+    title: "Stredisko osobnej hygieny a práčovne",
+    component: StrediskoOsobnejHygienyVIew,
   },
 ];
 

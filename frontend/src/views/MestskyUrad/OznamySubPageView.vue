@@ -1,21 +1,14 @@
 <template>
-  <div class="govuk-width-container main-box">
-    <h2 class="govuk-heading-l title">TITLE !!!???</h2>
-
-    <p>Publikované: 15.07.2022</p>
-    <hr class="idsk-crossroad-line" aria-hidden="true" />
-    <img class="card-img" src="../../assets/primator.jpg" alt="house" />
-
-    <div class="content">
-      <p class="text">
-        V období od 14. júla do 31. decembra 2022 budú pracovníci Technických
-        služieb mesta Trebišov a magistrátu navštevovať obyvateľov žijúcich v
-        rodinných domoch v meste Trebišov za účelom bezplatného označenia nádob
-        (110 alebo 120 litrových) na zber zmiešaného komunálneho odpadu
-        elektronickým čipom a za účelom registrácie elektronického čipu v
-        systéme evidencie odpadových nádob. Pri registrácii elektronického čipu
-        je potrebné potvrdiť podpisom protokol o pridelení elektronického čipu.
-      </p>
+  <div class="govuk-width-container">
+    <div class="content w-75">
+      <h1 class="govuk-heading-l">{{ article.name }}</h1>
+      <p class="date">Publikované: {{ article.date }}</p>
+      <img
+        class="card-img"
+        :src="article.image ? article.image : require('@/assets/primator.jpg')"
+        :alt="article.imageAlt ? article.imageAlt : 'placeholder'"
+      />
+      <p class="text">{{ article.text }}</p>
     </div>
   </div>
 </template>
@@ -26,7 +19,16 @@ import { useMeta } from "vue-meta";
 export default {
   name: "OznamySubPageView",
   data() {
-    return {};
+    return {
+      article: {
+        name: "Elektronické čipovanie nádob na zmesový komunálny odpad",
+        date: "26.07.2022",
+        url: "/1",
+        text: "V období od 14. júla do 31. decembra 2022 budú pracovníci Technických služieb mesta Trebišov a magistrátu navštevovať obyvateľov žijúcich v rodinných domoch v meste Trebišov za účelom bezplatného označenia nádob (110 alebo 120 litrových) na zber zmiešaného komunálneho odpadu elektronickým čipom a za účelom registrácie elektronického čipu v systéme evidencie odpadových nádob. Pri registrácii elektronického čipu je potrebné potvrdiť podpisom protokol o pridelení elektronického čipu.",
+        image: "",
+        imageAlt: "Ad",
+      },
+    };
   },
   setup() {
     useMeta({
@@ -60,19 +62,17 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.main-box {
-  margin-bottom: 50px;
-}
-
-.title {
-  margin-top: 30px !important;
-  margin-bottom: 30px !important;
-}
 .card-img {
   width: 100% !important;
 }
 
 .text {
   margin-top: 30px;
+}
+
+.date {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #bfc1c3;
 }
 </style>

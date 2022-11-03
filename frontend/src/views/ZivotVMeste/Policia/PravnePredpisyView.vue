@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container">
-    <div class="content">
-      <h1 class="govuk-heading-l">Cenníky</h1>
+    <div class="content w-75">
+      <h1 class="govuk-heading-l">Právne predpisy</h1>
 
       <LinksAndSizeComponent :files="files" />
     </div>
@@ -10,22 +10,22 @@
 
 <script>
 import { useMeta } from "vue-meta";
-import LinksAndSizeComponent from "../../components/LinksAndSizeComponent.vue";
+import LinksAndSizeComponent from "@/components/LinksAndSizeComponent.vue";
 
 export default {
-  name: "CennikyView",
+  name: "PravnePredpisyView",
   data() {
     return {
       files: [
         {
-          name: "Cenník služieb poskytovaných mestom a mestskými organizáciami - účinný od 01.07.2022",
-          size: "299.15kB",
+          name: "Zákon č. 564/1991 Zb. o obecnej polícii",
+          size: "515.18 kB",
           ext: "PDF",
           urlFile: "/",
         },
         {
-          name: "Cenník služieb poskytovaných Technickými službami mesta Trebišov - účinný od 01.07.2022",
-          size: "534 kB",
+          name: "Vyhláška MV SR 532/2003",
+          size: "389.68 kB",
           ext: "PDF",
           urlFile: "/",
         },

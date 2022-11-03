@@ -17,7 +17,7 @@
 import { useMeta } from "vue-meta";
 
 export default {
-  name: "OznamyOUmrtiachView",
+  name: "DenneCentraView",
   data() {
     return {
       items: [

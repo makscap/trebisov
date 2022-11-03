@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container">
     <div class="content w-75">
-      <h1 class="govuk-heading-l">Mestský úrad</h1>
+      <h1 class="govuk-heading-l">Mestská polícia</h1>
       <MapComponent :dataMap="dataMap" />
       <hr class="idsk-crossroad-line" aria-hidden="true" />
       <div class="cover">
@@ -113,10 +113,10 @@
 
 <script>
 import { useMeta } from "vue-meta";
-import MapComponent from "../../components/MapComponent.vue";
+import MapComponent from "@/components/MapComponent.vue";
 
 export default {
-  name: "MestskeUradView",
+  name: "MestskaPoliciaVIew",
   data() {
     return {
       dataMap: {

@@ -163,6 +163,12 @@ export default {
         { name: "oznamy-o-umrtiach", title: "Oznamy o úmrtiach" },
         { name: "strategicke-dokumenty", title: "Strategické dokumenty" },
         { name: "cenniky", title: "Cenníky" },
+        { name: "zivot-v-meste", title: "Život v meste" },
+        { name: "aktuality", title: "Aktuality" },
+        { name: "policia", title: "Polícia" },
+        { name: "mestska-policia", title: "Mestská polícia" },
+        { name: "pravne-predpisy", title: "Právne predpisy" },
+        { name: "rozdelenie-sektorov", title: "Rozdelenie sektorov" },
       ],
     };
   },

@@ -1,8 +1,7 @@
 <template>
-  <div class="govuk-width-container main-box">
-    <h2 class="govuk-heading-l title">Kancelária primátora</h2>
-
-    <div class="content">
+  <div class="govuk-width-container">
+    <div class="content w-75">
+      <h1 class="govuk-heading-l">Kancelária primátora</h1>
       <p>Kancelária primátora zabezpečuje činnosti najmä v oblastiach:</p>
       <ul>
         <li>
@@ -135,27 +134,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.main-box {
-  margin-bottom: 50px;
-}
-.card-img {
-  width: 100% !important;
-}
-
-.textbox {
-  display: flex;
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-  border-bottom: 3px solid #bfc1c3;
-}
-.textbox_child_first {
-  width: 300px;
-}
-
-.textbox_child_second {
-  padding-left: 30px;
-}
-
 .label {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
@@ -174,51 +152,4 @@ export default {
 .contact_item {
   margin-bottom: 16px;
 }
-
-.phone,
-.email {
-  display: inline-block;
-  font-size: 19px;
-  line-height: 25px;
-  color: #0065b3;
-}
-
-.list_persons {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  margin-bottom: 20px;
-}
-
-.item_persons {
-  // margin-bottom: 16px;
-}
-
-.list_persons_contact {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  margin-bottom: 20px;
-  display: flex;
-}
-
-.item_persons_contact {
-  margin-right: 32px;
-}
-// .link {
-//   font-family: "Source Sans Pro";
-//   font-weight: 400;
-//   font-size: 19px;
-//   line-height: 25px;
-//   text-decoration: underline;
-//   color: #0065b3 !important;
-// }
-
-// .link_size {
-//   font-family: "Source Sans Pro";
-//   font-weight: 400;
-//   font-size: 19px;
-//   line-height: 25px;
-//   text-decoration: underline;
-// }
 </style>
