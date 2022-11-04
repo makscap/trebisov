@@ -15,7 +15,9 @@
           {{ file.name }}
         </a>
 
-        <span class="link_size"> ({{ file.ext }}, {{ file.size }})</span>
+        <span class="link_size" v-if="file.size">
+          ({{ file.ext }}, {{ file.size }})</span
+        >
       </li>
     </ul>
   </div>

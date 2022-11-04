@@ -9,7 +9,6 @@ import PrimatorView from "../views/SamospravaMesta/PrimatorView.vue";
 import ZastupcoviaPrimatora from "../views/SamospravaMesta/ZastupcoviaPrimatora.vue";
 import OZastupitelstveView from "../views/SamospravaMesta/MestskeZastupitelstvo/OZastupitelstveView.vue";
 import Poslanci18_20View from "../views/SamospravaMesta/MestskeZastupitelstvo/PoslanciMsz/Poslanci18_20View.vue";
-// import LinksComponent from "../views/LinksComponent.vue";
 import UradnaTabulaView from "../views/SamospravaMesta/UradnaTabulaView.vue";
 import RozpocetMestaView from "../views/SamospravaMesta/RozpocetMestaView.vue";
 import VarejneObstaravanieView from "../views/SamospravaMesta/VarejneObstaravanieView.vue";
@@ -52,6 +51,7 @@ import ZasadnutiaKomisiiView from "../views/SamospravaMesta/MestskeZastupitelstv
 import KomisieFinancnejView from "../views/SamospravaMesta/MestskeZastupitelstvo/KomisieFinancnejView.vue";
 import PriamyPrenosView from "../views/SamospravaMesta/MestskeZastupitelstvo/PriamyPrenosView.vue";
 import RevitalizaciaHraduView from "../views/SamospravaMesta/RevitalizaciaHraduView.vue";
+import ActivitiesView from "../views/ActivitiesView.vue";
 
 // O Meste
 import OMesteView from "../views/OMeste/OMesteView.vue";
@@ -79,7 +79,6 @@ import ZivotVMesteView from "../views/ZivotVMeste/ZivotVMesteView.vue";
 import HistorickeAKulturnePamiatkyView from "../views/ZivotVMeste/HistorickeAKulturnePamiatkyView.vue";
 import PodujatiaView from "../views/ZivotVMeste/PodujatiaView.vue";
 import FotogaleriaView from "../views/ZivotVMeste/FotogaleriaView.vue";
-// import AktualityView from "../views/ZivotVMeste/AktualityView.vue";
 import MestskySportovyKlubView from "../views/ZivotVMeste/MestskySportovyKlubView.vue";
 import OKlubeView from "../views/ZivotVMeste/OKlubeView.vue";
 import AktualityKlubuView from "../views/ZivotVMeste/AktualityKlubuView.vue";
@@ -97,8 +96,6 @@ import MestskyKamerovySystemView from "../views/ZivotVMeste/Policia/MestskyKamer
 import RadyAInformacieView from "../views/ZivotVMeste/Policia/RadyAInformacieView.vue";
 import PolicajneAktualityView from "../views/ZivotVMeste/Policia/PolicajneAktualityView.vue";
 import OkresneRiaditelstvoView from "../views/ZivotVMeste/Policia/OkresneRiaditelstvoView.vue";
-
-import ActivitiesView from "../views/ActivitiesView.vue";
 
 // Pre Obcanov
 import PreObcanovView from "../views/PreObcanov/PreObcanovView.vue";
@@ -124,6 +121,43 @@ import MestskaSocialnaUbytovnaView from "../views/PreObcanov/MestskaSocialnaUbyt
 import MestskyUtulokVIew from "../views/PreObcanov/MestskyUtulokVIew.vue";
 import SocialneSluzbyVIew from "../views/PreObcanov/SocialneSluzbyVIew.vue";
 import StrediskoOsobnejHygienyVIew from "../views/PreObcanov/StrediskoOsobnejHygienyVIew.vue";
+import StavebnyUradVIew from "../views/PreObcanov/StavebnyUradView.vue";
+import BytovyPodnikView from "../views/PreObcanov/BytovyPodnikView.vue";
+
+// Stavebny Urad
+import KolaudacneRozhodnutieView from "../views/PreObcanov/KolaudacneRozhodnutieView.vue";
+import OdstranenieStavbyView from "../views/PreObcanov/OdstranenieStavbyView.vue";
+import OhlasenieDrobnejStavbyView from "../views/PreObcanov/OhlasenieDrobnejStavbyView.vue";
+import OhlasenieStavebnychUpravView from "../views/PreObcanov/OhlasenieStavebnychUpravView.vue";
+import PovolenieInformachnychZariadeniView from "../views/PreObcanov/PovolenieInformachnychZariadeniView.vue";
+
+// Byvanie
+import ByvanieView from "../views/PreObcanov/ByvanieView.vue";
+import ZiadostOPridelenieView from "../views/PreObcanov/ZiadostOPridelenieView.vue";
+import ZiadostOPrechodNajmuView from "../views/PreObcanov/ZiadostOPrechodNajmuView.vue";
+import ZiadostOSuhlasView from "../views/PreObcanov/ZiadostOSuhlasView.vue";
+import SupisneCislaView from "../views/PreObcanov/SupisneCislaView.vue";
+
+// Komunalny Odpad
+import KomunalnyOdpadView from "../views/PreObcanov/KomunalnyOdpadView.vue";
+import HarmonogramVyvozuView from "../views/PreObcanov/HarmonogramVyvozuView.vue";
+import ZbernyDvorView from "../views/PreObcanov/ZbernyDvorView.vue";
+import DoseparacneStrediskoView from "../views/PreObcanov/DoseparacneStrediskoView.vue";
+import MiestneDaneView from "../views/PreObcanov/MiestneDaneView.vue";
+import DanZNehnutelnostiView from "../views/PreObcanov/DanZNehnutelnostiView.vue";
+import DopravaAKomunikacieView from "../views/PreObcanov/DopravaAKomunikacieView.vue";
+
+// Dopravne Znacenia
+import DopravneZnacenia from "../views/PreObcanov/DopravneZnacenia.vue";
+import ObchadzkyView from "../views/PreObcanov/ObchadzkyView.vue";
+import RozkopavkyView from "../views/PreObcanov/RozkopavkyView.vue";
+import CestovnyPoriadokView from "../views/PreObcanov/CestovnyPoriadokView.vue";
+
+import ZivotneProstredieView from "../views/PreObcanov/ZivotneProstredieView.vue";
+import InformacieView from "../views/PreObcanov/InformacieView.vue";
+import OtazkyAOdpovedeView from "../views/PreObcanov/OtazkyAOdpovedeView.vue";
+import ObcaniaView from "../views/PreObcanov/ObcaniaView.vue";
+import OstatneView from "../views/PreObcanov/OstatneView.vue";
 
 export const routes = [
   {
@@ -242,36 +276,6 @@ export const routes = [
     title: "",
     component: VseobecneZavazneDetailView,
   },
-
-  // {
-  //   title: "Aktuality",
-  //   route: "/aktuality",
-  // },
-  // {
-  //   title: "Historické a kultúrne pamiatky",
-  //   route: "/historicke-a-kulturne-pamiatky",
-  // },
-  // {
-  //   title: "Podujatia",
-  //   route: "/podujatia",
-  // },
-  // {
-  //   title: "Fotogaléria",
-  //   route: "/fotogaléria",
-  // },
-  // {
-  //   title: "Školstvo",
-  //   route: "/skolstvo",
-  // },
-  // {
-  //   title: "Mestský športový klub mládeže",
-  //   route: "/",
-  // },
-  // {
-  //   title: "Polícia",
-  //   route: "/policia",
-  // },
-
   {
     path: "/zivot-v-meste",
     name: "Život v meste",
@@ -430,11 +434,6 @@ export const routes = [
     title: "Okresné riaditeľstvo policajného zboru v Trebišove",
     component: OkresneRiaditelstvoView,
   },
-
-  // ====
-  // ====
-  // ====
-  // ====
   {
     path: "/o-meste/zakladne-udaje",
     name: "Základné údaje",
@@ -911,6 +910,174 @@ export const routes = [
     name: "Stredisko osobnej hygieny a práčovne",
     title: "Stredisko osobnej hygieny a práčovne",
     component: StrediskoOsobnejHygienyVIew,
+  },
+  {
+    path: "/pre-obcanov/stavebny-urad",
+    name: "Stavebný úrad",
+    title: "Stavebný úrad",
+    component: StavebnyUradVIew,
+  },
+  {
+    path: "/pre-obcanov/stavebny-urad/kolaudacne-rozhodnutie",
+    name: "Kolaudačné rozhodnutie",
+    title: "Kolaudačné rozhodnutie",
+    component: KolaudacneRozhodnutieView,
+  },
+  {
+    path: "/pre-obcanov/stavebny-urad/odstranenie-stavby",
+    name: "Odstránenie stavby",
+    title: "Odstránenie stavby",
+    component: OdstranenieStavbyView,
+  },
+  {
+    path: "/pre-obcanov/stavebny-urad/ohlasenie-drobnej-stavby",
+    name: "Ohlásenie drobnej stavby",
+    title: "Ohlásenie drobnej stavby",
+    component: OhlasenieDrobnejStavbyView,
+  },
+  {
+    path: "/pre-obcanov/stavebny-urad/ohlasenie-dstavebnych-uprav",
+    name: "Ohlásenie stavebných úprav",
+    title: "Ohlásenie stavebných úprav",
+    component: OhlasenieStavebnychUpravView,
+  },
+  {
+    path: "/pre-obcanov/stavebny-urad/povolenie-informachnycn-zariadeni",
+    name: "Povolenie informačných, reklamných a propagačných zariadení",
+    title: "Povolenie informačných, reklamných a propagačných zariadení",
+    component: PovolenieInformachnychZariadeniView,
+  },
+  {
+    path: "/pre-obcanov/byvanie",
+    name: "Bývanie",
+    title: "Bývanie",
+    component: ByvanieView,
+  },
+  {
+    path: "/pre-obcanov/byvanie/bytovy-podnik",
+    name: "Bytový podnik Trebišov s.r.o.",
+    title: "Bytový podnik Trebišov s.r.o.",
+    component: BytovyPodnikView,
+  },
+  {
+    path: "/pre-obcanov/byvanie/ziadost-o-pridelenie-mestskeho-najomneho-bytu",
+    name: "Žiadosť o pridelenie mestského nájomného bytu",
+    title: "Žiadosť o pridelenie mestského nájomného bytu",
+    component: ZiadostOPridelenieView,
+  },
+  {
+    path: "/pre-obcanov/byvanie/ziadost-o-prechod-majmu-mestskeho-najomneho-bytu",
+    name: "Žiadosť o prechod nájmu mestského nájomného bytu",
+    title: "Žiadosť o prechod nájmu mestského nájomného bytu",
+    component: ZiadostOPrechodNajmuView,
+  },
+  {
+    path: "/pre-obcanov/byvanie/ziadost-o-suhlas-k-vymene-bytu-vo-vlastnictve-mesta",
+    name: "Žiadosť o súhlas k výmene bytu vo vlastníctve mesta",
+    title: "Žiadosť o súhlas k výmene bytu vo vlastníctve mesta",
+    component: ZiadostOSuhlasView,
+  },
+  {
+    path: "/pre-obcanov/byvanie/urcenie-supisneho-alebo-orientacneho-cisla",
+    name: "Určenie súpisného alebo orientačného čísla",
+    title: "Určenie súpisného alebo orientačného čísla",
+    component: SupisneCislaView,
+  },
+  {
+    path: "/pre-obcanov/komunalny-odpad",
+    name: "Komunálny odpad",
+    title: "Komunálny odpad",
+    component: KomunalnyOdpadView,
+  },
+  {
+    path: "/pre-obcanov/komunalny-odpad/harmonogram-vyvozu-lomunalnego-odpadu",
+    name: "Harmonogram vývozu komunálneho odpadu",
+    title: "Harmonogram vývozu komunálneho odpadu",
+    component: HarmonogramVyvozuView,
+  },
+  {
+    path: "/pre-obcanov/komunalny-odpad/zberny-dvor",
+    name: "Zberný dvor",
+    title: "Zberný dvor",
+    component: ZbernyDvorView,
+  },
+  {
+    path: "/pre-obcanov/komunalny-odpad/doseparacne-stredisko",
+    name: "Doseparačné stredisko",
+    title: "Doseparačné stredisko",
+    component: DoseparacneStrediskoView,
+  },
+  {
+    path: "/pre-obcanov/miestne-dane-a-poplatky",
+    name: "Miestne dane a poplatky",
+    title: "Miestne dane a poplatky",
+    component: MiestneDaneView,
+  },
+  {
+    path: "/pre-obcanov/miestne-dane-a-poplatky/dan-z-nehnutelnosti",
+    name: "Daň z nehnuteľností",
+    title: "Daň z nehnuteľností",
+    component: DanZNehnutelnostiView,
+  },
+  {
+    path: "/pre-obcanov/doprava-a-komunikacie",
+    name: "Doprava a komunikácie",
+    title: "Doprava a komunikácie",
+    component: DopravaAKomunikacieView,
+  },
+  {
+    path: "/pre-obcanov/doprava-a-komunikacie/doprava-znacenia-na-miestnych-komunikaciah",
+    name: "Dopravné značenia na miestnych komunikáciach",
+    title: "Dopravné značenia na miestnych komunikáciach",
+    component: DopravneZnacenia,
+  },
+  {
+    path: "/pre-obcanov/doprava-a-komunikacie/obchadzky-a-uzavierky-miestnych-komunikacii",
+    name: "Dopravné značenia na miestnych komunikáciach",
+    title: "Dopravné značenia na miestnych komunikáciach",
+    component: ObchadzkyView,
+  },
+  {
+    path: "/pre-obcanov/doprava-a-komunikacie/rozkopavky-miestnych-komunikacii",
+    name: "Rozkopávky miestnych komunikácií",
+    title: "Rozkopávky miestnych komunikácií",
+    component: RozkopavkyView,
+  },
+  {
+    path: "/pre-obcanov/doprava-a-komunikacie/cestovny-poriadok-mhd",
+    name: "Cestovný poriadok MHD",
+    title: "Cestovný poriadok MHD",
+    component: CestovnyPoriadokView,
+  },
+  {
+    path: "/pre-obcanov/zivotne-prostredie",
+    name: "Životné prostredie",
+    title: "Životné prostredie",
+    component: ZivotneProstredieView,
+  },
+  {
+    path: "/pre-obcanov/informacie",
+    name: "Informácie",
+    title: "Informácie",
+    component: InformacieView,
+  },
+  {
+    path: "/pre-obcanov/otazky-a-odpovede",
+    name: "Otázky a odpovede",
+    title: "Otázky a odpovede",
+    component: OtazkyAOdpovedeView,
+  },
+  {
+    path: "/pre-obcanov/otazky-a-odpovede/obcania-a-podnety-obcanov",
+    name: "Občania a podnety občanov",
+    title: "Občania a podnety občanov",
+    component: ObcaniaView,
+  },
+  {
+    path: "/pre-obcanov/ostatne",
+    name: "Ostatné",
+    title: "Ostatné",
+    component: OstatneView,
   },
 ];
 
