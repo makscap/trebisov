@@ -1,176 +1,164 @@
 <template>
   <div class="govuk-width-container">
     <div class="content w-75">
-      <h1 class="govuk-heading-l">Mestský úrad</h1>
-      <MapComponent :dataMap="dataMap" />
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <div class="cover">
-        <h4 class="label">Kontaktné informácie</h4>
-        <div class="mb-24">
-          <span class="bold">E-mail:</span>
-          <a href="mailto:trebisov@trebisov.sk"> trebisov@trebisov.sk </a>
-        </div>
-        <div class="mb-24">
-          <div><span class="bold">Informátor - vrátnica</span></div>
-          <div>
-            Tel.:
-            <a href="tel:+421566713339"> +421 56 6713 339 </a>
-          </div>
-        </div>
-
-        <ul class="list">
-          <li class="item">
-            <div><span class="bold">Sekretariát prednostu</span></div>
-            <div>Tel.: <a href="tel:+421566722157"> +421 56 672 2157 </a></div>
-            <div>Mobil: <a href="tel:+421915790360"> +421 915 790 360 </a></div>
-            <div>
-              E-mail:
-              <a href="mailto:vaskova@trebisov.sk"> vaskova@trebisov.sk </a>
-            </div>
-          </li>
-
-          <li class="item">
-            <div><span class="bold">Sekretariát primátora</span></div>
-            <div>Tel.: <a href="tel:+421566722665"> +421 56 672 2665 </a></div>
-            <div>
-              Mobil:
-
-              <a href="tel:+421905592107"> +421 905 592 107 </a>
-            </div>
-            <div>
-              E-mail:
-              <a href="mailto:hippova.katarina@trebisov.sk">
-                hippova.katarina@trebisov.sk
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <div class="cover">
-        <h4 class="label">Identifikačné údaje</h4>
-        <ul class="list list_identifikacne">
-          <li class="item">
-            <span class="bold">Bankové spojenie:</span> Všeobecná úverová banka,
-            a.s. pobočka Trebišov
-          </li>
-          <li><span class="bold">Číslo účtu:</span> 19325622/0200</li>
-          <li><span class="bold">IBAN:</span> SK39 0200 0000 0000 1932 5622</li>
-          <li><span class="bold">SWIFT/BIC:</span> SUBASKBX</li>
-        </ul>
-      </div>
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <h4 class="label">Úradné hodiny</h4>
-      <ul class="list_schedule">
-        <li class="item_schedule" v-for="(oneDay, i) in scheduleData" :key="i">
-          <span>{{ oneDay.day }}</span>
-          <span>{{ oneDay.time }}</span>
-        </li>
-      </ul>
-      <h4 class="label">Doplňujúce infromácie</h4>
+      <h1 class="govuk-heading-l">Domáca opatrovateľská služba</h1>
 
       <p>
-        Mestský úrad zabezpečuje organizačné, administratívne a hospodárske veci
-        mestského zastupiteľstva, primátora, mestskej rady, komisií MsZ a Výboru
-        mestskej časti Milhostov.
-        <br /><br />Mestský úrad zabezpečuje výkon originálnej pôsobnosti
-        samosprávy (originálne kompetencie) aj výkon prenesenej pôsobnosti
-        štátnej správy (prenesené kompetencie). <br /><br />Mestský úrad najmä
+        Mesto Trebišov poskytuje domácu opatrovateľskú službu v byte občana v
+        súlade so zákonom č. 448/2008 Z. z. o sociálnych službách, účinným od
+        1.1.2014 a Všeobecne záväzným nariadením Mesta Trebišov č. 134/2014 o
+        sociálnych službách v platnom znení.
       </p>
+      <p>
+        Opatrovateľská služba je sociálna služba poskytovaná fyzickej osobe,
+        ktorá je odkázaná na pomoc inej fyzickej osoby a jej stupeň odkázanosti
+        je najmenej II podľa prílohy č. 3 k zákonu č. 448/2008 Z. z.
+        Opatrovateľská služba je poskytovaná v rozsahu 2 až 7,5 h / deň počas
+        pracovných dní.
+      </p>
+
+      <p>Opatrovateľskú službu nemožno poskytovať fyzickej osobe</p>
+
+      <ul>
+        <li>ktorej sa poskytuje celoročná pobytová sociálna služba,</li>
+        <li>
+          ktorá je opatrovaná fyzickou osobou, ktorej sa poskytuje peňažný
+          príspevok na opatrovanie podľa zák. č. 447/2008 Z. z. o peňažných
+          príspevkoch na kompenzáciu ťažkého zdravotného postihnutia a o zmene a
+          doplnení niektorých zákonov, ak tento zákon o sociálnych službách
+          neustanovuje inak,
+        </li>
+        <li>
+          ktorej sa poskytuje peňažný príspevok na osobnú asistenciu podľa
+          osobitného predpisu,
+        </li>
+        <li>
+          ktorej je nariadená karanténa pre podozrenie z nákazy prenosnou
+          chorobou a pri ochorení touto nákazou.
+        </li>
+      </ul>
+
+      <p>
+        Konanie o odkázanosti na sociálnu službu sa začína spravidla na základe
+        písomnej žiadosti fyzickej osoby o posúdenie odkázanosti na sociálnu
+        službu.
+      </p>
+
+      <p>
+        Žiadosť o poskytovanie sociálnej služby - domácej opatrovateľskej služby
+        sa podáva obci - mestu podľa miesta trvalého pobytu prijímateľa
+        sociálnej služby ako žiadosť o posúdenie odkázanosti na sociálnu službu,
+        neoddeliteľnou prílohou ktorej je Lekársky nález, vyplnený všeobecným
+        ošetrujúcim lekárom žiadateľa.
+      </p>
+
+      <h4 class="label">Doklady k vybaveniu opatrovateľskej služby:</h4>
+
+      <ol>
+        <li>Žiadosť o posúdenie odkázanosti na sociálnu službu</li>
+        <li>Lekársky nález</li>
+        <li>Príjem žiadateľa a spoluposudzovaných osôb</li>
+        <li>
+          Potvrdenie z ÚPSVaR o nepoberaní peňažného príspevku za opatrovanie,
+          resp. peňažného príspevku na osobnú asistenciu.
+        </li>
+      </ol>
+
+      <div class="label_box">
+        <h4 class="label inline">Doba vybavenia žiadosti:</h4>
+        <span> do 30 dní</span>
+      </div>
+
+      <div class="label_box">
+        <h4 class="label inline">
+          Platby za poskytovanú opatrovateľskú službu:
+        </h4>
+        <span>
+          1,2 € na 1 hodinu opatrovania <br />Podrobnejšie informácie sú uvedené
+          vo VZN Mesta Trebišov č. 134/2014 o sociálnych službách.
+        </span>
+      </div>
+
+      <h4 class="label">Súvisiace predpisy</h4>
 
       <ul>
         <li>
-          zabezpečuje písomnú agendu všetkých orgánov mesta a je podateľňou a
-          výpravňou písomností,
+          <a href="/" className="">
+            Zákon č. 448/2008 Z. z. o sociálnych službách
+          </a>
         </li>
         <li>
-          zabezpečuje odborné podklady a iné písomnosti na rokovanie MsZ, MsR,
-          komisií a výboru,
+          <a href="/" className="">
+            Zákon č. 447/2008 Z. z. o peňažných príspevkoch na kompenzáciu
+            ťažkého zdravotného postihnutia a o zmene a doplnení niektorých
+            zákonov
+          </a>
         </li>
-        <li>vypracúva písomné vyhotovenia rozhodnutí mesta,</li>
-        <li>pripravuje návrhy a vykonáva uznesenia MsZ a rozhodnutia mesta,</li>
         <li>
-          odborne a metodicky usmerňuje mestom zriadené organizácie a založené
-          spoločnosti.
+          <a href="/" className=""> VZN č. 134/2014 o sociálnych službách </a>
         </li>
       </ul>
+      <p class="label mb-30">Vybavuje</p>
 
-      <div>
-        <a
-          :href="require('@/assets/pdf/test.pdf')"
-          target="_blank"
-          title="Štatút mesta Trebišov"
-          class="govuk-link-custom link"
-        >
-          Organizačná štruktúra mestského úradu
-        </a>
-
-        <span class="link_size"> (PDF, 181.32 kB)</span>
+      <div class="mb-30">
+        <ContactCard :contactsData="contactsData" />
       </div>
+
+      <h4 class="label">Prílohy</h4>
+      <LinksAndSizeComponent :files="files" />
     </div>
   </div>
 </template>
 
 <script>
 import { useMeta } from "vue-meta";
-import MapComponent from "../../components/MapComponent.vue";
+import LinksAndSizeComponent from "@/components/LinksAndSizeComponent.vue";
+import ContactCard from "@/components/ContactCard.vue";
 
 export default {
   name: "DomacaOpatrovatelskaSluzbaView",
   data() {
     return {
-      dataMap: {
-        name: "Mestská polícia Trebišov",
-        street: "M. R. Štefánika 862/204",
-        city: "075 25 Trebišov",
-        text: "Prízemie v budove Mestského úradu v Trebišove",
-        img: "mestsky-urad.jpg",
-      },
-      subpages: [
+      contactsData: [
         {
-          title: "O mestskom úrade",
-          route: "/o-mestskom-urade",
+          name: "Mgr. Henrieta Demjanová",
+          position: "vedúca oddelenia",
+          location: "Mestský úrad, 4. poschodie, kancelária č. 402",
+          phone: ["+421 56 6713 338"],
+          mobil: ["+421 917 596 326"],
+          email: ["demjanova@trebisov.sk"],
         },
-        {
-          title: "Prednosta",
-          route: "/",
-        },
-        {
-          title: "Oddelenia",
-          route: "/",
-        },
-        { title: "Strediská", route: "/" },
-        { title: "Oznamy", route: "/" },
-        { title: "Oznamy o úmrtiach", route: "/" },
-        { title: "Strategické dokumenty", route: "/" },
-        { title: "Všeobecne záväzné nariadenia", route: "/" },
-        { title: "Cenník", route: "/" },
       ],
-      scheduleData: [
+
+      files: [
         {
-          day: "pondelok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
+          name: "Žiadosť o posúdenie odkázanosti na sociálnu službu",
+          size: "60.69 kB",
+          ext: "DOCX",
+          urlFile: "/",
         },
         {
-          day: "utorok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
+          name: "Žiadosť o posúdenie odkázanosti na sociálnu službu",
+          size: "132.41 kB",
+          ext: "PDF",
+          urlFile: "/",
         },
         {
-          day: "streda:",
-          time: "nestránkový deň",
+          name: "Lekársky nález na účely posúdenia odkázanosti na sociálnu službu",
+          size: "17.56 kB",
+          ext: "DOCX",
+          urlFile: "/",
         },
         {
-          day: "štvrtok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
-        },
-        {
-          day: "piatok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
+          name: "Lekársky nález na účely posúdenia odkázanosti na sociálnu službu",
+          size: "102.3 kB",
+          ext: "PDF",
+          urlFile: "/",
         },
       ],
     };
   },
-  components: { MapComponent },
+  components: { LinksAndSizeComponent, ContactCard },
   setup() {
     useMeta({
       title: "Domov",
@@ -202,47 +190,21 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.cover {
-  padding-bottom: 30px;
-}
 .label {
-  font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 20px;
+  font-size: 19px;
+  line-height: 25px;
   color: #024497;
 }
-
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
+.inline {
+  display: inline;
 }
 
-.item:first-child {
-  margin-right: 72px;
+.label_box {
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
-
-.mb-24 {
-  margin-bottom: 24px;
-}
-
-.list_identifikacne {
-  flex-direction: column;
-}
-
-.list_schedule {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.item_schedule {
-  width: 100%;
-  max-width: 430px;
-  display: flex;
-  justify-content: space-between;
+.label_box span {
+  font-weight: 400 !important;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container parent">
     <div class="content">
-      <SubPagesMenu :subpages="subpages" title="Polícia" />
+      <SubPagesMenu :subpages="subpages" title="Matrika" />
     </div>
   </div>
 </template>
@@ -16,32 +16,58 @@ export default {
     return {
       subpages: [
         {
-          title: "Mestská polícia",
-          route: "/mestska-policia",
+          title: "Zápis novorodenca a rodný list",
+          route: "/zapis-novorodenca-a-rodny-list",
         },
         {
-          title: "Okresné riaditeľstvo policajného zboru v Trebišove",
-          route: "/okresne-riaditelstvo-policajneho-zboru",
+          title: "Oprava rodného čísla",
+          route: "/oprava-rodneho-cisla",
         },
         {
-          title: "Policajné aktuality",
-          route: "/policajne-aktuality",
+          title: "Uzavretie manželstva",
+          route: "/uzavretie-manzelstva",
         },
         {
-          title: "Právne predpisy",
-          route: "/pravne-predpisy",
+          title: "Potvrdenie k uzavretiu manželstva v cudzine",
+          route: "/potvrdenie-k-uzavretiu-manzelstva-v-cudzine",
         },
         {
-          title: "Mestský kamerový systém",
-          route: "/mestsky-kamerovy-system",
+          title: "Vystavenie úmrtného listu",
+          route: "/vystavenie-umrtneho-listu",
         },
         {
-          title: "Rozdelenie sektorov",
-          route: "/rozdelenie-sektorov",
+          title: "Osobitná matrika",
+          route: "/osobitna-matrika",
         },
         {
-          title: "Rady a informácie",
-          route: "/rady-a-informacie",
+          title: "Zápis do matriky na základe dokladov z cudzích štátov",
+          route: "/zapis-do-matriky-na-zaklade-dokladov-z-cudzich-statov",
+        },
+        {
+          title: "Oznámenie o prijatí skoršieho priezviska po rozvode",
+          route: "/oznamenie-o-prijati-skorsieho-priezviska-po-rozvode",
+        },
+        {
+          title: "Zmena mena osvojenca",
+          route: "/zmena-mena-osvojenca",
+        },
+        {
+          title:
+            "Zmena cudzojazyčného priezviska do slovenskej pravopisnej podoby",
+          route:
+            "/zmena-cudzojazycneho-priezviska-do-slovenskej-pravopisnej-podoby",
+        },
+        {
+          title: "Osvedčovanie listín a podpisov na listinách",
+          route: "/osvedcovanie-listin-a-podpisov-na-listinach",
+        },
+        {
+          title: "Ďalšie činnosti Matričného úradu",
+          route: "/dalsie-cinnosti0matricneho-uradu",
+        },
+        {
+          title: "Vystavenie úmrtného listu",
+          route: "/vystavenie-umrtneho-listu",
         },
       ],
     };

@@ -1,12 +1,33 @@
 <template>
   <div class="govuk-width-container">
     <div class="content w-75">
-      <h1 class="govuk-heading-l">Oznamy o úmrtiach</h1>
-      <p>S hlbokým zármutkom vám oznamujeme, že nás opustili:</p>
+      <h1 class="govuk-heading-l">Denné centrá</h1>
+      <p>
+        V dennom centre sa poskytuje sociálna služba počas dňa fyzickej osobe,
+        ktorá dovŕšila dôchodkový vek, fyzickej osobe s ťažkým zdravotným
+        postihnutím alebo nepriaznivým zdravotným stavom, rodičovi s dieťaťom
+        alebo starému rodičovi s vnukom alebo vnučkou. V dennom centre sa
+        poskytuje sociálne poradenstvo a zabezpečuje záujmová činnosť.
+      </p>
       <ul class="list">
         <li class="item" v-for="(item, i) in items" :key="i">
           <h5 class="name">{{ item.name }}</h5>
-          <p class="text">{{ item.text }}</p>
+          <div>
+            <ul class="list_child">
+              <li v-if="item.adress" class="item_child">
+                <span>Sídlo:</span> {{ item.adress }}
+              </li>
+              <li v-if="item.host" class="item_child">
+                <span>Vedúca DC:</span> {{ item.host }}
+              </li>
+              <li v-if="item.quality" class="item_child">
+                <span>Počet členov:</span> {{ item.quality }}
+              </li>
+              <li v-if="item.phone" class="item_child">
+                <span>Tel.:</span> {{ item.phone }}
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>
@@ -22,20 +43,43 @@ export default {
     return {
       items: [
         {
-          name: "MUDr. Ján TÓTH (†88)",
-          text: "Rozlúčka bude 17.8.2022 o 10.30 h na Mestskom cintoríne v Trebišove. Gréckokatolícky obrad.",
+          name: "Denné centrum č.1",
+          adress: "Puškinova 277/18",
+          host: "Marta Dzúrová",
+          quality: 46,
+          phone: "0905 392 228",
         },
         {
-          name: "MUDr. Ján TÓTH (†88)",
-          text: "Rozlúčka bude 17.8.2022 o 10.30 h na Mestskom cintoríne v Trebišove. Gréckokatolícky obrad.",
+          name: "Denné centrum č.2",
+          adress: "Mestský úrad v Trebišove, M. R. Štefánika 862/204",
+          host: "Oľga Repovská",
+          quality: 42,
         },
         {
-          name: "MUDr. Ján TÓTH (†88)",
-          text: "Rozlúčka bude 17.8.2022 o 10.30 h na Mestskom cintoríne v Trebišove. Gréckokatolícky obrad.",
+          name: "Denné centrum č.3",
+          adress: "Puškinova 277/18",
+          host: "Marta Dzúrová",
+          quality: 46,
+          phone: "0905 392 228",
         },
         {
-          name: "MUDr. Ján TÓTH (†88)",
-          text: "Rozlúčka bude 17.8.2022 o 10.30 h na Mestskom cintoríne v Trebišove. Gréckokatolícky obrad.",
+          name: "Denné centrum č.4",
+          adress: "Puškinova 277/18",
+          host: "Marta Dzúrová",
+          quality: 46,
+          phone: "0905 392 228",
+        },
+        {
+          name: "Denné centrum č.5",
+          adress: "Mestský úrad v Trebišove, M. R. Štefánika 862/204",
+          host: "Oľga Repovská",
+          quality: 42,
+        },
+        {
+          name: "Denné centrum č.6",
+          adress: "Mestský úrad v Trebišove, M. R. Štefánika 862/204",
+          host: "Oľga Repovská",
+          quality: 42,
         },
       ],
     };
@@ -82,11 +126,11 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: #f3f2f1;
-  border: 2px solid #0b0c0c;
+  align-items: flex-start;
+  background-color: rgba(243, 242, 241, 0.5);
+  border: 2px solid #2b8cc4;
   border-radius: 4px;
-  padding: 43px 0px;
+  padding: 55px 50px;
   margin-bottom: 30px;
 }
 
@@ -97,17 +141,16 @@ export default {
 .name {
   margin: 0;
   padding: 0;
-  margin-bottom: 16px;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
-  color: #0b0c0c;
-  text-align: center;
+  color: #2b8cc4;
+  margin-bottom: 10px;
 }
-.text {
+
+.list_child {
+  list-style: none;
   padding: 0;
   margin: 0;
-  max-width: 425px;
-  text-align: center;
 }
 </style>

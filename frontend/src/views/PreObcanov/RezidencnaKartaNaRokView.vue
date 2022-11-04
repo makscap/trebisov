@@ -1,176 +1,123 @@
 <template>
   <div class="govuk-width-container">
     <div class="content w-75">
-      <h1 class="govuk-heading-l">Mestský úrad</h1>
-      <MapComponent :dataMap="dataMap" />
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <div class="cover">
-        <h4 class="label">Kontaktné informácie</h4>
-        <div class="mb-24">
-          <span class="bold">E-mail:</span>
-          <a href="mailto:trebisov@trebisov.sk"> trebisov@trebisov.sk </a>
-        </div>
-        <div class="mb-24">
-          <div><span class="bold">Informátor - vrátnica</span></div>
-          <div>
-            Tel.:
-            <a href="tel:+421566713339"> +421 56 6713 339 </a>
-          </div>
-        </div>
-
-        <ul class="list">
-          <li class="item">
-            <div><span class="bold">Sekretariát prednostu</span></div>
-            <div>Tel.: <a href="tel:+421566722157"> +421 56 672 2157 </a></div>
-            <div>Mobil: <a href="tel:+421915790360"> +421 915 790 360 </a></div>
-            <div>
-              E-mail:
-              <a href="mailto:vaskova@trebisov.sk"> vaskova@trebisov.sk </a>
-            </div>
-          </li>
-
-          <li class="item">
-            <div><span class="bold">Sekretariát primátora</span></div>
-            <div>Tel.: <a href="tel:+421566722665"> +421 56 672 2665 </a></div>
-            <div>
-              Mobil:
-
-              <a href="tel:+421905592107"> +421 905 592 107 </a>
-            </div>
-            <div>
-              E-mail:
-              <a href="mailto:hippova.katarina@trebisov.sk">
-                hippova.katarina@trebisov.sk
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <div class="cover">
-        <h4 class="label">Identifikačné údaje</h4>
-        <ul class="list list_identifikacne">
-          <li class="item">
-            <span class="bold">Bankové spojenie:</span> Všeobecná úverová banka,
-            a.s. pobočka Trebišov
-          </li>
-          <li><span class="bold">Číslo účtu:</span> 19325622/0200</li>
-          <li><span class="bold">IBAN:</span> SK39 0200 0000 0000 1932 5622</li>
-          <li><span class="bold">SWIFT/BIC:</span> SUBASKBX</li>
-        </ul>
-      </div>
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <h4 class="label">Úradné hodiny</h4>
-      <ul class="list_schedule">
-        <li class="item_schedule" v-for="(oneDay, i) in scheduleData" :key="i">
-          <span>{{ oneDay.day }}</span>
-          <span>{{ oneDay.time }}</span>
-        </li>
-      </ul>
-      <h4 class="label">Doplňujúce infromácie</h4>
-
-      <p>
-        Mestský úrad zabezpečuje organizačné, administratívne a hospodárske veci
-        mestského zastupiteľstva, primátora, mestskej rady, komisií MsZ a Výboru
-        mestskej časti Milhostov.
-        <br /><br />Mestský úrad zabezpečuje výkon originálnej pôsobnosti
-        samosprávy (originálne kompetencie) aj výkon prenesenej pôsobnosti
-        štátnej správy (prenesené kompetencie). <br /><br />Mestský úrad najmä
-      </p>
-
-      <ul>
-        <li>
-          zabezpečuje písomnú agendu všetkých orgánov mesta a je podateľňou a
-          výpravňou písomností,
-        </li>
-        <li>
-          zabezpečuje odborné podklady a iné písomnosti na rokovanie MsZ, MsR,
-          komisií a výboru,
-        </li>
-        <li>vypracúva písomné vyhotovenia rozhodnutí mesta,</li>
-        <li>pripravuje návrhy a vykonáva uznesenia MsZ a rozhodnutia mesta,</li>
-        <li>
-          odborne a metodicky usmerňuje mestom zriadené organizácie a založené
-          spoločnosti.
-        </li>
-      </ul>
+      <h1 class="govuk-heading-l">Rezidenčná karta na rok 2022</h1>
 
       <div>
-        <a
-          :href="require('@/assets/pdf/test.pdf')"
-          target="_blank"
-          title="Štatút mesta Trebišov"
-          class="govuk-link-custom link"
-        >
-          Organizačná štruktúra mestského úradu
-        </a>
+        <p>
+          Vážení občania,
+          <br />aj v tomto roku mesto Trebišov vydá rezidenčné karty (RK) na rok
+          2022 pre občanov s trvalým pobytom na území mesta Trebišov, ktorí
+          splnili podmienky na jej vydanie
+        </p>
 
-        <span class="link_size"> (PDF, 181.32 kB)</span>
+        <p class="bold">Podmienky na vydanie rezidenčnej karty:</p>
+
+        <ol>
+          <li class="bold">trvalý pobyt na území mesta Trebišov</li>
+
+          <li class="bold">
+            splnenie záväzkov (uhradené poplatky za TKO, miestne dane) voči
+            mestu k 31. 12. 2021.
+          </li>
+        </ol>
+        <p>
+          Rezidenčnú kartu získa občan mesta Trebišova (po splnení podmienok)
+          ZDARMA.
+        </p>
+
+        <p>
+          Oproti minulému obdobiu mesto pristúpilo k nasledovným zmenám pri
+          vydávaní rezidenčných kariet:
+        </p>
+
+        <ul>
+          <li>
+            dochádza k predĺženiu platnosti rezidenčnej karty vždy do 31. marca
+            nasledujúceho roka, z dôvodu zabezpečenia plynulého procesu prípravy
+            a distribúcie aktuálnych rezidenčných kariet. Platnosť rezidenčnej
+            karty vydanej v roku 2021 sa predlžuje do 31. 03. 2022.
+          </li>
+        </ul>
+
+        <p>
+          <span> Stav pred zmenou:</span> platnosť rezidenčnej karty bola do
+          31.12. aktuálneho roka, pre ktorý bola táto karta vydaná
+        </p>
+
+        <ul>
+          <li>
+            rezidenčnú kartu je potrebné vyzdvihnúť priamo na MsÚ v Trebišove
+            (jeden z rodinných príslušníkov, prípadne členov spoločnej
+            domácnosti), na základe vyplnenej Žiadosti o vydanie rezidenčnej
+            karty, kde bude karta na počkanie osobne vydaná.
+            <span>Rezidenčné karty nebudú zasielané poštou!</span>
+          </li>
+        </ul>
+
+        <p>
+          <span> Stav pred zmenou:</span> obyvateľom, ktorí v minulom období
+          (2019 až 2021) požiadali o vydanie RK a v podanej žiadosti označili,
+          že súhlasia s opätovným a zároveň pravidelným zasielaním rezidenčnej
+          karty za predpokladu splnenia vyššie uvedených podmienok, doručené na
+          adresu ich trvalého pobytu.
+          <br />
+          <br /><span>
+            Karty budú vydávané od 1. 3. 2022 v úradných hodinách na vrátnici
+            MsÚ v Trebišove.
+          </span>
+          <br />
+          <br />Pre osoby do dovŕšenia 3 rokov veku sa rezidenčná karta
+          nevydáva. <br />
+          <br />Pre osoby od dovŕšenia 3 rokov veku do dovŕšenia 15 rokov veku
+          je Rezidenčná karta mesta Trebišov platná IBA S PREUKAZOM POISTENCA.
+          <br />
+          <br />Pre osoby od 15 do dovŕšenia 65 rokov je Rezidenčná karta mesta
+          Trebišov platná IBA S OBČIANSKYM PREUKAZOM. <br />
+          <br />Všetkým občanom s trvalým pobytom na území mesta Trebišov od 65
+          rokov veku bola vydaná a doručená SENIOR KARTA, ktorá seniorov
+          oprávňuje využívať výhody plynúce z rezidenčnej karty. Seniorom od
+          uvedeného veku teda mesto rezidenčnú kartu nevydáva. <br />
+          <br />Výhody, vyplývajúce z rezidenčnej karty na rok 2022, občania
+          môžu uplatňovať v Areáli vodných športov (letné kúpalisko a mestská
+          plaváreň) na poskytnutie zľavy z ceny vstupného. Rovnako aj pri
+          návšteve Komunitnej klubovne FAJNOVO (budova Centra voľného času), pri
+          člnkovaní a vodnom bicyklovaní na rybníku v mestskom parku. <br />
+          <br />V prípade straty rezidenčnej karty mesto Trebišov účtuje
+          poplatok za vystavenie náhradnej karty v sume 1 €. Poplatok je
+          potrebné uhradiť v pokladni MsÚ v Trebišove.
+        </p>
       </div>
+      <LinksAndSizeComponent :files="files" />
     </div>
   </div>
 </template>
 
 <script>
 import { useMeta } from "vue-meta";
-import MapComponent from "../../components/MapComponent.vue";
+import LinksAndSizeComponent from "@/components/LinksAndSizeComponent.vue";
 
 export default {
   name: "RezidencnaKartaNaRokView",
   data() {
     return {
-      dataMap: {
-        name: "Mestská polícia Trebišov",
-        street: "M. R. Štefánika 862/204",
-        city: "075 25 Trebišov",
-        text: "Prízemie v budove Mestského úradu v Trebišove",
-        img: "mestsky-urad.jpg",
-      },
-      subpages: [
+      files: [
         {
-          title: "O mestskom úrade",
-          route: "/o-mestskom-urade",
+          name: "Žiadosť o vydanie Rezidenčnej karty na rok 2022",
+          size: "206.04kB",
+          ext: "PDF",
+          urlFile: "/",
         },
         {
-          title: "Prednosta",
-          route: "/",
-        },
-        {
-          title: "Oddelenia",
-          route: "/",
-        },
-        { title: "Strediská", route: "/" },
-        { title: "Oznamy", route: "/" },
-        { title: "Oznamy o úmrtiach", route: "/" },
-        { title: "Strategické dokumenty", route: "/" },
-        { title: "Všeobecne záväzné nariadenia", route: "/" },
-        { title: "Cenník", route: "/" },
-      ],
-      scheduleData: [
-        {
-          day: "pondelok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
-        },
-        {
-          day: "utorok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
-        },
-        {
-          day: "streda:",
-          time: "nestránkový deň",
-        },
-        {
-          day: "štvrtok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
-        },
-        {
-          day: "piatok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
+          name: "Žiadosť o vydanie Rezidenčnej karty na rok 2022",
+          size: "116.96 kB",
+          ext: "DOCX",
+          urlFile: "/",
         },
       ],
     };
   },
-  components: { MapComponent },
+  components: { LinksAndSizeComponent },
   setup() {
     useMeta({
       title: "Domov",
@@ -201,48 +148,4 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-.cover {
-  padding-bottom: 30px;
-}
-.label {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 20px;
-  color: #024497;
-}
-
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.item:first-child {
-  margin-right: 72px;
-}
-
-.mb-24 {
-  margin-bottom: 24px;
-}
-
-.list_identifikacne {
-  flex-direction: column;
-}
-
-.list_schedule {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.item_schedule {
-  width: 100%;
-  max-width: 430px;
-  display: flex;
-  justify-content: space-between;
-}
-</style>
+<style lang="scss" scoped></style>

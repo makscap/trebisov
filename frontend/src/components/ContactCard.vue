@@ -7,10 +7,19 @@
         <div class="location">{{ item.location }}</div>
         <ul class="list_contact">
           <li class="item_contact">
+            <ul v-if="item.phone" class="list_contact_fax">
+              <li v-for="(phone, ind) in item.phone" :key="ind">
+                Telefón:
+                <a :href="'tel:' + phone" className="phone">
+                  {{ phone }}
+                </a>
+              </li>
+            </ul>
+
             <ul v-if="item.mobil" class="list_contact_mobil">
               <li v-for="(tel, ind) in item.mobil" :key="ind">
                 <div>
-                  Telefón:
+                  Mobil:
                   <a :href="'tel:' + tel" className="phone">
                     {{ tel }}
                   </a>

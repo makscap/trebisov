@@ -16,32 +16,60 @@ export default {
     return {
       subpages: [
         {
-          title: "Mestská polícia",
-          route: "/mestska-policia",
+          title: "Evidencia obyvateľov",
+          route: "/evidencia-obyvatelov",
         },
         {
-          title: "Okresné riaditeľstvo policajného zboru v Trebišove",
-          route: "/okresne-riaditelstvo-policajneho-zboru",
+          title: "Matrika",
+          route: "/matrika",
         },
         {
-          title: "Policajné aktuality",
-          route: "/policajne-aktuality",
+          title: "Karty",
+          route: "/karty",
         },
         {
-          title: "Právne predpisy",
-          route: "/pravne-predpisy",
+          title: "Sociálna pomoc",
+          route: "/socialna-pomoc",
         },
         {
-          title: "Mestský kamerový systém",
-          route: "/mestsky-kamerovy-system",
+          title: "Technické služby mesta Trebišov",
+          route: "technicke-sluzby-mesta/",
         },
         {
-          title: "Rozdelenie sektorov",
-          route: "/rozdelenie-sektorov",
+          title: "Bývanie",
+          route: "/byvanie",
         },
         {
-          title: "Rady a informácie",
-          route: "/rady-a-informacie",
+          title: "Stavebný úrad",
+          route: "/stavebny-urad",
+        },
+        {
+          title: "Komunálny odpad",
+          route: "/komunalny-odpad",
+        },
+        {
+          title: "Miestne dane a poplatky",
+          route: "/miestne-dane-a-poplatky",
+        },
+        {
+          title: "Doprava a komunikácie",
+          route: "/doprava-a-komunikacie",
+        },
+        {
+          title: "Informácie",
+          route: "/informacie",
+        },
+        {
+          title: "Životné prostredie",
+          route: "/zivotne-prostredie",
+        },
+        {
+          title: "Ostatné",
+          route: "/ostatne",
+        },
+        {
+          title: "Otázky a odpovede",
+          route: "/otazky-a-odpovede",
         },
       ],
     };

@@ -16,32 +16,20 @@ export default {
     return {
       subpages: [
         {
-          title: "Mestská polícia",
-          route: "/mestska-policia",
+          title: "Potvrdenie o trvalom pobyte",
+          route: "/potverdenie-o-trvalom-pobyte",
         },
         {
-          title: "Okresné riaditeľstvo policajného zboru v Trebišove",
-          route: "/okresne-riaditelstvo-policajneho-zboru",
+          title: "Prihlásenie k prechodnému pobytu",
+          route: "/prihlasenie-k-prechodnemu-pobytu",
         },
         {
-          title: "Policajné aktuality",
-          route: "/policajne-aktuality",
+          title: "Prihlásenie na trvalý pobyt",
+          route: "/prihlasenie-na-trvaly-pobyt",
         },
         {
-          title: "Právne predpisy",
-          route: "/pravne-predpisy",
-        },
-        {
-          title: "Mestský kamerový systém",
-          route: "/mestsky-kamerovy-system",
-        },
-        {
-          title: "Rozdelenie sektorov",
-          route: "/rozdelenie-sektorov",
-        },
-        {
-          title: "Rady a informácie",
-          route: "/rady-a-informacie",
+          title: "Vydanie prvého občianského preukazu pri dovŕšení 15. roku",
+          route: "/vydanie-prveho-obcianskeho-preukazu",
         },
       ],
     };

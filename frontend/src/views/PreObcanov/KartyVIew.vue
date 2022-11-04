@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container parent">
     <div class="content">
-      <SubPagesMenu :subpages="subpages" title="Polícia" />
+      <SubPagesMenu :subpages="subpages" title="Karty" />
     </div>
   </div>
 </template>
@@ -16,32 +16,12 @@ export default {
     return {
       subpages: [
         {
-          title: "Mestská polícia",
-          route: "/mestska-policia",
+          title: "Rezidenčná karta na rok 2022",
+          route: "/rezidencna-karta-na-rok-2022",
         },
         {
-          title: "Okresné riaditeľstvo policajného zboru v Trebišove",
-          route: "/okresne-riaditelstvo-policajneho-zboru",
-        },
-        {
-          title: "Policajné aktuality",
-          route: "/policajne-aktuality",
-        },
-        {
-          title: "Právne predpisy",
-          route: "/pravne-predpisy",
-        },
-        {
-          title: "Mestský kamerový systém",
-          route: "/mestsky-kamerovy-system",
-        },
-        {
-          title: "Rozdelenie sektorov",
-          route: "/rozdelenie-sektorov",
-        },
-        {
-          title: "Rady a informácie",
-          route: "/rady-a-informacie",
+          title: "Senior karta",
+          route: "/senior-karta",
         },
       ],
     };

@@ -1,176 +1,73 @@
 <template>
   <div class="govuk-width-container">
     <div class="content w-75">
-      <h1 class="govuk-heading-l">Mestský úrad</h1>
-      <MapComponent :dataMap="dataMap" />
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <div class="cover">
-        <h4 class="label">Kontaktné informácie</h4>
-        <div class="mb-24">
-          <span class="bold">E-mail:</span>
-          <a href="mailto:trebisov@trebisov.sk"> trebisov@trebisov.sk </a>
-        </div>
-        <div class="mb-24">
-          <div><span class="bold">Informátor - vrátnica</span></div>
-          <div>
-            Tel.:
-            <a href="tel:+421566713339"> +421 56 6713 339 </a>
-          </div>
-        </div>
-
-        <ul class="list">
-          <li class="item">
-            <div><span class="bold">Sekretariát prednostu</span></div>
-            <div>Tel.: <a href="tel:+421566722157"> +421 56 672 2157 </a></div>
-            <div>Mobil: <a href="tel:+421915790360"> +421 915 790 360 </a></div>
-            <div>
-              E-mail:
-              <a href="mailto:vaskova@trebisov.sk"> vaskova@trebisov.sk </a>
-            </div>
-          </li>
-
-          <li class="item">
-            <div><span class="bold">Sekretariát primátora</span></div>
-            <div>Tel.: <a href="tel:+421566722665"> +421 56 672 2665 </a></div>
-            <div>
-              Mobil:
-
-              <a href="tel:+421905592107"> +421 905 592 107 </a>
-            </div>
-            <div>
-              E-mail:
-              <a href="mailto:hippova.katarina@trebisov.sk">
-                hippova.katarina@trebisov.sk
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <div class="cover">
-        <h4 class="label">Identifikačné údaje</h4>
-        <ul class="list list_identifikacne">
-          <li class="item">
-            <span class="bold">Bankové spojenie:</span> Všeobecná úverová banka,
-            a.s. pobočka Trebišov
-          </li>
-          <li><span class="bold">Číslo účtu:</span> 19325622/0200</li>
-          <li><span class="bold">IBAN:</span> SK39 0200 0000 0000 1932 5622</li>
-          <li><span class="bold">SWIFT/BIC:</span> SUBASKBX</li>
-        </ul>
-      </div>
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <h4 class="label">Úradné hodiny</h4>
-      <ul class="list_schedule">
-        <li class="item_schedule" v-for="(oneDay, i) in scheduleData" :key="i">
-          <span>{{ oneDay.day }}</span>
-          <span>{{ oneDay.time }}</span>
-        </li>
-      </ul>
-      <h4 class="label">Doplňujúce infromácie</h4>
+      <h1 class="govuk-heading-l">Inštitút osobitného príjemcu</h1>
 
       <p>
-        Mestský úrad zabezpečuje organizačné, administratívne a hospodárske veci
-        mestského zastupiteľstva, primátora, mestskej rady, komisií MsZ a Výboru
-        mestskej časti Milhostov.
-        <br /><br />Mestský úrad zabezpečuje výkon originálnej pôsobnosti
-        samosprávy (originálne kompetencie) aj výkon prenesenej pôsobnosti
-        štátnej správy (prenesené kompetencie). <br /><br />Mestský úrad najmä
+        Inštitút osobitného príjemcu sociálnych dávok, najmä vo vzťahu k
+        nájomníkom - neplatičom a rodičom záškolákov využíva aj mesto Trebišov.
+        <br /><br />Pracovníci oddelenia sociálnych vecí a oddelenia školstva
+        MsÚ na základe podnetu zo školy, alebo od správcu bytov zisťujú, či sa
+        dávky využívajú na účel, na ktorý boli určené, či je postarané o stravu
+        a oblečenie detí, či sa platí nájomné za byt, komunálny odpad a podobne.
+        Mesto ako osobitný príjemca na základe prieskumu a zaradenia konkrétnej
+        rodiny do režimu osobitného príjemcu, rozhodne prostredníctvom
+        sociálneho referátu o použití dávky. Jej poberateľa informuje, ako bude
+        použitá. Napríklad časť na zaplatenie nájomného, komunálny odpad, časť
+        na nákup oblečenia a potravín a ďalšia ako finančné plnenie.
+        <br /><br />Oddelenie školstva a oddelenie sociálnych vecí už vykonáva
+        osobitného príjemcu na rodinné prídavky vo vzťahu k deťom, ktoré si
+        neplnia povinnú školskú dochádzku alebo sú v Stanici opatrovateľskej
+        služby z dôvodu zanedbania starostlivosti zo strany ich rodičov. V
+        súlade s účinnosťou zákona NR SR č. 281/2002 Z.z. sa pozastaví
+        vyplácanie prídavkov na dieťa a príspevkov k prídavkom na dieťa v tom
+        prípade, ak žiak vymešká v mesiaci bez ospravedlnenia viac než 15
+        vyučovacích hodín. Škola to oznámi ÚPSVaR v Trebišove. Ten na základe
+        oznámenia vydá rozhodnutie, ktorým odníme rodinné prídavky za príslušný
+        mesiac zákonnému zástupcovi dieťaťa. Peniaze poukáže osobitnému
+        príjemcovi, ktorým je zo zákona obec, v tomto prípade mesto Trebišov.
       </p>
 
-      <ul>
-        <li>
-          zabezpečuje písomnú agendu všetkých orgánov mesta a je podateľňou a
-          výpravňou písomností,
-        </li>
-        <li>
-          zabezpečuje odborné podklady a iné písomnosti na rokovanie MsZ, MsR,
-          komisií a výboru,
-        </li>
-        <li>vypracúva písomné vyhotovenia rozhodnutí mesta,</li>
-        <li>pripravuje návrhy a vykonáva uznesenia MsZ a rozhodnutia mesta,</li>
-        <li>
-          odborne a metodicky usmerňuje mestom zriadené organizácie a založené
-          spoločnosti.
-        </li>
-      </ul>
+      <p class="label mb-30">Vybavuje</p>
 
-      <div>
-        <a
-          :href="require('@/assets/pdf/test.pdf')"
-          target="_blank"
-          title="Štatút mesta Trebišov"
-          class="govuk-link-custom link"
-        >
-          Organizačná štruktúra mestského úradu
-        </a>
-
-        <span class="link_size"> (PDF, 181.32 kB)</span>
-      </div>
+      <ContactCard :contactsData="contactsData" />
     </div>
   </div>
 </template>
 
 <script>
 import { useMeta } from "vue-meta";
-import MapComponent from "../../components/MapComponent.vue";
+import ContactCard from "@/components/ContactCard.vue";
 
 export default {
   name: "InstitutOsobitnehoPijemcuView",
   data() {
     return {
-      dataMap: {
-        name: "Mestská polícia Trebišov",
-        street: "M. R. Štefánika 862/204",
-        city: "075 25 Trebišov",
-        text: "Prízemie v budove Mestského úradu v Trebišove",
-        img: "mestsky-urad.jpg",
-      },
-      subpages: [
+      contactsData: [
         {
-          title: "O mestskom úrade",
-          route: "/o-mestskom-urade",
+          name: "Mgr. Henrieta Demjanová",
+          position: "vedúca oddelenia",
+          location: "Mestský úrad, 4. poschodie, kancelária č. 402",
+          phone: ["+421 56 6713 338"],
+          mobil: ["+421 917 596 326"],
+          email: ["demjanova@trebisov.sk"],
         },
         {
-          title: "Prednosta",
-          route: "/",
+          name: "Bc. Vladimír Kočiš",
+          mobil: ["+421 915 785 238"],
         },
         {
-          title: "Oddelenia",
-          route: "/",
-        },
-        { title: "Strediská", route: "/" },
-        { title: "Oznamy", route: "/" },
-        { title: "Oznamy o úmrtiach", route: "/" },
-        { title: "Strategické dokumenty", route: "/" },
-        { title: "Všeobecne záväzné nariadenia", route: "/" },
-        { title: "Cenník", route: "/" },
-      ],
-      scheduleData: [
-        {
-          day: "pondelok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
-        },
-        {
-          day: "utorok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
-        },
-        {
-          day: "streda:",
-          time: "nestránkový deň",
-        },
-        {
-          day: "štvrtok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
-        },
-        {
-          day: "piatok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
+          name: "Ing. Rastislav Kočiš",
+          position: "referent pre školstvo",
+          location: "Mestský úrad, 4. poschodie, kancelária č. 408",
+          phone: ["+421 56 6713 327"],
+          mobil: ["+421 915 790 364"],
+          email: ["kocisr@trebisov.sk"],
         },
       ],
     };
   },
-  components: { MapComponent },
+  components: { ContactCard },
   setup() {
     useMeta({
       title: "Domov",
@@ -202,47 +99,21 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.cover {
-  padding-bottom: 30px;
-}
 .label {
-  font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 20px;
+  font-size: 19px;
+  line-height: 25px;
   color: #024497;
 }
-
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
+.inline {
+  display: inline;
 }
 
-.item:first-child {
-  margin-right: 72px;
+.label_box {
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
-
-.mb-24 {
-  margin-bottom: 24px;
-}
-
-.list_identifikacne {
-  flex-direction: column;
-}
-
-.list_schedule {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.item_schedule {
-  width: 100%;
-  max-width: 430px;
-  display: flex;
-  justify-content: space-between;
+.label_box span {
+  font-weight: 400 !important;
 }
 </style>

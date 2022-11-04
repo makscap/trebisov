@@ -177,8 +177,92 @@ export default {
           title: "Pre občanov",
         },
         {
-          name: "/pre-obcanov/evidencia-obyvatelov",
+          name: "evidencia-obyvatelov",
           title: "Evidencia obyvateľov",
+        },
+        {
+          name: "potverdenie-o-trvalom-pobyte",
+          title: "Potvrdenie o trvalom pobyte",
+        },
+        {
+          name: "prihlasenie-k-prechodnemu-pobytu",
+          title: "Prihlásenie k prechodnému pobytu",
+        },
+        {
+          name: "prihlasenie-na-trvaly-pobyt",
+          title: "Prihlásenie na trvalý pobyt",
+        },
+        {
+          name: "vydanie-prveho-obcianskeho-preukazu",
+          title: "Vydanie prvého občianského preukazu pri dovŕšení 15. roku",
+        },
+        {
+          name: "matrika",
+          title: "Matrika",
+        },
+        {
+          name: "zapis-novorodenca-a-rodny-list",
+          title: "Zápis novorodenca a rodný list",
+        },
+        {
+          name: "oprava-rodneho-cisla",
+          title: "Oprava rodného čísla",
+        },
+        {
+          name: "karty",
+          title: "Karty",
+        },
+        {
+          name: "rezidencna-karta-na-rok-2022",
+          title: "Rezidenčná karta na rok 2022",
+        },
+        {
+          name: "senior-karta",
+          title: "Senior karta",
+        },
+        {
+          name: "socialna-pomoc",
+          title: "Sociálna pomoc",
+        },
+        {
+          name: "financna-pomoc-primatora-a-zastupcu-primatora",
+          title: "Finančná pomoc primátora a zástupcu primátora",
+        },
+        {
+          name: "ako-ziadat-o-financnu-pomoc-primatora-a-zastupcu-primatora",
+          title: "Ako žiadať o finančnú pomoc primátora a zástupcu primátora",
+        },
+        {
+          name: "financna-pomoc-primatora-a-zastupcu-primatora-2018-2022",
+          title: "Finančná pomoc primátora a zástupcu primátora 2018 – 2022",
+        },
+        {
+          name: "denne-centra",
+          title: "Denné centrá",
+        },
+        {
+          name: "domaca-opatrovatelska-sluzba",
+          title: "Domáca opatrovateľská služba",
+        },
+        {
+          name: "institut-osobitneho-prijemcu",
+          title: "Inštitút osobitného príjemcu",
+        },
+        {
+          name: "mestska-socialna-ubytovna",
+          title: "Mestská sociálna ubytovňa",
+        },
+        {
+          name: "mestsky-utulok",
+          title: "Mestský útulok",
+        },
+        {
+          name: "socialne-sluzby-s-pouzitim-telekomunikacnych-technologii",
+          title: "Sociálne služby s použitím telekomunikačných technológií",
+        },
+        {
+          name: "stredisko-osobnej-hygieny-a-pracovne",
+          title: "Stredisko osobnej hygieny a práčovne",
         },
       ],
     };

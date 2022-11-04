@@ -1,7 +1,10 @@
 <template>
   <div class="govuk-width-container parent">
     <div class="content">
-      <SubPagesMenu :subpages="subpages" title="Polícia" />
+      <SubPagesMenu
+        :subpages="subpages"
+        title="Finančná pomoc primátora a zástupcu primátora"
+      />
     </div>
   </div>
 </template>
@@ -16,32 +19,16 @@ export default {
     return {
       subpages: [
         {
-          title: "Mestská polícia",
-          route: "/mestska-policia",
+          title: "Ako žiadať o finančnú pomoc primátora a zástupcu primátora",
+          route: "/ako-ziadat-o-financnu-pomoc-primatora-a-zastupcu-primatora",
         },
         {
-          title: "Okresné riaditeľstvo policajného zboru v Trebišove",
-          route: "/okresne-riaditelstvo-policajneho-zboru",
+          title: "Finančná pomoc primátora a zástupcu primátora 2018 – 2022",
+          route: "/financna-pomoc-primatora-a-zastupcu-primatora-2018-2022",
         },
         {
-          title: "Policajné aktuality",
-          route: "/policajne-aktuality",
-        },
-        {
-          title: "Právne predpisy",
-          route: "/pravne-predpisy",
-        },
-        {
-          title: "Mestský kamerový systém",
-          route: "/mestsky-kamerovy-system",
-        },
-        {
-          title: "Rozdelenie sektorov",
-          route: "/rozdelenie-sektorov",
-        },
-        {
-          title: "Rady a informácie",
-          route: "/rady-a-informacie",
+          title: "Finančná pomoc primátora a zástupcu primátora 2015 – 2018",
+          route: "/financna-pomoc-primatora-a-zastupcu-primatora-2015-2018",
         },
       ],
     };

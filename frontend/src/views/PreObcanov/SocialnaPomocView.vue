@@ -1,7 +1,7 @@
 <template>
-  <div class="govuk-width-container parent">
+  <div class="govuk-width-container">
     <div class="content">
-      <SubPagesMenu :subpages="subpages" title="Polícia" />
+      <SubPagesMenu :subpages="subpages" title="Sociálna pomoc" />
     </div>
   </div>
 </template>
@@ -16,32 +16,36 @@ export default {
     return {
       subpages: [
         {
-          title: "Mestská polícia",
-          route: "/mestska-policia",
+          title: "Finančná pomoc primátora a zástupcu primátora",
+          route: "/financna-pomoc-primatora-a-zastupcu-primatora",
         },
         {
-          title: "Okresné riaditeľstvo policajného zboru v Trebišove",
-          route: "/okresne-riaditelstvo-policajneho-zboru",
+          title: "Denné centrá",
+          route: "/denne-centra",
         },
         {
-          title: "Policajné aktuality",
-          route: "/policajne-aktuality",
+          title: "Domáca opatrovateľská služba",
+          route: "/domaca-opatrovatelska-sluzba",
         },
         {
-          title: "Právne predpisy",
-          route: "/pravne-predpisy",
+          title: "Inštitút osobitného príjemcu",
+          route: "/institut-osobitneho-prijemcu",
         },
         {
-          title: "Mestský kamerový systém",
-          route: "/mestsky-kamerovy-system",
+          title: "Mestská sociálna ubytovňa",
+          route: "/mestska-socialna-ubytovna",
         },
         {
-          title: "Rozdelenie sektorov",
-          route: "/rozdelenie-sektorov",
+          title: "Mestský útulok",
+          route: "/mestsky-utulok",
         },
         {
-          title: "Rady a informácie",
-          route: "/rady-a-informacie",
+          title: "Sociálne služby s použitím telekomunikačných technológií",
+          route: "/socialne-sluzby-s-pouzitim-telekomunikacnych-technologii",
+        },
+        {
+          title: "Stredisko osobnej hygieny a práčovne",
+          route: "/stredisko-osobnej-hygieny-a-pracovne",
         },
       ],
     };
