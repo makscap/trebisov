@@ -227,13 +227,19 @@
                 </form>
                 <div class="idsk-header-web__main--buttons">
                   <div class="idsk-header-web__main--login">
-                    <button
+                    <router-link
+                      class="idsk-button idsk-header-web__main--login-loginbtn"
+                      to="/auth"
+                    >
+                      Prihlásiť sa
+                    </router-link>
+                    <!-- <button
                       type="button"
                       class="idsk-button idsk-header-web__main--login-loginbtn"
                       data-module="idsk-button"
                     >
                       Prihlásiť sa
-                    </button>
+                    </button> -->
                     <div class="idsk-header-web__main--login-action">
                       <img
                         class="idsk-header-web__main--login-action-profile-img"

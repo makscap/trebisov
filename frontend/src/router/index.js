@@ -159,6 +159,16 @@ import OtazkyAOdpovedeView from "../views/PreObcanov/OtazkyAOdpovedeView.vue";
 import ObcaniaView from "../views/PreObcanov/ObcaniaView.vue";
 import OstatneView from "../views/PreObcanov/OstatneView.vue";
 
+import HlasObcanovView from "../views/HlasObcanovView.vue";
+import ParticipativnyRozpocetView from "../views/ParticipativnyRozpocetView.vue";
+import HlasovanieOParticipativnomRozpocteView from "../views/HlasovanieOParticipativnomRozpocteView.vue";
+import DiskusneForumView from "../views/DiskusneForumView.vue";
+import TopicForumView from "../views/TopicForumView.vue";
+import ProfileForumView from "../views/ProfileForumView.vue";
+import AuthVIew from "../views/AuthVIew.vue";
+import ObcianskaInzerciaView from "../views/ObcianskaInzerciaView.vue";
+import ObcianskaInzerciaTopicView from "../views/ObcianskaInzerciaTopicView.vue";
+
 export const routes = [
   {
     path: "/",
@@ -167,16 +177,70 @@ export const routes = [
     component: HomeView,
   },
   {
+    path: "/auth",
+    name: "Auth",
+    title: "Auth",
+    component: AuthVIew,
+  },
+  {
     path: "/o-meste",
     name: "O meste",
     title: "O meste",
     component: OMesteView,
   },
   {
+    path: "/hlas-obcanov",
+    name: "Hlas občanov",
+    title: "Hlas občanov",
+    component: HlasObcanovView,
+  },
+  {
+    path: "/obcianska-inzercia",
+    name: "Občianska inzercia",
+    title: "Občianska inzercia",
+    component: ObcianskaInzerciaView,
+  },
+  {
+    path: "/obcianska-inzercia/:topic",
+    name: "",
+    title: "",
+    component: ObcianskaInzerciaTopicView,
+  },
+  {
+    path: "/hlas-obcanov/participativny-rozpocet",
+    name: "Participatívny rozpočet",
+    title: "Participatívny rozpočet",
+    component: ParticipativnyRozpocetView,
+  },
+  {
+    path: "/hlas-obcanov/hlasovanie-o-participativnom-rozpocte-mesta",
+    name: "Hlasovanie o participatívnom rozpočte mesta",
+    title: "Hlasovanie o participatívnom rozpočte mesta",
+    component: HlasovanieOParticipativnomRozpocteView,
+  },
+  {
     path: "/samosprava-mesta",
     name: "Samospráva mesta",
     title: "Samospráva mesta",
     component: SamospravaMestaView,
+  },
+  {
+    path: "/diskusne-forum",
+    name: "Diskusné fórum",
+    title: "Diskusné fórum",
+    component: DiskusneForumView,
+  },
+  {
+    path: "/diskusne-forum/:topic",
+    name: "",
+    title: "",
+    component: TopicForumView,
+  },
+  {
+    path: "/diskusne-forum/:topic/:profile",
+    name: "",
+    title: "",
+    component: ProfileForumView,
   },
   {
     path: "/mestsky-urad",

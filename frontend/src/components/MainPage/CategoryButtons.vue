@@ -70,7 +70,7 @@ export default {
         {
           title: "Diskusné fórum",
           icon: require("@/assets/categories_icons/message.svg"),
-          link: "/aktuality/mladi-vodici",
+          link: "/diskusne-forum",
         },
       ],
     };

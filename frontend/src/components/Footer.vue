@@ -320,12 +320,19 @@
                     :key="index"
                     class="idsk-footer-extended-list-item"
                   >
-                    <a
+                    <router-link
+                      :to="item.url"
+                      class="govuk-link-custom"
+                      :title="item.name"
+                      aria-hidden="false"
+                      >{{ item.name }}
+                    </router-link>
+                    <!-- <a
                       class="govuk-link-custom"
                       title="Link small Regular 12/20"
                       :href="item.url"
                       >{{ item.name }}</a
-                    >
+                    > -->
                   </li>
                 </ul>
               </div>
@@ -483,19 +490,19 @@ export default {
           firstBlock: [
             {
               name: "Zákaldné údaje",
-              url: "",
+              url: "/o-meste/zakladne-udaje",
             },
             {
               name: "História mesta",
-              url: "",
+              url: "/o-meste/historia-mesta",
             },
             {
               name: "Symboly mesta",
-              url: "",
+              url: "/o-meste/symboly-mesta",
             },
             {
               name: "Štatút mesta",
-              url: "",
+              url: "/o-meste/statut-mesta",
             },
           ],
           secondBlock: [

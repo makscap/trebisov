@@ -7,7 +7,7 @@
         class="govuk-accordion__section list"
       >
         <div class="govuk-accordion__section-header">
-          <h2 class="govuk-accordion__section-heading">
+          <div class="govuk-accordion__section-heading">
             <button
               type="button"
               class="govuk-accordion__section-button"
@@ -47,7 +47,7 @@
                 />
               </svg>
             </span>
-          </h2>
+          </div>
         </div>
         <div>
           <div

@@ -56,53 +56,18 @@
             >
               <h2 class="govuk-heading-s white bold">Pre občanov</h2>
               <ul class="idsk-intro-block__side-menu__ul">
-                <li class="idsk-intro-block__side-menu__li">
-                  <a
+                <li
+                  class="idsk-intro-block__side-menu__li"
+                  v-for="(link, i) in links"
+                  :key="i"
+                >
+                  <router-link
+                    :to="this.$route.path + link.url"
                     class="govuk-link idsk-intro-block__side-menu__a"
-                    href="#"
-                    title="O eurofondoch"
-                    >Evidencia obyvateľov</a
-                  >
-                </li>
-                <li class="idsk-intro-block__side-menu__li">
-                  <a
-                    class="govuk-link idsk-intro-block__side-menu__a"
-                    href="#"
-                    title="Aktuality"
-                    >Stavebný úrad</a
-                  >
-                </li>
-                <li class="idsk-intro-block__side-menu__li">
-                  <a
-                    class="govuk-link idsk-intro-block__side-menu__a"
-                    href="#"
-                    title="O ministerstve"
-                    >Komunálny odpad</a
-                  >
-                </li>
-                <li class="idsk-intro-block__side-menu__li">
-                  <a
-                    class="govuk-link idsk-intro-block__side-menu__a"
-                    href="#"
-                    title="Aktuálne výzvy"
-                    >Miestne dane a poplatky</a
-                  >
-                </li>
-                <li class="idsk-intro-block__side-menu__li">
-                  <a
-                    class="govuk-link idsk-intro-block__side-menu__a"
-                    href="#"
-                    title="Dokumenty"
-                    >Doprava a komunikácie</a
-                  >
-                </li>
-                <li class="idsk-intro-block__side-menu__li">
-                  <a
-                    class="govuk-link idsk-intro-block__side-menu__a"
-                    href="#"
-                    title="Dokumenty"
-                    >Informácie</a
-                  >
+                    :title="link.name"
+                    aria-hidden="false"
+                    >{{ link.name }}
+                  </router-link>
                 </li>
               </ul>
             </div>
@@ -117,7 +82,34 @@
 export default {
   name: "HeaderComponent",
   data() {
-    return {};
+    return {
+      links: [
+        {
+          name: "Evidencia obyvateľov",
+          url: "pre-obcanov/evidencia-obyvatelov",
+        },
+        {
+          name: "Stavebný úrad",
+          url: "pre-obcanov/stavebny-urad",
+        },
+        {
+          name: "Komunálny odpad",
+          url: "pre-obcanov/komunalny-odpad",
+        },
+        {
+          name: "Miestne dane a poplatky",
+          url: "pre-obcanov/miestne-dane-a-poplatky",
+        },
+        {
+          name: "Doprava a komunikácie",
+          url: "pre-obcanov/doprava-a-komunikacie",
+        },
+        {
+          name: "Informácie",
+          url: "pre-obcanov/informacie",
+        },
+      ],
+    };
   },
   beforeMount() {},
   computed: {},

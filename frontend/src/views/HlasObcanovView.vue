@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container parent">
     <div class="content">
-      <SubPagesMenu :subpages="subpages" title="Evidencia obyvateľov" />
+      <SubPagesMenu :subpages="subpages" title="Hlas občanov" />
     </div>
   </div>
 </template>
@@ -11,25 +11,17 @@ import SubPagesMenu from "@/components/SubPagesMenu.vue";
 import { useMeta } from "vue-meta";
 
 export default {
-  name: "EvidenciaObyvatelovView",
+  name: "HlasObcanovView",
   data() {
     return {
       subpages: [
         {
-          title: "Potvrdenie o trvalom pobyte",
-          route: "/potverdenie-o-trvalom-pobyte",
+          title: "Participatívny rozpočet",
+          route: "/participativny-rozpocet",
         },
         {
-          title: "Prihlásenie k prechodnému pobytu",
-          route: "/prihlasenie-k-prechodnemu-pobytu",
-        },
-        {
-          title: "Prihlásenie na trvalý pobyt",
-          route: "/prihlasenie-na-trvaly-pobyt",
-        },
-        {
-          title: "Vydanie prvého občianského preukazu pri dovŕšení 15. roku",
-          route: "/vydanie-prveho-obcianskeho-preukazu",
+          title: "Hlasovanie o participatívnom rozpočte mesta",
+          route: "/hlasovanie-o-participativnom-rozpocte-mesta",
         },
       ],
     };
