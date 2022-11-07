@@ -32,8 +32,12 @@
                   :title="item.doc_name"
                   class="govuk-link-custom link"
                 >
-                  {{ item.doc_name }} ({{ item.doc_size }} {{ item.doc_ext }})
+                  {{ item.doc_name }}
                 </a>
+
+                <span class="link_size" v-if="item.doc_size || item.doc_ext">
+                  ({{ item.doc_size }} {{ item.doc_ext }})</span
+                >
               </td>
             </tr>
           </tbody>
@@ -112,4 +116,29 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.link_size {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 25px;
+  white-space: nowrap;
+}
+
+.idsk-table__cell:nth-child(1),
+.idsk-table__header:nth-child(1) {
+  width: 135px;
+}
+.idsk-table__cell:nth-child(2),
+.idsk-table__header:nth-child(2) {
+  width: 135px;
+}
+.idsk-table__cell:nth-child(3),
+.idsk-table__header:nth-child(3) {
+  width: 220px;
+}
+.idsk-table__cell:nth-child(4),
+.idsk-table__header:nth-child(4) {
+  flex: 1;
+}
+</style>

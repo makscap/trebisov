@@ -33,7 +33,7 @@
 
 <script>
 import { useMeta } from "vue-meta";
-import ContactCard from "../../components/ContactCard.vue";
+import ContactCard from "@/components/ContactCard.vue";
 
 export default {
   name: "MestkaVnutornaOchranaView",

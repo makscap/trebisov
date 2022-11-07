@@ -21,24 +21,28 @@
         <br />Dodatok č. 3 schválilo Mestské zastupiteľstvo v Trebišove na
         zasadnutí dňa 19.12.2018 uznesením č. 23/2018.
       </p>
-      <a
-        :href="require('@/assets/pdf/test.pdf')"
-        target="_blank"
-        title="Štatút mesta Trebišov"
-        class="govuk-link-custom"
-        >Štatút mesta Trebišov </a
-      ><span class="no-link"> (PDF, 502.63 kB)</span>
+      <LinksAndSizeComponent :files="files" />
     </div>
   </div>
 </template>
 
 <script>
 import { useMeta } from "vue-meta";
+import LinksAndSizeComponent from "../../components/LinksAndSizeComponent.vue";
 
 export default {
   name: "StatutMestaView",
   data() {
-    return {};
+    return {
+      files: [
+        {
+          name: "Štatút mesta Trebišov",
+          size: "502.63 kB",
+          ext: "PDF",
+          urlFile: "/",
+        },
+      ],
+    };
   },
   setup() {
     useMeta({
@@ -60,7 +64,7 @@ export default {
   },
 
   mounted() {},
-  components: {},
+  components: { LinksAndSizeComponent },
   methods: {
     falseFunction(e, route) {
       if (!route) e.preventDefault();

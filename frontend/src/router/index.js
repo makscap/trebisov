@@ -1,21 +1,37 @@
 import { createRouter, createWebHistory } from "vue-router";
+
 import HomeView from "../views/HomeView.vue";
+import ActivitiesView from "../views/ActivitiesView.vue";
+import HlasObcanovView from "../views/HlasObcanovView.vue";
+import ParticipativnyRozpocetView from "../views/ParticipativnyRozpocetView.vue";
+import HlasovanieOParticipativnomRozpocteView from "../views/HlasovanieOParticipativnomRozpocteView.vue";
+import DiskusneForumView from "../views/DiskusneForumView.vue";
+import TopicForumView from "../views/TopicForumView.vue";
+import ProfileForumView from "../views/ProfileForumView.vue";
+import AuthVIew from "../views/AuthVIew.vue";
+import ObcianskaInzerciaView from "../views/ObcianskaInzerciaView.vue";
+import ObcianskaInzerciaTopicView from "../views/ObcianskaInzerciaTopicView.vue";
+
+// O MESTE
+import OMesteView from "../views/OMeste/OMesteView.vue";
 import ZakladneUdajeView from "../views/OMeste/ZakladneUdajeView.vue";
 import HistoriaMestaTrebisovView from "../views/OMeste/HistoriaMestaTrebisovView.vue";
 import SymbolyMestaView from "../views/OMeste/SymbolyMestaView.vue";
 import StatutMestaView from "../views/OMeste/StatutMestaView.vue";
 import InfolistMestaView from "../views/OMeste/InfolistMestaView.vue";
+
+// SAMOSPRAVA MESTA
 import PrimatorView from "../views/SamospravaMesta/PrimatorView.vue";
 import ZastupcoviaPrimatora from "../views/SamospravaMesta/ZastupcoviaPrimatora.vue";
 import OZastupitelstveView from "../views/SamospravaMesta/MestskeZastupitelstvo/OZastupitelstveView.vue";
 import Poslanci18_20View from "../views/SamospravaMesta/MestskeZastupitelstvo/PoslanciMsz/Poslanci18_20View.vue";
 import UradnaTabulaView from "../views/SamospravaMesta/UradnaTabulaView.vue";
-import RozpocetMestaView from "../views/SamospravaMesta/RozpocetMestaView.vue";
+import RozpocetMestaView from "../views/SamospravaMesta/Rozpocet/RozpocetMestaView.vue";
 import VarejneObstaravanieView from "../views/SamospravaMesta/VarejneObstaravanieView.vue";
-import MestoTrebisovView from "../views/SamospravaMesta/MestoTrebisovView.vue";
-import TechnickeSluzbyMestaView from "../views/SamospravaMesta/TechnickeSluzbyMestaView.vue";
-import MestskySportovyKlubMladezeView from "../views/SamospravaMesta/MestskySportovyKlubMladezeView.vue";
-import ZakladnaUmeleckaSkolaView from "../views/SamospravaMesta/ZakladnaUmeleckaSkolaView.vue";
+import MestoTrebisovView from "../views/SamospravaMesta/VerejneObstaravanie/MestoTrebisovView.vue";
+import TechnickeSluzbyMestaView from "../views/SamospravaMesta/VerejneObstaravanie/TechnickeSluzbyMestaView.vue";
+import MestskySportovyKlubMladezeView from "../views/SamospravaMesta/VerejneObstaravanie/MestskySportovyKlubMladezeView.vue";
+import ZakladnaUmeleckaSkolaView from "../views/SamospravaMesta/VerejneObstaravanie/ZakladnaUmeleckaSkolaView.vue";
 import InternePredpisyView from "../views/SamospravaMesta/InternePredpisyView.vue";
 import ZmluvyFakturyView from "../views/SamospravaMesta/ZmluvyFakturyView.vue";
 import DocumentsView from "../views/SamospravaMesta/MestskeZastupitelstvo/DocumentsView.vue";
@@ -31,6 +47,7 @@ import InterpelaciePoslancovRokView from "../views/SamospravaMesta/MestskeZastup
 import OznameniaFunkciiTlacivaView from "../views/SamospravaMesta/MestskeZastupitelstvo/PoslanciMsz/OznameniaFunkciiTlacivaView.vue";
 import OznameniaFunkciiPoslanciView from "../views/SamospravaMesta/MestskeZastupitelstvo/PoslanciMsz/OznameniaFunkciiPoslanciView.vue";
 import ZasadnutiaView from "../views/SamospravaMesta/MestskeZastupitelstvo/ZasadnutiaView.vue";
+import ZasadnutiaChildView from "../views/SamospravaMesta/MestskeZastupitelstvo/ZasadnutiaChildView.vue";
 import ZasadnutiaSubPageView from "../views/SamospravaMesta/ZasadnutiaSubPageView.vue";
 import VideozaznamView from "../views/SamospravaMesta/VideozaznamView.vue";
 import DochadzkaPoslancovView from "../views/SamospravaMesta/DochadzkaPoslancovView.vue";
@@ -41,31 +58,27 @@ import OstatneDokumentyView from "../views/SamospravaMesta/HlavnyKontrolor/Ostat
 import SamospravaMestaView from "../views/SamospravaMesta/SamospravaMestaView.vue";
 import ProjektyView from "../views/SamospravaMesta/ProjektyView.vue";
 import MestskaRadaView from "../views/SamospravaMesta/MestskeZastupitelstvo/MestskaRadaView.vue";
-import ClenoviaMestskejRadyView from "../views/SamospravaMesta/ClenoviaMestskejRadyView.vue";
-import ZasadnutiaMestskejRadyView from "../views/SamospravaMesta/ZasadnutiaMestskejRadyView.vue";
-import RozpocetMesta2010_2022View from "../views/SamospravaMesta/RozpocetMesta2010_2022View.vue";
-import ZaverecnyUcetMesta2010_2021View from "../views/SamospravaMesta/ZaverecnyUcetMesta2010_2021View.vue";
+import ClenoviaMestskejRadyView from "../views/SamospravaMesta/MestskeZastupitelstvo/MestskaRada/ClenoviaMestskejRadyView.vue";
+import ZasadnutiaMestskejRadyView from "../views/SamospravaMesta/MestskeZastupitelstvo/MestskaRada/ZasadnutiaMestskejRadyView.vue";
+import RozpocetMesta2010_2022View from "../views/SamospravaMesta/Rozpocet/RozpocetMesta2010_2022View.vue";
+import ZaverecnyUcetMesta2010_2021View from "../views/SamospravaMesta/Rozpocet/ZaverecnyUcetMesta2010_2021View.vue";
 import DotacieDataView from "../views/SamospravaMesta/DotacieDataView.vue";
 import KomisieView from "../views/SamospravaMesta/MestskeZastupitelstvo/KomisieView.vue";
 import ZasadnutiaKomisiiView from "../views/SamospravaMesta/MestskeZastupitelstvo/ZasadnutiaKomisiiView.vue";
 import KomisieFinancnejView from "../views/SamospravaMesta/MestskeZastupitelstvo/KomisieFinancnejView.vue";
 import PriamyPrenosView from "../views/SamospravaMesta/MestskeZastupitelstvo/PriamyPrenosView.vue";
 import RevitalizaciaHraduView from "../views/SamospravaMesta/RevitalizaciaHraduView.vue";
-import ActivitiesView from "../views/ActivitiesView.vue";
 
-// O Meste
-import OMesteView from "../views/OMeste/OMesteView.vue";
-
-// Mestsky Urad
+// MESTSKY URAD
 import MestskyUradView from "../views/MestskyUrad/MestskyUradView.vue";
 import OMestskomUradeView from "../views/MestskyUrad/OMestskomUradeView.vue";
 import PrednostaView from "../views/MestskyUrad/PrednostaView.vue";
 import OddeleniaMsuView from "../views/MestskyUrad/OddeleniaMsuView.vue";
-import KancelariaPrimatoraView from "../views/MestskyUrad/KancelariaPrimatoraView.vue";
-import OddelenieFinancneView from "../views/MestskyUrad/OddelenieFinancneView.vue";
+import KancelariaPrimatoraView from "../views/MestskyUrad/Oddelenie/KancelariaPrimatoraView.vue";
+import OddelenieFinancneView from "../views/MestskyUrad/Oddelenie/OddelenieFinancneView.vue";
 import StrediskaView from "../views/MestskyUrad/StrediskaView.vue";
-import MestkaVnutornaOchranaView from "../views/MestskyUrad/MestkaVnutornaOchranaView.vue";
-import MestskeKulturneStrediskoView from "../views/MestskyUrad/MestskeKulturneStrediskoView.vue";
+import MestkaVnutornaOchranaView from "../views/MestskyUrad/Strediska/MestkaVnutornaOchranaView.vue";
+import MestskeKulturneStrediskoView from "../views/MestskyUrad/Strediska/MestskeKulturneStrediskoView.vue";
 import OznamyView from "../views/MestskyUrad/OznamyView.vue";
 import OznamySubPageView from "../views/MestskyUrad/OznamySubPageView.vue";
 import OznamyOUmrtiachView from "../views/MestskyUrad/OznamyOUmrtiachView.vue";
@@ -74,7 +87,7 @@ import CennikyView from "../views/MestskyUrad/CennikyView.vue";
 import VseobecneZavazneView from "../views/MestskyUrad/VseobecneZavazneView.vue";
 import VseobecneZavazneDetailView from "../views/MestskyUrad/VseobecneZavazneDetailView.vue";
 
-// Zivot V Meste
+// ZIVOT V MESTE
 import ZivotVMesteView from "../views/ZivotVMeste/ZivotVMesteView.vue";
 import HistorickeAKulturnePamiatkyView from "../views/ZivotVMeste/HistorickeAKulturnePamiatkyView.vue";
 import PodujatiaView from "../views/ZivotVMeste/PodujatiaView.vue";
@@ -96,78 +109,69 @@ import MestskyKamerovySystemView from "../views/ZivotVMeste/Policia/MestskyKamer
 import RadyAInformacieView from "../views/ZivotVMeste/Policia/RadyAInformacieView.vue";
 import PolicajneAktualityView from "../views/ZivotVMeste/Policia/PolicajneAktualityView.vue";
 import OkresneRiaditelstvoView from "../views/ZivotVMeste/Policia/OkresneRiaditelstvoView.vue";
+import HistorickeAKulturnePamiatkyDetailView from "../views/ZivotVMeste/HistorickeAKulturnePamiatkyDetailView.vue";
+import SkolyASkolskeZariadeniaView from "../views/ZivotVMeste/Skolstvo/SkolyASkolskeZariadeniaView.vue";
+import TestovanieView from "../views/ZivotVMeste/Skolstvo/TestovanieView.vue";
+import SkolskeSutazeView from "../views/ZivotVMeste/Skolstvo/SkolskeSutazeView.vue";
+import HodnotiaceSpravyView from "../views/ZivotVMeste/Skolstvo/HodnotiaceSpravyView.vue";
+import SkolstvoKontaktyView from "../views/ZivotVMeste/Skolstvo/SkolstvoKontaktyView.vue";
 
-// Pre Obcanov
+// PRE OBCANOV
 import PreObcanovView from "../views/PreObcanov/PreObcanovView.vue";
 import EvidenciaObyvatelovView from "../views/PreObcanov/EvidenciaObyvatelovView.vue";
-import PodtvrdenieOTrvalomPobyteVIew from "../views/PreObcanov/PodtvrdenieOTrvalomPobyteVIew.vue";
-import PrihlasenieKPrechodnemuPobytuView from "../views/PreObcanov/PrihlasenieKPrechodnemuPobytuView.vue";
-import PrihlasenieNaTrvalyPobytVIew from "../views/PreObcanov/PrihlasenieNaTrvalyPobytVIew.vue";
-import VydaniePrvehoObcianskehoPreukazuView from "../views/PreObcanov/VydaniePrvehoObcianskehoPreukazuView.vue";
+import PodtvrdenieOTrvalomPobyteVIew from "../views/PreObcanov/EvidenciaObyvatelov/PodtvrdenieOTrvalomPobyteVIew.vue";
+import PrihlasenieKPrechodnemuPobytuView from "../views/PreObcanov/EvidenciaObyvatelov/PrihlasenieKPrechodnemuPobytuView.vue";
+import PrihlasenieNaTrvalyPobytVIew from "../views/PreObcanov/EvidenciaObyvatelov/PrihlasenieNaTrvalyPobytVIew.vue";
+import VydaniePrvehoObcianskehoPreukazuView from "../views/PreObcanov/EvidenciaObyvatelov/VydaniePrvehoObcianskehoPreukazuView.vue";
 import MatrikaView from "../views/PreObcanov/MatrikaView.vue";
-import ZapisNovorodencaView from "../views/PreObcanov/ZapisNovorodencaView.vue";
-import OpravaRodnehoCislaView from "../views/PreObcanov/OpravaRodnehoCislaView.vue";
+import ZapisNovorodencaView from "../views/PreObcanov/Matrika/ZapisNovorodencaView.vue";
+import OpravaRodnehoCislaView from "../views/PreObcanov/Matrika/OpravaRodnehoCislaView.vue";
 import KartyVIew from "../views/PreObcanov/KartyVIew.vue";
-import RezidencnaKartaNaRokView from "../views/PreObcanov/RezidencnaKartaNaRokView.vue";
-import SeniorKartaView from "../views/PreObcanov/SeniorKartaView.vue";
+import RezidencnaKartaNaRokView from "../views/PreObcanov/Karty/RezidencnaKartaNaRokView.vue";
+import SeniorKartaView from "../views/PreObcanov/Karty/SeniorKartaView.vue";
 import SocialnaPomocView from "../views/PreObcanov/SocialnaPomocView.vue";
 import FinancnaPomocView from "../views/PreObcanov/FinancnaPomocView.vue";
 import AkoZiadatOFinancnuPomocView from "../views/PreObcanov/AkoZiadatOFinancnuPomocView.vue";
-import FinancnaPomoc2018_2022View from "../views/PreObcanov/FinancnaPomoc2018-2022View.vue";
-import DenneCentraView from "../views/PreObcanov/DenneCentraView.vue";
-import DomacaOpatrovatelskaSluzbaView from "../views/PreObcanov/DomacaOpatrovatelskaSluzbaView.vue";
-import InstitutOsobitnehoPijemcuView from "../views/PreObcanov/InstitutOsobitnehoPijemcuView.vue";
-import MestskaSocialnaUbytovnaView from "../views/PreObcanov/MestskaSocialnaUbytovnaView.vue";
-import MestskyUtulokVIew from "../views/PreObcanov/MestskyUtulokVIew.vue";
-import SocialneSluzbyVIew from "../views/PreObcanov/SocialneSluzbyVIew.vue";
-import StrediskoOsobnejHygienyVIew from "../views/PreObcanov/StrediskoOsobnejHygienyVIew.vue";
+import FinancnaPomoc2018_2022View from "../views/PreObcanov/SocialnaPomoc/FinancnaPomoc2018-2022View.vue";
+import DenneCentraView from "../views/PreObcanov/SocialnaPomoc/DenneCentraView.vue";
+import DomacaOpatrovatelskaSluzbaView from "../views/PreObcanov/SocialnaPomoc/DomacaOpatrovatelskaSluzbaView.vue";
+import InstitutOsobitnehoPijemcuView from "../views/PreObcanov/SocialnaPomoc/InstitutOsobitnehoPijemcuView.vue";
+import MestskaSocialnaUbytovnaView from "../views/PreObcanov/SocialnaPomoc/MestskaSocialnaUbytovnaView.vue";
+import MestskyUtulokVIew from "../views/PreObcanov/SocialnaPomoc/MestskyUtulokVIew.vue";
+import SocialneSluzbyVIew from "../views/PreObcanov/SocialnaPomoc/SocialneSluzbyVIew.vue";
+import StrediskoOsobnejHygienyVIew from "../views/PreObcanov/SocialnaPomoc/StrediskoOsobnejHygienyVIew.vue";
 import StavebnyUradVIew from "../views/PreObcanov/StavebnyUradView.vue";
-import BytovyPodnikView from "../views/PreObcanov/BytovyPodnikView.vue";
-
+import ZivotneProstredieView from "../views/PreObcanov/ZivotneProstredieView.vue";
+import InformacieView from "../views/PreObcanov/InformacieView.vue";
+import OtazkyAOdpovedeView from "../views/PreObcanov/OtazkyAOdpovedeView.vue";
+import ObcaniaView from "../views/PreObcanov/ObcaniaView.vue";
+import OstatneView from "../views/PreObcanov/OstatneView.vue";
 // Stavebny Urad
 import KolaudacneRozhodnutieView from "../views/PreObcanov/KolaudacneRozhodnutieView.vue";
 import OdstranenieStavbyView from "../views/PreObcanov/OdstranenieStavbyView.vue";
 import OhlasenieDrobnejStavbyView from "../views/PreObcanov/OhlasenieDrobnejStavbyView.vue";
 import OhlasenieStavebnychUpravView from "../views/PreObcanov/OhlasenieStavebnychUpravView.vue";
 import PovolenieInformachnychZariadeniView from "../views/PreObcanov/PovolenieInformachnychZariadeniView.vue";
-
 // Byvanie
 import ByvanieView from "../views/PreObcanov/ByvanieView.vue";
-import ZiadostOPridelenieView from "../views/PreObcanov/ZiadostOPridelenieView.vue";
-import ZiadostOPrechodNajmuView from "../views/PreObcanov/ZiadostOPrechodNajmuView.vue";
-import ZiadostOSuhlasView from "../views/PreObcanov/ZiadostOSuhlasView.vue";
-import SupisneCislaView from "../views/PreObcanov/SupisneCislaView.vue";
-
+import BytovyPodnikView from "../views/PreObcanov/Byvanie/BytovyPodnikView.vue";
+import ZiadostOPridelenieView from "../views/PreObcanov/Byvanie/ZiadostOPridelenieView.vue";
+import ZiadostOPrechodNajmuView from "../views/PreObcanov/Byvanie/ZiadostOPrechodNajmuView.vue";
+import ZiadostOSuhlasView from "../views/PreObcanov/Byvanie/ZiadostOSuhlasView.vue";
+import SupisneCislaView from "../views/PreObcanov/Byvanie/SupisneCislaView.vue";
 // Komunalny Odpad
 import KomunalnyOdpadView from "../views/PreObcanov/KomunalnyOdpadView.vue";
-import HarmonogramVyvozuView from "../views/PreObcanov/HarmonogramVyvozuView.vue";
-import ZbernyDvorView from "../views/PreObcanov/ZbernyDvorView.vue";
-import DoseparacneStrediskoView from "../views/PreObcanov/DoseparacneStrediskoView.vue";
+import HarmonogramVyvozuView from "../views/PreObcanov/KomunalnyOdpad/HarmonogramVyvozuView.vue";
+import ZbernyDvorView from "../views/PreObcanov/KomunalnyOdpad/ZbernyDvorView.vue";
+import DoseparacneStrediskoView from "../views/PreObcanov/KomunalnyOdpad/DoseparacneStrediskoView.vue";
 import MiestneDaneView from "../views/PreObcanov/MiestneDaneView.vue";
 import DanZNehnutelnostiView from "../views/PreObcanov/DanZNehnutelnostiView.vue";
 import DopravaAKomunikacieView from "../views/PreObcanov/DopravaAKomunikacieView.vue";
-
 // Dopravne Znacenia
 import DopravneZnacenia from "../views/PreObcanov/DopravneZnacenia.vue";
 import ObchadzkyView from "../views/PreObcanov/ObchadzkyView.vue";
 import RozkopavkyView from "../views/PreObcanov/RozkopavkyView.vue";
 import CestovnyPoriadokView from "../views/PreObcanov/CestovnyPoriadokView.vue";
-
-import ZivotneProstredieView from "../views/PreObcanov/ZivotneProstredieView.vue";
-import InformacieView from "../views/PreObcanov/InformacieView.vue";
-import OtazkyAOdpovedeView from "../views/PreObcanov/OtazkyAOdpovedeView.vue";
-import ObcaniaView from "../views/PreObcanov/ObcaniaView.vue";
-import OstatneView from "../views/PreObcanov/OstatneView.vue";
-
-import HlasObcanovView from "../views/HlasObcanovView.vue";
-import ParticipativnyRozpocetView from "../views/ParticipativnyRozpocetView.vue";
-import HlasovanieOParticipativnomRozpocteView from "../views/HlasovanieOParticipativnomRozpocteView.vue";
-import DiskusneForumView from "../views/DiskusneForumView.vue";
-import TopicForumView from "../views/TopicForumView.vue";
-import ProfileForumView from "../views/ProfileForumView.vue";
-import AuthVIew from "../views/AuthVIew.vue";
-import ObcianskaInzerciaView from "../views/ObcianskaInzerciaView.vue";
-import ObcianskaInzerciaTopicView from "../views/ObcianskaInzerciaTopicView.vue";
 
 export const routes = [
   {
@@ -353,6 +357,12 @@ export const routes = [
     component: HistorickeAKulturnePamiatkyView,
   },
   {
+    path: "/zivot-v-meste/historicke-a-kulturne-pamiatky/:slug",
+    name: "",
+    title: "",
+    component: HistorickeAKulturnePamiatkyDetailView,
+  },
+  {
     path: "/zivot-v-meste/historicke-a-kulturne-pamiatky/:article",
     name: "",
     title: "",
@@ -451,9 +461,39 @@ export const routes = [
     component: SkolstvoView,
   },
   {
+    path: "/zivot-v-meste/skolstvo/skoly-a-skolske-zariadenia",
+    name: "Školy a školské zariadenia Trebišov",
+    title: "Školy a školské zariadenia Trebišov",
+    component: SkolyASkolskeZariadeniaView,
+  },
+  {
+    path: "/zivot-v-meste/skolstvo/testovanie",
+    name: "Testovanie",
+    title: "Testovanie",
+    component: TestovanieView,
+  },
+  {
+    path: "/zivot-v-meste/skolstvo/skolske-sutaze",
+    name: "Školské súťaže",
+    title: "Školské súťaže",
+    component: SkolskeSutazeView,
+  },
+  {
+    path: "/zivot-v-meste/skolstvo/hodnotiace-spravy",
+    name: "Hodnotiace správy",
+    title: "Hodnotiace správy",
+    component: HodnotiaceSpravyView,
+  },
+  {
+    path: "/zivot-v-meste/skolstvo/kontakt",
+    name: "Školstvo kontakt",
+    title: "Školstvo kontakt",
+    component: SkolstvoKontaktyView,
+  },
+  {
     path: "/zivot-v-meste/policia",
-    name: "Školstvo",
-    title: "Školstvo",
+    name: "Polícia",
+    title: "Polícia",
     component: PoliciaView,
   },
   {
@@ -696,6 +736,12 @@ export const routes = [
     name: "Zasadnutia MsZ v Trebišove",
     title: "Zasadnutia MsZ v Trebišove",
     component: ZasadnutiaView,
+  },
+  {
+    path: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/:child",
+    name: "",
+    title: "",
+    component: ZasadnutiaChildView,
   },
   {
     path: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/:topic",

@@ -5,50 +5,14 @@
         Oznámenia funkcií, zamestnaní, činností a majetkových pomerov verejného
         funkcionára - poslanci
       </h1>
-
-      <!-- <div class="govuk-accordion">
-        <div
-          v-for="(item, ind) in archive"
-          :key="ind"
-          class="govuk-accordion__section list"
-        >
-          <div class="idsk-crossroad__item label govuk-heading-m">
-            {{ item.title }}
-          </div>
-
-          <div v-for="(child, indx) in item.children" :key="indx" class="">
-            <div class="govuk-accordion__section-header">
-              <h2 class="govuk-accordion__section-heading">
-                <button
-                  type="button"
-                  class="govuk-accordion__section-button"
-                  aria-expanded="false"
-                  @click="toggleAccordion(child)"
-                >
-                  {{ child.name }}</button
-                ><span class="govuk-accordion__icon" aria-hidden="true"></span>
-              </h2>
-            </div>
-            <div
-              v-for="(el, i) in child.info"
-              :key="i"
-              :class="
-                child.isOpen
-                  ? 'govuk-accordion__section'
-                  : 'govuk-accordion__section-content'
-              "
-            >
-              <p class="govuk-body"></p>
-            </div>
-          </div>
-        </div>
-      </div> -->
+      <RazcestnikAndLinksComponent :archive="archive" />
     </div>
   </div>
 </template>
 
 <script>
 import { useMeta } from "vue-meta";
+import RazcestnikAndLinksComponent from "@/components/RazcestnikAndLinksComponent";
 
 export default {
   name: "OznameniaFunkciiPoslanciView",
@@ -56,31 +20,40 @@ export default {
     return {
       archive: [
         {
-          title: "Mesto Trebišov",
+          title:
+            "Oznámenia funkcií, zamestnaní, činností a majetkových pomerov verejného funkcionára - poslanci za rok 2020",
+          isOpen: false,
           children: [
             {
-              name: "Oznámenia funkcií, zamestnaní, činností a majetkových pomerov verejného funkcionára - poslanci za rok 2020",
-              isOpen: true,
-              info: [
-                {
-                  name: "Mesto Trebišov, M. R. Štefánika 862/204, 075 25 Trebišov",
-                  size: "Povinne zverejňované zmluvy sú od 31.03.2022 v zmysle § 5a ods. 6 zákona č. 211/2000 Z. z. o slobodnom prístupe k informáciám a o zmene a doplnení niektorých zákonov (zákon o slobode informácií) v znení neskorších predpisov zverejňované v Centrálnom registri zmlúv.",
-                  url: "https://crz.gov.sk",
-                  ext: "https://crz.gov.sk",
-                },
-              ],
+              name: "Mgr. Martin Begala",
+              url: "/",
+              size: "279.42 kB",
+              ext: "PDF",
             },
             {
-              name: "Oznámenia funkcií, zamestnaní, činností a majetkových pomerov verejného funkcionára - poslanci za rok 2019",
-              isOpen: false,
-              info: [
-                {
-                  organization:
-                    "Mesto Trebišov, M. R. Štefánika 862/204, 075 25 Trebišov",
-                  text: "Povinne zverejňované zmluvy sú od 31.03.2022 v zmysle § 5a ods. 6 zákona č. 211/2000 Z. z. o slobodnom prístupe k informáciám a o zmene a doplnení niektorých zákonov (zákon o slobode informácií) v znení neskorších predpisov zverejňované v Centrálnom registri zmlúv.",
-                  site: "https://crz.gov.sk",
-                },
-              ],
+              name: "Mgr. Martin Begala",
+              url: "/",
+              size: "279.42 kB",
+              ext: "PDF",
+            },
+          ],
+        },
+        {
+          title:
+            "Oznámenia funkcií, zamestnaní, činností a majetkových pomerov verejného funkcionára - poslanci za rok 2019",
+          isOpen: false,
+          children: [
+            {
+              name: "Mgr. Martin Begala",
+              url: "/",
+              size: "279.42 kB",
+              ext: "PDF",
+            },
+            {
+              name: "Mgr. Martin Begala",
+              url: "/",
+              size: "279.42 kB",
+              ext: "PDF",
             },
           ],
         },
@@ -105,7 +78,7 @@ export default {
       ],
     });
   },
-  components: {},
+  components: { RazcestnikAndLinksComponent },
   mounted() {},
   methods: {
     toggleAccordion(item) {

@@ -99,6 +99,7 @@ export default {
 
 .column_title {
   width: 135px;
+  font-weight: 700;
 }
 
 .item {

@@ -115,5 +115,10 @@ export default {
 
 .date {
   margin-bottom: 8px !important;
+  color: #626a6e !important;
+}
+
+.link {
+  font-weight: 700;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="govuk-width-container parent">
+  <div class="govuk-width-container">
     <div class="content">
       <SubPagesMenu :subpages="subpages" title="Mestský úrad" />
     </div>

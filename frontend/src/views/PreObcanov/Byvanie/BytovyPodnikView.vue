@@ -113,7 +113,7 @@
 
 <script>
 import { useMeta } from "vue-meta";
-import MapComponent from "../../components/MapComponent.vue";
+import MapComponent from "@/components/MapComponent.vue";
 
 export default {
   name: "BytovyPodnikView",

@@ -1,24 +1,10 @@
 <template>
   <div class="govuk-width-container">
     <div class="content w-75">
-      <h1 class="govuk-heading-l">Rozpočet mesta Trebišov</h1>
-      <ul class="list">
-        <li v-for="(sub, ind) in this.subpages" :key="ind" class="item">
-          <div class="idsk-crossroad idsk-crossroad-2">
-            <div class="idsk-crossroad__item">
-              <router-link
-                :to="this.$route.path + sub.route"
-                class="govuk-link idsk-crossroad-title"
-                title="Title for 1st element"
-                aria-hidden="false"
-                >{{ sub.title }}
-              </router-link>
-              <hr class="idsk-crossroad-line" aria-hidden="true" />
-            </div>
-          </div>
-        </li>
-      </ul>
-
+      <SubPagesMenuVertical
+        :subpages="subpages"
+        title="Rozpočet mesta Trebišov"
+      />
       <div>
         <p>
           Zostavovanie rozpočtu obce a rozpočtu mesta v celku vychádza
@@ -69,6 +55,7 @@
 
 <script>
 import { useMeta } from "vue-meta";
+import SubPagesMenuVertical from "@/components/SubPagesMenuVertical.vue";
 
 export default {
   name: "RozpocetMestaView",
@@ -105,7 +92,7 @@ export default {
       ],
     });
   },
-
+  components: { SubPagesMenuVertical },
   mounted() {},
   methods: {
     falseFunction(e, route) {

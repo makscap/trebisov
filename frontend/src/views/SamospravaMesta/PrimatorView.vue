@@ -94,7 +94,9 @@
           </span>
         </p>
         <p>Prílohy:</p>
-        <ul class="p-0">
+        <LinksAndSizeComponent :files="files" />
+
+        <!-- <ul class="p-0">
           <li class="item_link">
             <a
               :href="require('@/assets/pdf/test.pdf')"
@@ -186,7 +188,7 @@
 
             <div class="link_size">(PDF, 191.08 kB)</div>
           </li>
-        </ul>
+        </ul> -->
       </div>
     </div>
   </div>
@@ -194,11 +196,57 @@
 
 <script>
 import { useMeta } from "vue-meta";
+import LinksAndSizeComponent from "../../components/LinksAndSizeComponent.vue";
 
 export default {
   name: "StatutMestaView",
   data() {
-    return {};
+    return {
+      files: [
+        {
+          name: "Oznámenie funkcií, zamestnaní, činností a majetkových pomerov po ujatí sa verejnej funkcie za rok 2014",
+          size: "191.08 kB",
+          ext: "PDF",
+          urlFile: "/",
+        },
+        {
+          name: "Oznámenie funkcií, zamestnaní, činností a majetkových pomerov za rok 2015",
+          size: "191.08 kB",
+          ext: "PDF",
+          urlFile: "/",
+        },
+        {
+          name: "Oznámenie funkcií, zamestnaní, činností a majetkových pomerov za rok 2016",
+          size: "191.08 kB",
+          ext: "PDF",
+          urlFile: "/",
+        },
+        {
+          name: "Oznámenie funkcií, zamestnaní, činností a majetkových pomerov za rok 2017",
+          size: "191.08 kB",
+          ext: "PDF",
+          urlFile: "/",
+        },
+        {
+          name: "Oznámenie funkcií, zamestnaní, činností a majetkových pomerov za rok 2018",
+          size: "191.08 kB",
+          ext: "PDF",
+          urlFile: "/",
+        },
+        {
+          name: "Oznámenie funkcií, zamestnaní, činností a majetkových pomerov za rok 2019",
+          size: "191.08 kB",
+          ext: "PDF",
+          urlFile: "/",
+        },
+        {
+          name: "Oznámenie funkcií, zamestnaní, činností a majetkových pomerov za rok 2020",
+          size: "191.08 kB",
+          ext: "PDF",
+          urlFile: "/",
+        },
+      ],
+    };
   },
   setup() {
     useMeta({
@@ -220,7 +268,7 @@ export default {
   },
 
   mounted() {},
-  components: {},
+  components: { LinksAndSizeComponent },
   methods: {
     falseFunction(e, route) {
       if (!route) e.preventDefault();

@@ -86,12 +86,16 @@
       </ul>
       <h4 class="label">Orgánmi mestského zastupiteľstva sú:</h4>
       <ul>
-        <li>mestská rada ako iniciatívny, výkonný a kontrolný orgán</li>
         <li>
-          komisie mestského zastupiteľstva ako poradné, iniciatívne a kontrolné
-          orgány
+          <span>mestská rada</span> ako iniciatívny, výkonný a kontrolný orgán
         </li>
-        <li>útvar hlavného kontrolóra ako kontrolný organizačný útvar</li>
+        <li>
+          <span>komisie mestského zastupiteľstva</span> ako poradné, iniciatívne
+          a kontrolné orgány
+        </li>
+        <li>
+          <span>útvar hlavného kontrolóra</span> ako kontrolný organizačný útvar
+        </li>
       </ul>
     </div>
   </div>

@@ -45,12 +45,12 @@ export default {
         {
           title: "Primátor mesta",
           icon: require("@/assets/categories_icons/person.svg"),
-          link: "/aktuality/chodci",
+          link: "/samosprava-mesta/primator",
         },
         {
           title: "Mestské zastupiteľstvo",
           icon: require("@/assets/categories_icons/people.svg"),
-          link: "/aktuality/deti",
+          link: "/samosprava-mesta/mestske-zastupitelstvo",
         },
         {
           title: "Voľby 2022",
@@ -60,12 +60,12 @@ export default {
         {
           title: "Úradná tabuľa",
           icon: require("@/assets/categories_icons/assignment.svg"),
-          link: "/aktuality/cyklisti",
+          link: "/samosprava-mesta/uradna-tabula",
         },
         {
           title: "Otázky a odpovede",
           icon: require("@/assets/categories_icons/live_help.svg"),
-          link: "/aktuality/motocyklisti",
+          link: "/pre-obcanov/otazky-a-odpovede",
         },
         {
           title: "Diskusné fórum",

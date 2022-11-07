@@ -2,9 +2,9 @@
   <div class="govuk-width-container">
     <div class="content w-75">
       <h1 class="govuk-heading-l">{{ data.verejny }}</h1>
-      <h3 class="idsk-crossroad__item govuk-heading-m">
+      <h2 class="idsk-crossroad__item govuk-heading-m">
         Profil verejného obstarávateľa
-      </h3>
+      </h2>
 
       <div class="container">
         <ul class="list">

@@ -1,23 +1,9 @@
 <template>
   <div class="govuk-width-container">
-    <div class="content w-75">
+    <div class="content">
       <h1 class="govuk-heading-l">Komisie</h1>
-      <ul class="list">
-        <li v-for="(sub, ind) in this.subpages" :key="ind" class="item">
-          <div class="idsk-crossroad idsk-crossroad-2">
-            <div class="idsk-crossroad__item">
-              <router-link
-                :to="this.$route.path + sub.route"
-                class="govuk-link idsk-crossroad-title"
-                title="Title for 1st element"
-                aria-hidden="false"
-                >{{ sub.title }}
-              </router-link>
-              <hr class="idsk-crossroad-line" aria-hidden="true" />
-            </div>
-          </div>
-        </li>
-      </ul>
+
+      <SubPagesMenuVertical :subpages="subpages" title="Mestská rada" />
 
       <div>
         <p>
@@ -58,12 +44,16 @@
           V aktuálnom volebnom období sú zriadené tieto komisie MsZ v Trebišove:
         </p>
       </div>
+
+      <RazcestnikAndLinksComponent :archive="archive" />
     </div>
   </div>
 </template>
 
 <script>
 import { useMeta } from "vue-meta";
+import SubPagesMenuVertical from "@/components/SubPagesMenuVertical.vue";
+import RazcestnikAndLinksComponent from "@/components/RazcestnikAndLinksComponent";
 
 export default {
   name: "KomisieView",
@@ -77,6 +67,46 @@ export default {
         {
           title: "Zasadnutia komisí",
           route: "/zasadnutia-komisii",
+        },
+      ],
+      archive: [
+        {
+          title:
+            "Oznámenia funkcií, zamestnaní, činností a majetkových pomerov verejného funkcionára - poslanci za rok 2020",
+          isOpen: false,
+          children: [
+            {
+              name: "Mgr. Martin Begala",
+              url: "/",
+              size: "279.42 kB",
+              ext: "PDF",
+            },
+            {
+              name: "Mgr. Martin Begala",
+              url: "/",
+              size: "279.42 kB",
+              ext: "PDF",
+            },
+          ],
+        },
+        {
+          title:
+            "Oznámenia funkcií, zamestnaní, činností a majetkových pomerov verejného funkcionára - poslanci za rok 2019",
+          isOpen: false,
+          children: [
+            {
+              name: "Mgr. Martin Begala",
+              url: "/",
+              size: "279.42 kB",
+              ext: "PDF",
+            },
+            {
+              name: "Mgr. Martin Begala",
+              url: "/",
+              size: "279.42 kB",
+              ext: "PDF",
+            },
+          ],
         },
       ],
     };
@@ -100,7 +130,10 @@ export default {
       ],
     });
   },
-
+  components: {
+    SubPagesMenuVertical,
+    RazcestnikAndLinksComponent,
+  },
   mounted() {},
   methods: {
     falseFunction(e, route) {

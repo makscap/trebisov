@@ -5,6 +5,17 @@
         :subpages="subpages"
         title="Mestský športový klub mládeže"
       />
+
+      <div class="wrap_banner">
+        <div>
+          <span class="label">
+            S podporou Ministerstva školstva, vedy, výskumu a športu SR</span
+          >
+        </div>
+        <div class="image_box">
+          <img class="image" src="@/assets/ministerstvo.png" alt="logo" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -80,4 +91,28 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.wrap_banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f2f1;
+  height: 133px;
+}
+
+.label {
+  display: inline-block;
+  max-width: 290px;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 25px;
+  text-align: center;
+  color: #024497;
+  margin-right: 48px;
+  margin-bottom: 0px;
+}
+
+.image_box {
+  margin-bottom: 0px;
+}
+</style>

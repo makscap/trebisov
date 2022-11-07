@@ -53,6 +53,26 @@ export default {
           fax: ["+421 915 790 369"],
           email: ["kerestan@trebisov.sk"],
         },
+        {
+          name: "Ing. Jozef Kereštan",
+          position: "vedúci strediska",
+          location: "Mestský úrad, 5. poschodie, kancelária č. 503",
+          mobil: ["+421 56 6713 336"],
+          fax: ["+421 915 790 369"],
+          email: ["kerestan@trebisov.sk"],
+        },
+        {
+          name: "Ing. Jozef Kereštan",
+          position: "vedúci strediska",
+          location: "Mestský úrad, 5. poschodie, kancelária č. 503",
+          mobil: ["+421 56 6713 336"],
+          fax: ["+421 915 790 369"],
+          email: ["kerestan@trebisov.sk"],
+        },
+        {
+          name: "Ing. Jozef Kereštan",
+          position: "vedúci strediska",
+        },
       ],
     };
   },

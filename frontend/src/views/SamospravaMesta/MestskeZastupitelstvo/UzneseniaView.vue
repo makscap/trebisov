@@ -1,6 +1,6 @@
 <template>
   <div class="govuk-width-container">
-    <div class="content w-75">
+    <div class="content">
       <h1 class="govuk-heading-l">Uznesenia</h1>
 
       <div data-module="idsk-table" id="priklad-1">
@@ -178,4 +178,17 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.idsk-table__cell:nth-child(1),
+.idsk-table__header:nth-child(1) {
+  width: 135px;
+}
+.idsk-table__cell:nth-child(2),
+.idsk-table__header:nth-child(2) {
+  width: 135px;
+}
+.idsk-table__cell:nth-child(3),
+.idsk-table__header:nth-child(3) {
+  flex: 1;
+}
+</style>

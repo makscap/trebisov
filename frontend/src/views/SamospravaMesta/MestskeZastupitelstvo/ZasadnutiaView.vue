@@ -74,92 +74,113 @@
       </div>
     </div>
 
-    <RazcestnikComponent :links="links" />
+    <RazcestnikAndLinksComponent :archive="archive" :notBlank="true" />
   </div>
 </template>
 
 <script>
 import { useMeta } from "vue-meta";
-import RazcestnikComponent from "../../../components/RazcestnikComponent";
+import RazcestnikAndLinksComponent from "@/components/RazcestnikAndLinksComponent";
 
 export default {
   name: "ZasadnutiaView",
   data() {
     return {
-      isOpen: false,
-      links: [
+      archive: [
         {
           title: "Rok 2022",
+          isOpen: false,
           children: [
             {
               name: "25. zasadnutie MsZ zo dňa 20.06.2022",
-              url: "/",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
             },
             {
               name: "24. zasadnutie MsZ zo dňa 25.04.2022",
-              url: "/",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
             },
             {
               name: "23. zasadnutie MsZ zo dňa 14.02.2022",
-              url: "/",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
             },
           ],
         },
         {
           title: "Rok 2021",
+          isOpen: false,
           children: [
             {
               name: "25. zasadnutie MsZ zo dňa 20.06.2022",
-              url: "/",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
             },
             {
               name: "24. zasadnutie MsZ zo dňa 25.04.2022",
-              url: "/",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
             },
             {
               name: "23. zasadnutie MsZ zo dňa 14.02.2022",
-              url: "/",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
             },
           ],
         },
         {
           title: "Rok 2020",
+          isOpen: false,
           children: [
             {
               name: "25. zasadnutie MsZ zo dňa 20.06.2022",
-              url: "/",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
             },
             {
               name: "24. zasadnutie MsZ zo dňa 25.04.2022",
-              url: "/",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
             },
             {
               name: "23. zasadnutie MsZ zo dňa 14.02.2022",
-              url: "/",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
             },
           ],
         },
         {
           title: "Rok 2019",
+          isOpen: false,
           children: [
             {
               name: "25. zasadnutie MsZ zo dňa 20.06.2022",
-              url: "/",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
             },
             {
               name: "24. zasadnutie MsZ zo dňa 25.04.2022",
-              url: "/",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
             },
             {
               name: "23. zasadnutie MsZ zo dňa 14.02.2022",
-              url: "/",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
+            },
+          ],
+        },
+        {
+          title: "Rok 2018",
+          isOpen: false,
+          children: [
+            {
+              name: "25. zasadnutie MsZ zo dňa 20.06.2022",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
+            },
+            {
+              name: "24. zasadnutie MsZ zo dňa 25.04.2022",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
+            },
+            {
+              name: "23. zasadnutie MsZ zo dňa 14.02.2022",
+              url: "/samosprava-mesta/mestske-zastupitelstvo/zasadnutia/1",
             },
           ],
         },
       ],
     };
   },
-  components: { RazcestnikComponent },
+  components: { RazcestnikAndLinksComponent },
   setup() {
     useMeta({
       title: "Domov",

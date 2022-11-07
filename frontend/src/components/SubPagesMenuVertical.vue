@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1 v-if="title" class="govuk-heading-l">{{ title }}</h1>
     <div :class="title ? 'content' : 'mb-30'">
-      <ul class="list menu">
+      <h1 v-if="title" class="govuk-heading-l">{{ title }}</h1>
+      <ul class="list">
         <li v-for="(sub, ind) in this.subpages" :key="ind" class="item">
           <div class="idsk-crossroad idsk-crossroad-2">
             <div class="idsk-crossroad__item">
@@ -47,11 +47,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .list {
+  max-width: 630px;
+  width: 100%;
   list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0px;
   padding: 0px;
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container">
     <div class="content">
-      <h1 class="govuk-heading-l">Rozpočet mesta Trebišov</h1>
+      <h1 class="govuk-heading-l">Rozpočet mesta Trebišov 2022-2010</h1>
       <RazcestnikAndLinksComponent :archive="archive" />
     </div>
   </div>
@@ -9,7 +9,7 @@
 
 <script>
 import { useMeta } from "vue-meta";
-import RazcestnikAndLinksComponent from "../../components/RazcestnikAndLinksComponent.vue";
+import RazcestnikAndLinksComponent from "@/components/RazcestnikAndLinksComponent.vue";
 
 export default {
   name: "RozpocetMesta2010_2022View",

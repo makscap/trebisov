@@ -1,18 +1,38 @@
 <template>
-  <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">Program zápasov</h2>
+  <div class="govuk-width-container">
+    <div class="content w-75">
+      <h1 class="govuk-heading-l">Program zápasov</h1>
+
+      <LinksAndSizeComponent :files="files" />
+    </div>
   </div>
 </template>
 
 <script>
 import { useMeta } from "vue-meta";
+import LinksAndSizeComponent from "@/components/LinksAndSizeComponent.vue";
 
 export default {
   name: "ProgramZapasovView",
   data() {
-    return {};
+    return {
+      files: [
+        {
+          name: "Smernica o poskytovaní informácií na žiadosť",
+          size: "341.41 MB",
+          ext: "PDF",
+          urlFile: "/",
+        },
+        {
+          name: "Zásady hospodárenia a nakladania s majetkom mesta",
+          size: "391.01 kB",
+          ext: "PDF",
+          urlFile: "/",
+        },
+      ],
+    };
   },
-  components: {},
+  components: { LinksAndSizeComponent },
   setup() {
     useMeta({
       title: "Domov",

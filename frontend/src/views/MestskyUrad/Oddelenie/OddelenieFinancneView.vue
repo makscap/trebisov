@@ -1,43 +1,32 @@
 <template>
   <div class="govuk-width-container">
     <div class="content w-75">
-      <h1 class="govuk-heading-l">Kancelária primátora</h1>
-      <p>Kancelária primátora zabezpečuje činnosti najmä v oblastiach:</p>
+      <h1 class="govuk-heading-l">Oddelenie finančné</h1>
+      <p>Oddelenie finančné zabezpečuje činnosti najmä v oblastiach:</p>
       <ul>
+        <li>rozpočet a záverečný účet,</li>
+        <li>účtovníctvo a fakturácia,</li>
+        <li>finančné výkazníctvo,</li>
+        <li>evidencia a inventarizácia majetku,</li>
+        <li>personalistika a mzdy,</li>
         <li>
-          organizačná a administratívna agenda mestského zastupiteľstva a
-          mestskej rady,
+          príspevky na tvorbu a udržanie pracovných miest a na aktivačnú
+          činnosť,
         </li>
-        <li>
-          verejné zhromaždenia obyvateľov mesta a stretnutia občanov s
-          primátorom,
-        </li>
-        <li>
-          organizačná, administratívna a hospodárska agenda primátora, zástupcu
-          primátora a prednostu,
-        </li>
-        <li>
-          právna pomoc všetkým orgánom mesta, mestským organizáciám a oddeleniam
-          mestského úradu,
-        </li>
-        <li>
-          zastupovanie mesta na súde, prokuratúre, polícii a iných orgánoch a
-          inštitúciách,
-        </li>
-        <li>konania o priestupkoch a správnych deliktoch,</li>
-        <li>poskytovanie informácií pri slobodnom prístupe k informáciám,</li>
-        <li>výkon a metodické usmerňovanie verejného obstarávania,</li>
-        <li>koordinácia rozpočtového procesu a finančnej kontroly,</li>
-        <li>poskytovanie dotácií,</li>
-        <li>
-          komunikácia s verejnosťou, styk s médiami, propagácia aktivít mesta,
-        </li>
-        <li>vzťahy s partnerskými mestami v zahraničí,</li>
-        <li>správa webového sídla.</li>
+        <li>zúčtovanie cestovných náhrad,</li>
+        <li>bezhotovostný platobný styk,</li>
+        <li>pokladňa,</li>
+        <li>úverové vzťahy,</li>
+        <li>vzťahy so štátnym rozpočtom a finančnými fondami,</li>
+        <li>správa miestnych daní a miestneho poplatku,</li>
+        <li>súdne a exekučné vymáhanie pohľadávok,</li>
+        <li>evidencia samostatne hospodáriacich roľníkov.</li>
       </ul>
       <hr class="idsk-crossroad-line" aria-hidden="true" />
+      <MapComponent :dataMap="dataMap" />
+      <h4 class="label">Kontaktné informácie</h4>
 
-      <div>
+      <!-- <div>
         <h4 class="label">Kontaktné informácie</h4>
         <ul class="contact_list">
           <li class="contact_item">
@@ -51,7 +40,7 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> -->
 
       <ContactCard :contactsData="contactsData" />
     </div>
@@ -60,12 +49,20 @@
 
 <script>
 import { useMeta } from "vue-meta";
-import ContactCard from "../../components/ContactCard.vue";
+import ContactCard from "@/components/ContactCard.vue";
+import MapComponent from "@/components/MapComponent.vue";
 
 export default {
-  name: "StatutMestaView",
+  name: "OddelenieFinancneView",
   data() {
     return {
+      dataMap: {
+        name: "Mestská polícia Trebišov",
+        street: "M. R. Štefánika 862/204",
+        city: "075 25 Trebišov",
+        text: "Prízemie v budove Mestského úradu v Trebišove",
+        img: "mestsky-urad.jpg",
+      },
       contactsData: [
         {
           name: "JUDr. Martin Galgoczy",
@@ -122,7 +119,7 @@ export default {
   },
 
   mounted() {},
-  components: { ContactCard },
+  components: { ContactCard, MapComponent },
   methods: {
     falseFunction(e, route) {
       if (!route) e.preventDefault();
@@ -141,15 +138,5 @@ export default {
   line-height: 30px;
   margin-bottom: 20px;
   color: #024497;
-}
-.contact_list {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  margin-bottom: 20px;
-}
-
-.contact_item {
-  margin-bottom: 16px;
 }
 </style>

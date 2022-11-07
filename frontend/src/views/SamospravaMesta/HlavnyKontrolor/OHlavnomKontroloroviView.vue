@@ -1,8 +1,7 @@
 <template>
   <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">O hlavnom kontrolórovi</h2>
-
-    <div class="content">
+    <div class="content w-75">
+      <h1 class="govuk-heading-l title">O hlavnom kontrolórovi</h1>
       <p>
         Hlavný kontrolór mesta bol zvolený na základe uznesenia č. 33/2017 z
         rokovania Mestského zastupiteľstva v Trebišove dňa 24.4.2017.
@@ -14,7 +13,7 @@
         neskorších predpisov.
       </p>
 
-      <h4 class="label">Rozsah kontrolnej činnosti (§ 18d)</h4>
+      <h2 class="label">Rozsah kontrolnej činnosti (§ 18d)</h2>
 
       <ol>
         <li>
@@ -55,7 +54,7 @@
         </li>
       </ol>
 
-      <h4 class="label">Pravidlá kontrolnej činnosti (§ 18e)</h4>
+      <h2 class="label">Pravidlá kontrolnej činnosti (§ 18e)</h2>
 
       <p>
         Hlavný kontrolór pri výkone kontrolnej činnosti postupuje podľa
@@ -63,7 +62,7 @@
         pravidlách kontrolnej činnosti môže ustanoviť obec uznesením.
       </p>
 
-      <h4 class="label">Úlohy hlavného kontrolóra (§ 18f)</h4>
+      <h2 class="label">Úlohy hlavného kontrolóra (§ 18f)</h2>
 
       <ol>
         <li>

@@ -9,7 +9,7 @@
 
 <script>
 import { useMeta } from "vue-meta";
-import RazcestnikAndLinksComponent from "../../components/RazcestnikAndLinksComponent.vue";
+import RazcestnikAndLinksComponent from "@/components/RazcestnikAndLinksComponent.vue";
 
 export default {
   name: "RozpocetMesta2010_2022View",

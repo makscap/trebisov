@@ -10,36 +10,36 @@
         služieb a súťaž návrhov.
       </p>
 
-      <h3 class="idsk-crossroad__item label govuk-heading-m">
+      <h2 class="idsk-crossroad__item label govuk-heading-m">
         Profil verejného obstarávateľa
-      </h3>
+      </h2>
 
-      <ListLinks title="" :links="links" />
+      <SubPagesMenuVertical :subpages="subpages" />
     </div>
   </div>
 </template>
 
 <script>
 import { useMeta } from "vue-meta";
-import ListLinks from "../../components/ListLinks.vue";
+import SubPagesMenuVertical from "@/components/SubPagesMenuVertical.vue";
 
 export default {
   name: "VarejneObstaravanieView",
   data() {
     return {
-      links: [
-        { name: "Mesto Trebišov", url: "/mesto-trebisov" },
+      subpages: [
+        { title: "Mesto Trebišov", route: "/mesto-trebisov" },
         {
-          name: "Technické služby mesta Trebišov",
-          url: "/technicke-sluzby-mesta",
+          title: "Technické služby mesta Trebišov",
+          route: "/technicke-sluzby-mesta",
         },
         {
-          name: "MESTSKÝ ŠPORTOVÝ KLUB MLÁDEŽE TREBIŠOV",
-          url: "/mestsky-sportovy-klub-mladeze",
+          title: "MESTSKÝ ŠPORTOVÝ KLUB MLÁDEŽE TREBIŠOV",
+          route: "/mestsky-sportovy-klub-mladeze",
         },
         {
-          name: "Základná umelecká škola",
-          url: "/zakladna-umelecka-skola",
+          title: "Základná umelecká škola",
+          route: "/zakladna-umelecka-skola",
         },
       ],
     };
@@ -64,7 +64,7 @@ export default {
   },
 
   mounted() {},
-  components: { ListLinks },
+  components: { SubPagesMenuVertical },
   methods: {
     falseFunction(e, route) {
       if (!route) e.preventDefault();

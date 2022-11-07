@@ -202,6 +202,9 @@
 
         <p class="bold">Projekt bol úspešne ukončený 27.4.2017</p>
         <p class="bold">Dôležité odkazy:</p>
+
+        <LinksAndSizeComponent :files="files" />
+
         <ul class="p-0">
           <li class="item_link" v-for="(item, i) in extra" :key="i">
             <a
@@ -296,51 +299,67 @@
 
 <script>
 import { useMeta } from "vue-meta";
+import LinksAndSizeComponent from "@/components/LinksAndSizeComponent.vue";
 
 export default {
   name: "RevitalizaciaHraduView",
   data() {
     return {
-      extra: [
+      files: [
         {
           name: "Projektová zmluva",
-          format: "PDF",
           size: "125 kB",
+          ext: "PDF",
+          urlFile: "/",
         },
         {
           name: "Partnerská dohoda",
-          format: "PDF",
           size: "125 kB",
+          ext: "PDF",
+          urlFile: "/",
         },
         {
           name: "Dodatok č. 1/2016 k Projektovej zmluve",
-          format: "PDF",
           size: "125 kB",
+          ext: "PDF",
+          urlFile: "/",
         },
         {
           name: "Zmluva o spolupráci",
-          format: "PDF",
           size: "125 kB",
+          ext: "PDF",
+          urlFile: "/",
         },
         {
-          link: "http://www.muzeumtv.sk/",
+          name: "http://www.muzeumtv.sk/",
+          urlFile: "http://www.muzeumtv.sk/",
         },
         {
-          link: "http://www.vucke.sk/APIR/sk/Urad_KSK/Zmluvy_obj_fakt/Stranky/Zmluvy-Vlastivedne_muzeum_Trebisov_MRStefanika25765.aspx",
+          name: "http://www.vucke.sk/APIR/sk/Urad_KSK/Zmluvy_obj_fakt/Stranky/Zmluvy-Vlastivedne_muzeum_Trebisov_MRStefanika25765.aspx",
+          urlFile:
+            "http://www.vucke.sk/APIR/sk/Urad_KSK/Zmluvy_obj_fakt/Stranky/Zmluvy-Vlastivedne_muzeum_Trebisov_MRStefanika25765.aspx",
+        },
+        {
+          name: "http://www.muzeumtv.sk/",
+          urlFile: "http://www.muzeumtv.sk/",
         },
         {
           name: "Zmluva o poskytnutí služieb",
-          format: "PDF",
           size: "125 kB",
+          ext: "PDF",
+          urlFile: "/",
         },
         {
-          link: "http://www.vlada.gov.sk/",
+          name: "http://www.vlada.gov.sk/",
+          urlFile: "http://www.vlada.gov.sk/",
         },
         {
-          link: "http://eeagrants.org/",
+          name: "http://eeagrants.org/",
+          urlFile: "http://eeagrants.org/",
         },
         {
-          link: "www.eeagrants.sk",
+          name: "www.eeagrants.sk",
+          urlFile: "www.eeagrants.sk",
         },
       ],
     };
@@ -365,7 +384,7 @@ export default {
   },
 
   mounted() {},
-  components: {},
+  components: { LinksAndSizeComponent },
   methods: {
     falseFunction(e, route) {
       if (!route) e.preventDefault();

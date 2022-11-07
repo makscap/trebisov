@@ -1,5 +1,5 @@
 <template>
-  <div class="govuk-width-container parent">
+  <div class="govuk-width-container">
     <div class="content">
       <SubPagesMenu :subpages="subpages" title="Školstvo" />
     </div>
@@ -21,7 +21,7 @@ export default {
         },
         {
           title: "Školy a školské zariadenia",
-          route: "/",
+          route: "/skoly-a-skolske-zariadenia",
         },
         {
           title: "Výberové konanie",
@@ -33,19 +33,19 @@ export default {
         },
         {
           title: "Testovanie",
-          route: "/",
+          route: "/testovanie",
         },
         {
           title: "Hodnotiace správy",
-          route: "/",
+          route: "/hodnotiace-spravy",
         },
         {
           title: "Školské súťaže",
-          route: "/",
+          route: "/skolske-sutaze",
         },
         {
           title: "Kontakt",
-          route: "/",
+          route: "/kontakt",
         },
       ],
     };

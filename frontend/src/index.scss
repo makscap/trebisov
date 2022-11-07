@@ -16,6 +16,15 @@ $govuk-global-styles: true;
     overflow-x: hidden;
 }
 
+div {
+        font-family: 'Source Sans Pro', sans-serif;
+            font-style: normal;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 25px;
+        color: #000000;
+}
+
 .idsk-button {
     background-color: #0065B3 !important;
 }
@@ -146,8 +155,8 @@ font-style: normal;
 
 .content h1 {
         font-weight: 700 !important;
-            font-size: 32px !important;
-            line-height: 35px !important;
+            font-size: 36px !important;
+            line-height: 48px !important;
     color: #024497!important;
         margin-bottom: 30px !important;
         max-width: 712px;

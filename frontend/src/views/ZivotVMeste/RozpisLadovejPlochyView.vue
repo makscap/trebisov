@@ -1,6 +1,34 @@
 <template>
-  <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">Rozpis ľadovej plochy a tréningov</h2>
+  <div class="govuk-width-container">
+    <div class="content w-75">
+      <h1 class="govuk-heading-l">Rozpis ľadovej plochy a tréningov</h1>
+
+      <div class="image_box">
+        <div class="title-wrap">
+          <div class="title-box">24.12.-30.12.2018</div>
+          <div class="title-box">ROZPIS ĽADOVEJ PLOCHY</div>
+          <div class="title-box">52.TÝŽDEŇ</div>
+        </div>
+        <img
+          class="image"
+          src="@/assets/rozpis-1.jpg"
+          alt="Rozdelenie sektorov"
+        />
+      </div>
+
+      <div class="image_box">
+        <div class="title-wrap title-wrap-center">
+          <div class="title-box">
+            ROZPIS TRÉNINGOV NA MESIAC AUGUST OD 13.8-17.8.2018
+          </div>
+        </div>
+        <img
+          class="image"
+          src="@/assets/rozpis-2.jpg"
+          alt="Rozdelenie sektorov"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -43,4 +71,24 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #024497;
+  border-radius: 4px 4px 0px 0px;
+  padding: 0px 20px;
+}
+
+.title-wrap-center {
+  justify-content: center;
+}
+.title-box {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+</style>
