@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Zhodnotenie dopravno-bezpečnostnej situácie a cieľa akčnej dekády 2011 – 2020 v Slovenskej republike",
+    "graphs": [
+      {
+        "img": "@/assets/staticticsDocs/doc1_1.png",
+        "title": "Graf vývoja počtu dopravných nehôd (DN) v SR v rokoch 2010 – 2020",
+        "source": "Štatistiky Prezídia Policajného zboru SR (ďalej len „PPZ“)"
+      },
+      {
+        "img": "@/assets/staticticsDocs/doc1_2.png",
+        "title": "Graf vývoja počtu usmrtených osôb pri DN v SR v rokoch 2010 – 2020",
+        "source": "Štatistiky PPZ"
+      },
+      {
+        "img": "../assets/staticticsDocs/doc1_3.png",
+        "title": "Graf vývoja počtu ťažko zranených osôb pri DN v SR v rokoch 2010 – 2020",
+        "source": "Štatistiky PPZ"
+      },
+      {
+        "img": "../assets/staticticsDocs/doc1_4.png",
+        "title": "Graf vývoja počtu ľahko zranených osôb pri DN v SR v rokoch 2010 – 2020",
+        "source": "Štatistiky PPZ"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Vývoj dopravnej nehodovosti v európskych súvislostiach",
+    "graphs": [
+      {
+        "img": "@/assets/staticticsDocs/doc2_1.png",
+        "title": "Porovnanie cieľa a skutočného poklesu počtu usmrtených osôb pri DN v EÚ do roku 2020",
+        "source": ""
+      },
+      {
+        "img": "@/assets/staticticsDocs/doc2_2.png",
+        "title": "Graf vývoja počtu usmrtených osôb pri DN v prepočte na 1 mil. obyvateľov v štátoch EÚ v porovnaní rokov 2010 a 2020",
+        "source": "Databáza CARE + Európska komisia"
+      }
+    ]
+  }
+]
