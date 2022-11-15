@@ -48,11 +48,17 @@
           <MapComponent :mapInfo="component.data[0].mapInfo" />
         </div>
         <div class="test" v-if="component.type === 'STEPPER_COMPONENT'">
-          <div class="test-color">STEPPER_COMPONENT</div>
-          <StepperComponent :mapInfo="component.data[0].mapInfo" />
+          <div class="test-color">
+            STEPPER_COMPONENT
+            <div class="icon"></div>
+          </div>
+          <StepperComponent :steps="component.data[0].steps" />
         </div>
         <div class="test" v-if="component.type === 'SUBPAGES_MENU'">
-          <div class="test-color">SUBPAGES_MENU (horizontal & vertical)</div>
+          <div class="test-color">
+            SUBPAGES_MENU (horizontal & vertical)
+            <div class="icon"></div>
+          </div>
           <SubPagesMenu
             :subpages="component.data[0].subpages"
             :isVertical="component.data[0].isVertical"
@@ -75,8 +81,41 @@
           />
         </div>
         <div class="test" v-if="component.type === 'BANNER_COMPONENT'">
-          <div class="test-color">BANNER</div>
+          <div class="test-color">
+            BANNER
+            <div class="icon"></div>
+          </div>
           <BannerComponent :banner="component.data[0].info" />
+        </div>
+        <div class="test" v-if="component.type === 'DETAIL_OF_PLACE'">
+          <div class="test-color">DETAIL_OF_PLACE</div>
+          <DetailOfPlace :details="component.data[0].details" />
+        </div>
+        <div class="test" v-if="component.type === 'BREADCRUMBS'">
+          <div class="test-color">BREADCRUMBS</div>
+          <Breadcrumbs :routes="component.data[0].routes" />
+        </div>
+        <div class="test" v-if="component.type === 'QUESTIONS'">
+          <div class="test-color">
+            QUESTIONS
+            <div class="icon"></div>
+          </div>
+          <QuestionsComponent :messages="component.data[0].messages" />
+        </div>
+        <div class="test" v-if="component.type === 'OZNAMY_CARD'">
+          <div class="test-color">
+            OZNAMY_CARD
+            <div class="icon"></div>
+          </div>
+          <OznamyCard :items="component.data[0].items" />
+        </div>
+        <div class="test" v-if="component.type === 'SOCIAL_LINK'">
+          <div class="test-color">SOCIAL_LINK</div>
+          <SocialLink :links="component.data[0].links" />
+        </div>
+        <div class="test" v-if="component.type === 'SAME_TOPICS'">
+          <div class="test-color">SAME_TOPICS</div>
+          <SameTopics :links="component.data[0].links" />
         </div>
       </div>
     </div>
@@ -104,6 +143,12 @@ import TableComponent from "@/components/TableComponent.vue";
 import TableZebraComponent from "@/components/TableZebraComponent.vue";
 import ProfilVerejnehoSubPage from "@/components/ProfilVerejnehoSubPage.vue";
 import BannerComponent from "@/components/BannerComponent.vue";
+import DetailOfPlace from "@/components/DetailOfPlace.vue";
+import Breadcrumbs from "@/components/Breadcrumbs.vue";
+import QuestionsComponent from "@/components/QuestionsComponent.vue";
+import OznamyCard from "@/components/OznamyCard.vue";
+import SocialLink from "@/components/SocialLink.vue";
+import SameTopics from "@/components/SameTopics.vue";
 
 export default {
   name: "ConstructorView",
@@ -354,7 +399,62 @@ export default {
           type: "STEPPER_COMPONENT",
           data: [
             {
-              data: [{}],
+              steps: [
+                {
+                  name: "Podanie finálneho návrhu projektov",
+                  date: "04 - 12/2022",
+                  text: "s ohľadom na pandemickú situáciu súvisiacu s COVID-19 a možnosti realizácie",
+                  isOpen: false,
+                },
+                {
+                  name: "Formálna a obsahová kontrola návrhov",
+                  date: "04 - 12/2022",
+                  text: "s ohľadom na pandemickú situáciu súvisiacu s COVID-19 a možnosti realizácie",
+                  isOpen: false,
+                },
+                {
+                  name: "Elektronické hlasovanie",
+                  date: "04 - 12/2022",
+                  text: "s ohľadom na pandemickú situáciu súvisiacu s COVID-19 a možnosti realizácie",
+                  isOpen: false,
+                },
+                {
+                  name: "Vyhodnotenie a zverejnenie výsledkov hlasovania",
+                  date: "04 - 12/2022",
+                  text: "s ohľadom na pandemickú situáciu súvisiacu s COVID-19 a možnosti realizácie",
+                  isOpen: false,
+                },
+                {
+                  name: "Realizácia víťazných projektov",
+                  date: "04 - 12/2022",
+                  text: "s ohľadom na pandemickú situáciu súvisiacu s COVID-19 a možnosti realizácie",
+                  isOpen: false,
+                },
+              ],
+            },
+          ],
+        },
+        // type: "SUBPAGES_MENU" (Vertical),
+        {
+          id: 9,
+          type: "SUBPAGES_MENU",
+          data: [
+            {
+              isVertical: true,
+              subpages: [
+                {
+                  title: "Participatívny rozpočet",
+                  route: "/participativny-rozpocet",
+                },
+                {
+                  title: "Hlasovanie o participatívnom rozpočte mesta",
+                  route: "/hlasovanie-o-participativnom-rozpocte-mesta",
+                },
+                {
+                  title: "Hlasovanie o participatívnom rozpočte mesta",
+                  route: "/hlasovanie-o-participativnom-rozpocte-mesta",
+                },
+              ],
             },
           ],
         },
@@ -554,6 +654,25 @@ export default {
             {
               info: {
                 title: "Lorem",
+                label:
+                  "Vitajte v 3. ročníku  participatívneho rozpočtu mesta Trebišov!",
+                width: "",
+                height: "300px",
+                urlImage: "https://picsum.photos/200/300",
+                isClickable: true,
+                urlLink: "https://www.lipsum.com/",
+              },
+            },
+          ],
+        },
+        // type: "BANNER_COMPONENT",
+        {
+          id: 13,
+          type: "BANNER_COMPONENT",
+          data: [
+            {
+              info: {
+                title: "Lorem",
                 label: "",
                 width: "",
                 height: "300px",
@@ -561,6 +680,149 @@ export default {
                 isClickable: false,
                 urlLink: "https://www.lipsum.com/",
               },
+            },
+          ],
+        },
+        // type: "DETAIL_OF_COMPONENT",
+        {
+          id: 14,
+          type: "DETAIL_OF_PLACE",
+          data: [
+            {
+              details: [
+                {
+                  title: "Číslo:",
+                  text: "177/2022",
+                  link: "wwww.google.com",
+                  file: [
+                    {
+                      name: "Cenník služieb poskytovaných mestom a mestskými organizáciami - účinný od 01.07.2022",
+                      size: "299.15kB",
+                      ext: "PDF",
+                      urlFile: "/",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        // type: "BREADCRUMBS",
+        {
+          id: 14,
+          type: "BREADCRUMBS",
+          data: [
+            {
+              routes: [
+                {
+                  name: "karty",
+                  title: "Karty",
+                },
+                {
+                  name: "senior-karta",
+                  title: "Senior karta",
+                },
+                {
+                  name: "socialna-pomoc",
+                  title: "Sociálna pomoc",
+                },
+              ],
+            },
+          ],
+        },
+        // type: "QUESTIONS",
+        {
+          id: 15,
+          type: "QUESTIONS",
+          data: [
+            {
+              messages: [
+                {
+                  question: {
+                    name: "Viera Hrivňáková",
+                    date: "09.07.2022 17:23",
+                    text: "Mám otázku na platenie poplatku za komunálny odpad za ubytovaných Ukrajincov v TV v bytových domoch. Mesto TV má informáciu, ktorým vlastníkom bytov poskytlo príspevok na bývanie za ubytovaných. Platia vlastníci bytov mestu poplatok za ich komunálny odpad? Urobilo mesto TV kontrolu, či vlastníci bytov zaplatili za ubytovaných, t.j. užívateľov prenajatých bytov aj poplatok za odpad? Ak nie, znamená to, že sa 'skladáme' ostatní užívatelia na poplatok, ktorí sú povinní zaplatiť vlastníci prenajímaných bytov?",
+                  },
+                  answer: {
+                    text: "Dobrý deň,<br/><br/> občania mesta Trebišov, ktorí ubytovali cudzincov (s povoleným prechodným pobytom na území SR) si riadne splnili oznamovaciu povinnosť v priebehu zdaňovacieho obdobia podľa ustanovenia § 80 zákona č. 582/2004 Z. z. o miestnych daniach a miestnom poplatku za komunálne odpady a drobné stavebné odpady v znení neskorších predpisov, jednak v KBV, ako aj v IBV.<br/><br/> Čo sa týka občanov, ktorí majú status 'odídenec', tak nová právna úprava stanovuje, že takáto osoba s prideleným dočasným útočiskom nebude, podľa zákona o miestnych daniach a miestnom poplatku, daňovníkom. Zároveň takejto osobe nevznikne oznamovacia povinnosť k poplatku za komunálne odpady.<br/><br/> Mgr. Erika Oprysková<br/> referentka pre miestne dane",
+                  },
+                },
+                {
+                  question: {
+                    name: "Viera Hrivňáková",
+                    date: "09.07.2022 17:23",
+                    text: "Mám otázku na platenie poplatku za komunálny odpad za ubytovaných Ukrajincov v TV v bytových domoch. Mesto TV má informáciu, ktorým vlastníkom bytov poskytlo príspevok na bývanie za ubytovaných. Platia vlastníci bytov mestu poplatok za ich komunálny odpad? Urobilo mesto TV kontrolu, či vlastníci bytov zaplatili za ubytovaných, t.j. užívateľov prenajatých bytov aj poplatok za odpad? Ak nie, znamená to, že sa 'skladáme' ostatní užívatelia na poplatok, ktorí sú povinní zaplatiť vlastníci prenajímaných bytov?",
+                  },
+                  answer: {
+                    text: "Dobrý deň,<br/><br/> občania mesta Trebišov, ktorí ubytovali cudzincov (s povoleným prechodným pobytom na území SR) si riadne splnili oznamovaciu povinnosť v priebehu zdaňovacieho obdobia podľa ustanovenia § 80 zákona č. 582/2004 Z. z. o miestnych daniach a miestnom poplatku za komunálne odpady a drobné stavebné odpady v znení neskorších predpisov, jednak v KBV, ako aj v IBV.<br/><br/> Čo sa týka občanov, ktorí majú status 'odídenec', tak nová právna úprava stanovuje, že takáto osoba s prideleným dočasným útočiskom nebude, podľa zákona o miestnych daniach a miestnom poplatku, daňovníkom. Zároveň takejto osobe nevznikne oznamovacia povinnosť k poplatku za komunálne odpady.<br/><br/> Mgr. Erika Oprysková<br/> referentka pre miestne dane",
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        // type: "OZNAMY_CARD",
+        {
+          id: 16,
+          type: "OZNAMY_CARD",
+          data: [
+            {
+              items: [
+                {
+                  name: "MUDr. Ján TÓTH (†88)",
+                  text: "Rozlúčka bude 17.8.2022 o 10.30 h na Mestskom cintoríne v Trebišove. Gréckokatolícky obrad.",
+                },
+                {
+                  name: "MUDr. Ján TÓTH (†88)",
+                  text: "Rozlúčka bude 17.8.2022 o 10.30 h na Mestskom cintoríne v Trebišove. Gréckokatolícky obrad.",
+                },
+                {
+                  name: "MUDr. Ján TÓTH (†88)",
+                  text: "Rozlúčka bude 17.8.2022 o 10.30 h na Mestskom cintoríne v Trebišove. Gréckokatolícky obrad.",
+                },
+                {
+                  name: "MUDr. Ján TÓTH (†88)",
+                  text: "Rozlúčka bude 17.8.2022 o 10.30 h na Mestskom cintoríne v Trebišove. Gréckokatolícky obrad.",
+                },
+              ],
+            },
+          ],
+        },
+        // type: "SOCIAL_LINK",
+        {
+          id: 17,
+          type: "SOCIAL_LINK",
+          data: [
+            {
+              links: [
+                {
+                  url: "http://www.facebook.com",
+                  name: "Facebook",
+                },
+                {
+                  url: "http://www.facebook.com",
+                  name: "Facebook",
+                },
+              ],
+            },
+          ],
+        },
+        // type: "SAME_TOPICS",
+        {
+          id: 18,
+          type: "SAME_TOPICS",
+          data: [
+            {
+              links: [
+                {
+                  url: "http://www.facebook.com",
+                  name: "Facebook",
+                },
+                {
+                  url: "http://www.facebook.com",
+                  name: "Facebook",
+                },
+              ],
             },
           ],
         },
@@ -582,6 +844,12 @@ export default {
     TableZebraComponent,
     ProfilVerejnehoSubPage,
     BannerComponent,
+    DetailOfPlace,
+    Breadcrumbs,
+    QuestionsComponent,
+    OznamyCard,
+    SocialLink,
+    SameTopics,
   },
   methods: {
     falseFunction(e, route) {
@@ -607,7 +875,6 @@ export default {
   color: white;
   background-color: #024497;
   border: 2px dotted red;
-  // color: white;
 }
 
 .icon {

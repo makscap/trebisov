@@ -76,10 +76,14 @@ export default {
 .list-vertical {
   max-width: 630px;
   width: 100%;
-  margin-top: 23px;
-  margin-right: 23px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #dee0e2;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 30px;
 }
 
 .item {
@@ -96,9 +100,9 @@ export default {
 
 .item-vertical {
   width: 100%;
-}
-
-.item-vertical:nth-child(2n) {
+  margin-top: 23px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dee0e2;
 }
 
 .list a {
