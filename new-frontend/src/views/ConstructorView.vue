@@ -6,7 +6,12 @@
         <div class="test" v-if="component.type === 'TITLE_PAGE'">
           <div class="test-color">
             TITLE_PAGE
-            <div class="icon"></div>
+            <div class="icon-wrap">
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <span class="done">DONE</span>
+            </div>
           </div>
           <TitlePage :title="component.data[0].title" />
         </div>
@@ -17,7 +22,12 @@
         <div class="test" v-if="component.type === 'FILES_COMPONENT'">
           <div class="test-color">
             FILES_COMPONENT
-            <div class="icon"></div>
+            <div class="icon-wrap">
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <span class="done">DONE</span>
+            </div>
           </div>
 
           <FilesComponent :files="component.data[0].files" />
@@ -25,14 +35,24 @@
         <div class="test" v-if="component.type === 'ACCORDEON_COMPONENT'">
           <div class="test-color">
             ACCORDEON_COMPONENT
-            <div class="icon"></div>
+            <div class="icon-wrap">
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <span class="done">DONE</span>
+            </div>
           </div>
           <AccordeonComponent :data="component.data[0].data" />
         </div>
         <div class="test" v-if="component.type === 'CONTACT_CARD'">
           <div class="test-color">
             CONTACT_CARD
-            <div class="icon"></div>
+            <div class="icon-wrap">
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <span class="done">DONE</span>
+            </div>
           </div>
           <ContactCard :contacts="component.data[0].contacts" />
         </div>
@@ -43,21 +63,36 @@
         <div class="test" v-if="component.type === 'MAP_COMPONENT'">
           <div class="test-color">
             MAP_COMPONENT
-            <div class="icon"></div>
+            <div class="icon-wrap">
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <span class="done">DONE</span>
+            </div>
           </div>
           <MapComponent :mapInfo="component.data[0].mapInfo" />
         </div>
         <div class="test" v-if="component.type === 'STEPPER_COMPONENT'">
           <div class="test-color">
             STEPPER_COMPONENT
-            <div class="icon"></div>
+            <div class="icon-wrap">
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <span class="done">DONE</span>
+            </div>
           </div>
           <StepperComponent :steps="component.data[0].steps" />
         </div>
         <div class="test" v-if="component.type === 'SUBPAGES_MENU'">
           <div class="test-color">
             SUBPAGES_MENU (horizontal & vertical)
-            <div class="icon"></div>
+            <div class="icon-wrap">
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <span class="done">DONE</span>
+            </div>
           </div>
           <SubPagesMenu
             :subpages="component.data[0].subpages"
@@ -83,7 +118,12 @@
         <div class="test" v-if="component.type === 'BANNER_COMPONENT'">
           <div class="test-color">
             BANNER
-            <div class="icon"></div>
+            <div class="icon-wrap">
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <span class="done">DONE</span>
+            </div>
           </div>
           <BannerComponent :banner="component.data[0].info" />
         </div>
@@ -98,14 +138,24 @@
         <div class="test" v-if="component.type === 'QUESTIONS'">
           <div class="test-color">
             QUESTIONS
-            <div class="icon"></div>
+            <div class="icon-wrap">
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <span class="done">DONE</span>
+            </div>
           </div>
           <QuestionsComponent :messages="component.data[0].messages" />
         </div>
         <div class="test" v-if="component.type === 'OZNAMY_CARD'">
           <div class="test-color">
             OZNAMY_CARD
-            <div class="icon"></div>
+            <div class="icon-wrap">
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <div class="icon"></div>
+              <span class="done">DONE</span>
+            </div>
           </div>
           <OznamyCard :items="component.data[0].items" />
         </div>
@@ -877,14 +927,24 @@ export default {
   border: 2px dotted red;
 }
 
-.icon {
+.icon-wrap {
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 50%;
   right: 20px;
-  width: 15px;
-  height: 15px;
-  background-color: greenyellow;
-  border-radius: 50%;
   transform: translate(0, -50%);
+}
+.icon {
+  width: 10px;
+  height: 20px;
+  background-color: greenyellow;
+  // border-radius: 50%;
+  margin-right: 10px;
+}
+
+.done {
+  font-weight: 700;
+  color: greenyellow;
 }
 </style>
