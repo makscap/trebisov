@@ -2,6 +2,7 @@
   <div
     class="image-box"
     :style="{
+      position: banner.isClickable ? 'relative' : 'static',
       width: banner.width ? banner.width : '100%',
       height: banner.height ? banner.height : '100%',
     }"
