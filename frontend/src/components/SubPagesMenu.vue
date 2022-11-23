@@ -7,12 +7,21 @@
           <div class="idsk-crossroad idsk-crossroad-2">
             <div class="idsk-crossroad__item">
               <router-link
+                v-if="sub.route"
                 :to="this.$route.path + sub.route"
                 class="govuk-link idsk-crossroad-title"
-                title="Title for 1st element"
+                :title="sub.title"
                 aria-hidden="false"
                 >{{ sub.title }}
               </router-link>
+
+              <a
+                v-if="sub.url"
+                :href="sub.url"
+                class="govuk-link idsk-crossroad-title"
+                aria-hidden="false"
+                >{{ sub.title }}
+              </a>
               <hr class="idsk-crossroad-line" aria-hidden="true" />
             </div>
           </div>
@@ -59,6 +68,9 @@ export default {
 .item {
   width: calc((100% / 2) - 23px);
   margin-right: 23px;
+}
+.item a {
+  font-weight: 700;
 }
 
 .item:nth-child(2n) {

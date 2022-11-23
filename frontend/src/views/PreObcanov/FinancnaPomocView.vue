@@ -1,7 +1,7 @@
 <template>
   <div class="govuk-width-container parent">
     <div class="content">
-      <SubPagesMenu
+      <SubPagesMenuVertical
         :subpages="subpages"
         title="Finančná pomoc primátora a zástupcu primátora"
       />
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import SubPagesMenu from "@/components/SubPagesMenu.vue";
+import SubPagesMenuVertical from "@/components/SubPagesMenuVertical.vue";
 import { useMeta } from "vue-meta";
 
 export default {
@@ -33,7 +33,7 @@ export default {
       ],
     };
   },
-  components: { SubPagesMenu },
+  components: { SubPagesMenuVertical },
   setup() {
     useMeta({
       title: "Domov",

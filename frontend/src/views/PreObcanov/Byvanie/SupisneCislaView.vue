@@ -51,20 +51,26 @@
       </ul>
       <h4 class="label">Súvisiace predpisy:</h4>
       <div class="mb-30">
-        <a href="/" target="_blank" title="/" class="govuk-link-custom link">
-          Zákon č. 125/2015 Z. z. o registri adries a o zmene a doplnení
-          niektorých zákonov
-        </a>
-        <a href="/" target="_blank" title="/" class="govuk-link-custom link">
-          Vyhláška Ministerstva vnútra Slovenskej republiky č. 142/2015 Z. z.,
-          ktorou sa vykonáva zákon č. 125/2015 Z. z. o registri adries a o zmene
-          a doplnení niektorých zákonov
-        </a>
-        <a href="/" target="_blank" title="/" class="govuk-link-custom link">
-          Vyhláška Ministerstva vnútra Slovenskej republiky č. 31/2003 Z. z.,
-          ktorou sa ustanovujú podrobnosti o označovaní ulíc a iných verejných
-          priestranstiev a o číslovaní stavieb
-        </a>
+        <div class="mb-30">
+          <a href="/" target="_blank" title="/" class="govuk-link-custom link">
+            Zákon č. 125/2015 Z. z. o registri adries a o zmene a doplnení
+            niektorých zákonov
+          </a>
+        </div>
+        <div class="mb-30">
+          <a href="/" target="_blank" title="/" class="govuk-link-custom link">
+            Vyhláška Ministerstva vnútra Slovenskej republiky č. 142/2015 Z. z.,
+            ktorou sa vykonáva zákon č. 125/2015 Z. z. o registri adries a o
+            zmene a doplnení niektorých zákonov
+          </a>
+        </div>
+        <div>
+          <a href="/" target="_blank" title="/" class="govuk-link-custom link">
+            Vyhláška Ministerstva vnútra Slovenskej republiky č. 31/2003 Z. z.,
+            ktorou sa ustanovujú podrobnosti o označovaní ulíc a iných verejných
+            priestranstiev a o číslovaní stavieb
+          </a>
+        </div>
       </div>
 
       <h4 class="label">Vybavuje:</h4>

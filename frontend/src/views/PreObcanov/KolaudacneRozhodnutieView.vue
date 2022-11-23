@@ -110,18 +110,20 @@
       </h4>
 
       <ul class="p-0 list-none">
-        <li>a) meno, priezvisko (názov) a adresu (sídlo) stavebníka,</li>
-        <li>b) označenie a miesto stavby,</li>
-        <li>
+        <li class="item_letter">
+          a) meno, priezvisko (názov) a adresu (sídlo) stavebníka,
+        </li>
+        <li class="item_letter">b) označenie a miesto stavby,</li>
+        <li class="item_letter">
           c) dátum a číslo stavebného povolenia alebo povolenia zmeny stavby
           pred jej dokončením,
         </li>
-        <li>d) predpokladaný termín dokončenia stavby,</li>
-        <li>
+        <li class="item_letter">d) predpokladaný termín dokončenia stavby,</li>
+        <li class="item_letter">
           e) termín úplného vypratania staveniska a dokončenia úprav okolia
           stavby,
         </li>
-        <li>
+        <li class="item_letter">
           f) údaj, či sa bude vykonávať skúšobná prevádzka, a čas jej trvania.
         </li>
       </ul>
@@ -131,7 +133,7 @@
       </h4>
 
       <ul class="p-0 list-none">
-        <li>
+        <li class="item_letter">
           a) opis a odôvodnenie vykonaných odchýlok od územného rozhodnutia a
           stavebného povolenia,
         </li>
@@ -140,21 +142,21 @@
         operátu merania a zobrazenia predmetov skutočného vyhotovenia stavby,
         pri podzemných sieťach technického vybavenia ešte pred zakrytím,
 
-        <li>
+        <li class="item_letter">
           c) geometrický plán podľa predpisov o katastri nehnuteľností; tento
           doklad sa nedoplní, ak nedošlo k zmene vonkajšieho pôdorysného
           ohraničenia stavby,
         </li>
-        <li>
+        <li class="item_letter">
           d) ak ide o stavbu, v ktorej bolo alebo má byť zabudované jadrové
           zariadenie, súhlas úradu jadrového dozoru udelený na základe posúdenia
           bezpečnostnej dokumentácie,
         </li>
-        <li>
+        <li class="item_letter">
           e) rozhodnutia, stanoviská, vyjadrenia, súhlasy, posúdenia alebo iné
           opatrenia dotknutých orgánov štátnej správy,
         </li>
-        <li>
+        <li class="item_letter">
           f) ďalšie doklady, ak si ich stavebný úrad vyžiadal, napr. doklad o
           splnení základných požiadaviek na stavby.
         </li>
@@ -175,33 +177,33 @@
 
       <ul class="p-0 list-none">
         <li>a) doklady o vytýčení priestorovej polohy stavby,</li>
-        <li>
+        <li class="item_letter">
           b) doklady o výsledkoch predpísaných skúšok a meraní a o spôsobilosti
           prevádzkových zariadení na plynulú a bezpečnú prevádzku; ak bola
           vykonaná skúšobná prevádzka, jej vyhodnotenie alebo správa o výsledku
           komplexného vyskúšania,
         </li>
-        <li>
+        <li class="item_letter">
           c) projektová dokumentácia overená stavebným úradom v stavebnom konaní
           alebo pri povoľovaní zmeny stavby pred jej dokončením,
         </li>
-        <li>
+        <li class="item_letter">
           d) výkresy, v ktorých sú vyznačené zmeny, ku ktorým došlo počas
           uskutočňovania stavby; tieto zmeny môžu byť na základe kolaudačného
           rozhodnutia vyznačené v projektovej dokumentácii overenej stavebným
           úradom v stavebnom konaní, ak konanie o nich stavebný úrad spojil s
           kolaudačným konaním,
         </li>
-        <li>
+        <li class="item_letter">
           e) doklady o overení požadovaných vlastností výrobkov a ďalšie doklady
           určené v podmienkach stavebného povolenia,
         </li>
-        <li>
+        <li class="item_letter">
           f) podrobnejšia dokumentácia vypracovaná ešte pred začatím stavby, ak
           stavebný úrad jej vypracovanie určil v podmienkach stavebného
           povolenia,
         </li>
-        <li>g) stavebný denník.</li>
+        <li class="item_letter">g) stavebný denník.</li>
       </ul>
 
       <p>
@@ -214,22 +216,22 @@
       </h4>
 
       <ul class="p-0 list-none">
-        <li>a) označenie stavby,</li>
-        <li>
+        <li class="item_letter">a) označenie stavby,</li>
+        <li class="item_letter">
           b) zistenie, či sa dodržali podmienky územného rozhodnutia a
           stavebného povolenia a či sa vyhovelo všeobecným technickým
           požiadavkám na výstavbu,
         </li>
-        <li>
+        <li class="item_letter">
           c) porovnávanie skutočného realizovania dokončenej stavby s
           projektovou dokumentáciou overenou stavebným úradom,
         </li>
-        <li>
+        <li class="item_letter">
           d) súpis zistených odchýlok od skutočného realizovania stavby,
           prípadne odkaz na podklady kolaudačného rozhodnutia,
         </li>
-        <li>e) námietky účastníkov konania,</li>
-        <li>f) stanoviská dotknutých orgánov.</li>
+        <li class="item_letter">e) námietky účastníkov konania,</li>
+        <li class="item_letter">f) stanoviská dotknutých orgánov.</li>
       </ul>
 
       <p>
@@ -423,5 +425,9 @@ export default {
 }
 .label_box span {
   font-weight: 400 !important;
+}
+
+.item_letter {
+  margin-bottom: 30px !important;
 }
 </style>

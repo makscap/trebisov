@@ -8,7 +8,7 @@
             <div class="idsk-crossroad__item">
               <router-link
                 :to="this.$route.path + sub.route"
-                class="govuk-link idsk-crossroad-title"
+                class="govuk-link idsk-crossroad-title bold"
                 title="Title for 1st element"
                 aria-hidden="false"
                 >{{ sub.title }}

@@ -1,22 +1,26 @@
 <template>
   <div>
-    <ul class="list">
-      <li class="item">
-        <h4 class="label">Adresa</h4>
-        <div class="name bold">{{ dataMap.name }}</div>
-        <div class="position">{{ dataMap.street }}</div>
-        <div class="location">{{ dataMap.city }}</div>
-        <p>{{ dataMap.text }}</p>
-      </li>
-      <li class="item">
-        <img
-          class="image"
-          :src="require('../assets/maps/' + dataMap.img)"
-          alt="policia"
-        />
-      </li>
-    </ul>
-    <!-- <hr class="idsk-crossroad-line" aria-hidden="true" /> -->
+    <div
+      data-module="idsk-address"
+      class="idsk-address idsk-address--full-width map"
+    >
+      <div class="idsk-address__content">
+        <div class="idsk-address__description">
+          <h2 class="govuk-heading-m">{{ dataMap.name }}</h2>
+          <p class="govuk-body" v-if="dataMap.floor">{{ dataMap.floor }}</p>
+          <p class="govuk-body">{{ dataMap.street }}</p>
+          <p class="govuk-body">{{ dataMap.city }}</p>
+          <p class="govuk-body" v-if="dataMap.text">{{ dataMap.text }}</p>
+        </div>
+        <iframe
+          class="idsk-address__map"
+          loading="lazy"
+          allowfullscreen
+          :src="dataMap.mapUrl"
+        >
+        </iframe>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -38,38 +42,17 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.image {
-  width: 100% !important;
+.map {
+  margin-bottom: 30px;
 }
 
-.label {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 20px;
-  color: #024497;
-}
-.location {
-  margin-bottom: 16px;
+.map h2 {
+  color: #0b0c0c !important;
+  margin-bottom: 16px !important;
 }
 
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-.item {
-  width: 100%;
-}
-
-.item:first-child {
-  width: 247px;
-}
-
-.item:last-child {
-  flex: 1;
+.map h3 {
+  margin-bottom: 5px !important;
+  color: #0b0c0c !important;
 }
 </style>

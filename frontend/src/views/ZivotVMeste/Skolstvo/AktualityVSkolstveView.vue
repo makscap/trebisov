@@ -1,20 +1,18 @@
 <template>
   <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">Podujatia v meste</h2>
-    <PodujatiaComponent />
+    <h2 class="govuk-heading-l title">Aktuality</h2>
   </div>
 </template>
 
 <script>
 import { useMeta } from "vue-meta";
-import PodujatiaComponent from "@/components/MainPage/PodujatiaComponent.vue";
 
 export default {
-  name: "PodujatiaView",
+  name: "AktualityView",
   data() {
     return {};
   },
-  components: { PodujatiaComponent },
+  components: {},
   setup() {
     useMeta({
       title: "Domov",

@@ -10,6 +10,7 @@
         />
       </div>
       <div v-html="detailData.textHtml"></div>
+      <ArticleGallerySlider />
     </div>
   </div>
 </template>
@@ -17,6 +18,7 @@
 <script>
 import { sights } from "@/store/sights";
 import { useMeta } from "vue-meta";
+import ArticleGallerySlider from "@/components/ArticleGallerySlider";
 
 export default {
   name: "HistorickeAKulturnePamiatkyDetailView",
@@ -41,7 +43,7 @@ export default {
       ],
     });
   },
-  components: {},
+  components: { ArticleGallerySlider },
   watch: {
     "$route.params.slug": {
       handler: function (slug) {

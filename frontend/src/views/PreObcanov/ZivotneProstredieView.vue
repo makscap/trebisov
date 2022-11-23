@@ -17,21 +17,21 @@ export default {
       subpages: [
         {
           title: "Poplatok za znečisťovanie ovzdušia",
-          route: "/",
+          route: "/poplatok-za-znecistovanie-ovzdusia",
         },
         {
           title:
             "Súhlas k povoleniu stavby malého zdroja znečisťovania ovzdušia",
-          route: "/",
+          route: "/suhlas-k-povoleniu-stavby-maleho-zdroja",
         },
         {
           title: "Povolenie na výrub dreviny",
-          route: "/",
+          route: "/povolenie-na-vyrub-dreviny",
         },
         {
           title:
             "Súhlas k užívaniu stavby malého zdroja znečisťovania ovzdušia",
-          route: "/",
+          route: "/suhlas-k-uzivaniu-stavby-maleho-zdroja",
         },
       ],
     };

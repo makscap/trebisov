@@ -10,7 +10,8 @@
         Trebišove už dlhodobo využívaný pre potreby Mestskej polície Trebišov
         predovšetkým pri odhaľovaní protiprávneho konania, ale aj ako prevencia
         pred vandalizmom.
-        <br /><br />
+      </p>
+      <p>
         Veľmi dôležitým faktorom, ktorý pôsobí pri umiestnení kamier, je ich
         preventívny účinok, kedy potenciálny páchateľ radšej upustí od nekalých
         úmyslov, lebo si je vedomý, že je monitorovaný a z trestného činu alebo
@@ -20,8 +21,9 @@
         vyhľadávaní páchateľa. Kamerový systém dáva možnosť aj na monitorovanie
         samotného výkonu hliadok mestskej polície, na kontrolu zákazov
         parkovania a podobne.
-        <br /><br />
+      </p>
 
+      <p>
         V súčasnosti Mestská polícia Trebišov disponuje 56 ks kamier zapojených
         do mestského kamerového systému a výstupy z neho, či už ide o fotografie
         alebo prezeranie záznamov, sú poskytované, na základe písomnej žiadosti,
@@ -30,8 +32,8 @@
         už násilného alebo majetkového charakteru, akými sú napr. krádež,
         dopravné nehody, poškodenia motorových vozidiel, lúpežné prepadnutia,
         výtržníctva, ublíženia na zdraví a iné.
-
-        <br /><br />
+      </p>
+      <p>
         Mestská polícia v Trebišove chce aj v budúcnosti pokračovať v trende
         rozširovania kamerového systému, resp. v jeho modernizácii, o čom svedčí
         aj podanie žiadosti o poskytnutie dotácie zo štátneho rozpočtu na
@@ -39,17 +41,26 @@
         rámci ktorého má Mesto Trebišov záujem na ďalšom rozšírení kamerového
         systému o 8 nových kamier. Zoznam kamier a ich umiestnenie sú uvedené v
         prílohách.
-        <br /><br />
+      </p>
 
+      <p>
         <span>
           Mgr. Miroslav Cabada<br />
           poverený riadením MsP Trebišov
         </span>
       </p>
-
       <LinksAndSizeComponent :files="data" />
 
-      <h4 class="label">Umiestnenie kamier v meste</h4>
+      <h2 class="label">Umiestnenie kamier v meste</h2>
+
+      <div class="image_box">
+        <img
+          class="image"
+          src="@/assets/mestska_policia_rozdelenie_sektorov.jpg"
+          alt="Rozdelenie sektorov"
+        />
+      </div>
+      <ArticleGallerySlider />
     </div>
   </div>
 </template>
@@ -57,6 +68,7 @@
 <script>
 import { useMeta } from "vue-meta";
 import LinksAndSizeComponent from "@/components/LinksAndSizeComponent.vue";
+import ArticleGallerySlider from "@/components/ArticleGallerySlider";
 
 export default {
   name: "MestskyKamerovySystemView",
@@ -102,7 +114,7 @@ export default {
       ],
     };
   },
-  components: { LinksAndSizeComponent },
+  components: { LinksAndSizeComponent, ArticleGallerySlider },
   setup() {
     useMeta({
       title: "Domov",

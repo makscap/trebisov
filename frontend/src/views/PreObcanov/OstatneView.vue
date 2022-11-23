@@ -17,32 +17,32 @@ export default {
       subpages: [
         {
           title: "Konanie verejného zhromaždenia",
-          route: "/",
+          route: "/konanie-verejnoho-zhromazdenia",
         },
         {
           title: "Podanie petície",
-          route: "/",
+          route: "/podanie-peticie",
         },
         {
           title: "Podanie sťažnosti",
-          route: "/",
+          route: "/podanie-staznost",
         },
         {
           title: "Vydanie osvedčenia pre samostatne hospodáriaceho roľníka",
-          route: "/",
+          route: "/vydanie-osvedcenia",
         },
         {
           title:
             "Žiadosť o parkovacie miesto na krytom parkovisku na ulici Berehovskej v Trebišove",
-          route: "/",
+          route: "/ziadost-o-parkovacie-miesto",
         },
         {
           title: "Neuhradené pohladávky za nájomné",
-          route: "/",
+          route: "/neuhradene-pohladavky",
         },
         {
           title: "Vydanie rybárskeho lístka",
-          route: "/",
+          route: "/vydanie-rybarskeho-listka",
         },
       ],
     };

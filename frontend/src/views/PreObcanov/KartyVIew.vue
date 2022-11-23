@@ -1,13 +1,13 @@
 <template>
   <div class="govuk-width-container parent">
     <div class="content">
-      <SubPagesMenu :subpages="subpages" title="Karty" />
+      <SubPagesMenuVertical :subpages="subpages" title="Karty" />
     </div>
   </div>
 </template>
 
 <script>
-import SubPagesMenu from "@/components/SubPagesMenu.vue";
+import SubPagesMenuVertical from "@/components/SubPagesMenuVertical.vue";
 import { useMeta } from "vue-meta";
 
 export default {
@@ -26,7 +26,7 @@ export default {
       ],
     };
   },
-  components: { SubPagesMenu },
+  components: { SubPagesMenuVertical },
   setup() {
     useMeta({
       title: "Domov",

@@ -23,7 +23,7 @@
           class="idsk-card idsk-card-secondary-horizontal"
         >
           <router-link
-            :to="getCrazyUrl(article)"
+            :to="this.$route.path + getCrazyUrl(article)"
             :title="
               'Po kliknutií sa otvorí v tomto okne článok s názvom ' +
               article.attributes.name
@@ -81,7 +81,7 @@
 
             <div class="idsk-heading idsk-heading-secondary-horizontal">
               <router-link
-                :to="getCrazyUrl(article)"
+                :to="this.$route.path + getCrazyUrl(article)"
                 :title="
                   'Po kliknutií sa otvorí v tomto okne článok s názvom ' +
                   article.attributes.name
@@ -193,7 +193,7 @@ export default {
       );
     },
     getCrazyUrl(article) {
-      return `/aktuality/${
+      return `/${
         this.types.find(
           (t) => t.id === article.attributes.categories.data[0].id
         )?.slug

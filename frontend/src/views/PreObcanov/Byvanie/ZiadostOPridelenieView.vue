@@ -5,71 +5,130 @@
         Žiadosť o pridelenie mestského nájomného bytu
       </h1>
 
+      <p>
+        Žiadateľ o mestský nájomný byt musí predložiť vyplnenú žiadosť o
+        pridelenie bytu na predpísanom tlačive na MsÚ v Trebišove.
+      </p>
+      <p>
+        Na základe platného VZN o prideľovaní mestských nájomných bytov (článok
+        3, bodu 3.3) žiadateľ o pridelenie nájomného bytu musí spĺňať tieto
+        podmienky:
+      </p>
       <h4 class="label">Potrebné doklady:</h4>
-      <ul>
-        <li>žiadosť o prechod nájmu bytu</li>
-      </ul>
-      <h4 class="label">
-        V žiadosti o prechod nájmu bytu je potrebné konkrétne uviesť:
-      </h4>
 
       <ul>
+        <li>je fyzickou osobou, ktorá dovŕšila 18-ty rok svojho života,</li>
+        <li>je osobou spôsobilou na právne úkony,</li>
         <li>
-          priezvisko a meno, dátum narodenia, byt na trvalej adrese, číslo bytu
+          nie je v meste Trebišov nadpolovičným spoluvlastníkom akéhokoľvek
+          bytu, rodinného domu, alebo inej budovy, určenej na trvalé bývanie a
+          zároveň, že nemá v tejto nehnuteľnosti trvalý alebo prechodný pobyt,
+        </li>
+        <li>nie je stavebníkom objektu na trvalé bývanie,</li>
+        <li>
+          spĺňa finančné predpoklady na uhrádzanie poplatkov za užívanie bytu,
+          preukáže príjem zo závislej činnosti, resp. z podnikania alebo iný
+          pravidelný príjem,
         </li>
         <li>
-          úmrtný list, resp. rozsudok o rozvode manželstva, (overená dohoda
-          bývalých manželov) resp. potvrdenie o zmene pobytu – trvalé opustenie
-          spoločnej domácnosti
+          nemá záväzok voči mestu a spoločnostiam, (vrátanie príspevkových a
+          rozpočtových organizácii mesta), v ktorých má mesto účasť, resp. boli
+          mestom založené alebo zriadené a to z titulu nezaplatenia daní,
+          poplatkov alebo iných finančných záväzkov, uvedené ustanovenie sa
+          nemusí uplatniť, ak žiadateľ využíva inštitút osobitného príjemcu,
         </li>
-        <li>doklad o spoločnej domácnosti najbližších príbuzných</li>
-        <li>dôvod prechodu nájmu</li>
+        <li>súhlasí so spracovaním a uchovávaním osobných údajov.</li>
       </ul>
 
-      <h4 class="label">Upozornenie</h4>
+      <p>
+        Mesto prešetrí opodstatnenosť jednotlivých žiadostí a žiadosť zaeviduje
+        do evidencie žiadostí o pridelenie mestského nájomného bytu alebo ju
+        zamietne.
+      </p>
 
-      <ul>
-        <li>
-          ak nájomca zomrie a ak nejde o byt v spoločnom nájme manželov, stávajú
-          sa nájomcami (spoločnými nájomcami) jeho deti, vnuci, rodičia,
-          súrodenci, zať a nevesta, ktorí s ním žili v deň jeho smrti v
-          spoločnej domácnosti a nemajú vlastný byt. Nájomcami (spoločnými
-          nájomcami) sa stávajú aj tí, ktorí sa starali o spoločnú domácnosť
-          zomretého nájomcu alebo na neho boli odkázaní výživou, ak s ním žili v
-          spoločnej domácnosti aspoň tri roky pred jeho smrťou a nemajú vlastný
-          byt
-        </li>
-        <li>
-          ustanovenia platia aj v prípade, ak nájomca opustí trvale spoločnú
-          domácnosť
-        </li>
-        <li>
-          ustanovenia neplatia pre byty trvale určené ako služobné byty, pre
-          byty osobitného určenia a pre byty v domoch osobitného určenia
-        </li>
-      </ul>
+      <p>
+        Spolužiadateľom o pridelenie nájomného bytu môže byť iba manžel alebo
+        manželka žiadateľa. Podmienku veku musí spĺňať aspoň jeden z manželov.
+        Iné podmienky uvedené v bode 3.3. musí spĺňať každý z manželov. Nájom
+        bytu sa primerane spravuje ustanoveniami Občianskeho zákonníka o
+        spoločnom nájme bytu manželmi.
+      </p>
+
+      <p>
+        Komisia bytová po preskúmaní jednotlivých žiadosti predložených na
+        prerokovanie a zaradených do evidencie navrhne zoznam na určenie
+        nájomcov do bytov a sociálnych bytov a tento predloží mestskému
+        zastupiteľstvu na schválenie. Mestské zastupiteľstvo uznesením rozhodne
+        o schválení alebo neschválení nájmu bytu určenému nájomcovi.
+      </p>
+
+      <h4 class="label">Potrebné doklady:</h4>
+      <p>
+        džiadosť o pridelenie mestského nájomného bytu čestné prehlásenie, že je
+        žiadateľ spôsobilý na právne úkony
+      </p>
 
       <div class="label_box">
         <h4 class="label inline">Podanie žiadostí:</h4>
-        <span> Podateľňa – kancelária prvého kontaktu - prízemie</span>
+        <span> Podateľňa - kancelária prvého kontaktu - prízemie</span>
       </div>
       <div class="label_box">
         <h4 class="label inline">Poplatok:</h4>
         <span> bez poplatku</span>
       </div>
+
+      <h4 class="label">Súvisiace predpisy:</h4>
+
+      <div class="mb-30">
+        <a href="/" target="_blank" title="/" class="govuk-link-custom link">
+          VZN č. 178/2022 o prideľovaní mestských nájomných bytov
+        </a>
+      </div>
+
+      <!-- 
+
+      <div class="mb-30">
+        <ContactCard :contactsData="contactsData" />
+      </div>
+
+       -->
+      <h4 class="label">Prílohy</h4>
+      <LinksAndSizeComponent :files="files" />
     </div>
   </div>
 </template>
 
 <script>
 import { useMeta } from "vue-meta";
+import LinksAndSizeComponent from "@/components/LinksAndSizeComponent.vue";
 
 export default {
   name: "ZiadostOPridelenieView",
   data() {
-    return {};
+    return {
+      files: [
+        {
+          name: "Zoznam žiadateľov o pridelenie mestských nájomných bytov za obdobie od 01.08.2022 do 31.07.2022",
+          size: "54.78 kB",
+          ext: "PDF",
+          urlFile: "/",
+        },
+        {
+          name: "Žiadosť o pridelenie mestského nájomného bytu + Čestné prehlásenie",
+          size: "54.78 kB",
+          ext: "PDF",
+          urlFile: "/",
+        },
+        {
+          name: "Žiadosť o pridelenie mestského nájomného bytu + Čestné prehlásenie",
+          size: "54.78 kB",
+          ext: "PDF",
+          urlFile: "/",
+        },
+      ],
+    };
   },
-  components: {},
+  components: { LinksAndSizeComponent },
   setup() {
     useMeta({
       title: "Domov",

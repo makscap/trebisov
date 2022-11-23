@@ -220,6 +220,8 @@
               ({{ item.format }}, {{ item.size }})
             </div>
           </li>
+
+          <ArticleGallerySlider />
           <!-- <li class="item_link">
             <a
               :href="require('@/assets/pdf/test.pdf')"
@@ -300,6 +302,7 @@
 <script>
 import { useMeta } from "vue-meta";
 import LinksAndSizeComponent from "@/components/LinksAndSizeComponent.vue";
+import ArticleGallerySlider from "@/components/ArticleGallerySlider";
 
 export default {
   name: "RevitalizaciaHraduView",
@@ -384,7 +387,7 @@ export default {
   },
 
   mounted() {},
-  components: { LinksAndSizeComponent },
+  components: { LinksAndSizeComponent, ArticleGallerySlider },
   methods: {
     falseFunction(e, route) {
       if (!route) e.preventDefault();

@@ -24,7 +24,7 @@
         class="carousel-desktop"
         :mouseDrag="true"
         :touchDrag="true"
-        :items-to-show="3"
+        :items-to-show="4"
         :pauseAutoplayOnHover="true"
       >
         <slide style="cursor: pointer" v-for="slide in images" :key="slide">
@@ -68,10 +68,42 @@ export default {
     return {
       isOpen: false,
       currentSlide: 0,
+      images: [
+        {
+          attributes: {
+            id: 1,
+            url: "https://picsum.photos/200/300",
+          },
+        },
+        {
+          attributes: {
+            id: 2,
+            url: "https://picsum.photos/seed/picsum/200/300",
+          },
+        },
+        {
+          attributes: {
+            id: 3,
+            url: "https://picsum.photos/200/300",
+          },
+        },
+        {
+          attributes: {
+            id: 4,
+            url: "https://picsum.photos/200/300?grayscale",
+          },
+        },
+        {
+          attributes: {
+            id: 5,
+            url: "https://picsum.photos/200/300",
+          },
+        },
+      ],
     };
   },
   props: {
-    images: Array,
+    // images: Array,
   },
   methods: {
     closeModal() {
@@ -119,32 +151,35 @@ export default {
   align-items: center;
 }
 .article-gallery-slid .carousel__next:hover {
-  background-color: #ffdf0f;
+  background-color: #024497;
 }
 .article-gallery-slid .carousel__prev:hover {
-  background-color: #ffdf0f;
+  background-color: #024497;
 }
 .article-gallery-slid .carousel__next {
-  right: 20px !important;
-  background-color: #dee0e2;
+  right: 35px !important;
+  background-color: #ffffff;
+  opacity: 0.5;
 }
 .article-gallery-slid .carousel__prev {
-  left: 20px !important;
-  background-color: #dee0e2;
+  left: 35px !important;
+  background-color: #ffffff;
+  opacity: 0.5;
 }
 .article-gallery-slid .carousel__icon {
   fill: black;
 }
 .article-gallery-slid .carousel__slide {
-  padding: 15px;
+  padding: 7px;
 }
 @media screen and (max-width: 960px) {
   .article-gallery-slid .slide {
     // left: 0 !important;
-    height: 250px;
+    height: 150px;
     // position: relative;
     width: 100%;
 
+    border-radius: 4px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -167,10 +202,11 @@ export default {
 @media screen and (min-width: 960px) {
   .article-gallery-slid .slide {
     // left: -30px !important;
-    height: 250px;
+    height: 150px;
     // position: relative;
     width: 100%;
 
+    border-radius: 4px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

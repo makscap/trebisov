@@ -1,112 +1,23 @@
 <template>
   <div class="govuk-width-container">
     <div class="content w-75">
-      <h1 class="govuk-heading-l">Mestský úrad</h1>
+      <h1 class="govuk-heading-l">
+        Okresné riaditeľstvo policajného zboru v Trebišove
+      </h1>
       <MapComponent :dataMap="dataMap" />
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <div class="cover">
-        <h4 class="label">Kontaktné informácie</h4>
-        <div class="mb-24">
-          <span class="bold">E-mail:</span>
-          <a href="mailto:trebisov@trebisov.sk"> trebisov@trebisov.sk </a>
-        </div>
-        <div class="mb-24">
-          <div><span class="bold">Informátor - vrátnica</span></div>
-          <div>
-            Tel.:
-            <a href="tel:+421566713339"> +421 56 6713 339 </a>
-          </div>
-        </div>
 
-        <ul class="list">
-          <li class="item">
-            <div><span class="bold">Sekretariát prednostu</span></div>
-            <div>Tel.: <a href="tel:+421566722157"> +421 56 672 2157 </a></div>
-            <div>Mobil: <a href="tel:+421915790360"> +421 915 790 360 </a></div>
-            <div>
-              E-mail:
-              <a href="mailto:vaskova@trebisov.sk"> vaskova@trebisov.sk </a>
-            </div>
-          </li>
-
-          <li class="item">
-            <div><span class="bold">Sekretariát primátora</span></div>
-            <div>Tel.: <a href="tel:+421566722665"> +421 56 672 2665 </a></div>
-            <div>
-              Mobil:
-
-              <a href="tel:+421905592107"> +421 905 592 107 </a>
-            </div>
-            <div>
-              E-mail:
-              <a href="mailto:hippova.katarina@trebisov.sk">
-                hippova.katarina@trebisov.sk
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <div class="cover">
-        <h4 class="label">Identifikačné údaje</h4>
-        <ul class="list list_identifikacne">
-          <li class="item">
-            <span class="bold">Bankové spojenie:</span> Všeobecná úverová banka,
-            a.s. pobočka Trebišov
-          </li>
-          <li><span class="bold">Číslo účtu:</span> 19325622/0200</li>
-          <li><span class="bold">IBAN:</span> SK39 0200 0000 0000 1932 5622</li>
-          <li><span class="bold">SWIFT/BIC:</span> SUBASKBX</li>
-        </ul>
-      </div>
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <h4 class="label">Úradné hodiny</h4>
-      <ul class="list_schedule">
-        <li class="item_schedule" v-for="(oneDay, i) in scheduleData" :key="i">
-          <span>{{ oneDay.day }}</span>
-          <span>{{ oneDay.time }}</span>
-        </li>
-      </ul>
-      <h4 class="label">Doplňujúce infromácie</h4>
-
-      <p>
-        Mestský úrad zabezpečuje organizačné, administratívne a hospodárske veci
-        mestského zastupiteľstva, primátora, mestskej rady, komisií MsZ a Výboru
-        mestskej časti Milhostov.
-        <br /><br />Mestský úrad zabezpečuje výkon originálnej pôsobnosti
-        samosprávy (originálne kompetencie) aj výkon prenesenej pôsobnosti
-        štátnej správy (prenesené kompetencie). <br /><br />Mestský úrad najmä
-      </p>
-
-      <ul>
-        <li>
-          zabezpečuje písomnú agendu všetkých orgánov mesta a je podateľňou a
-          výpravňou písomností,
-        </li>
-        <li>
-          zabezpečuje odborné podklady a iné písomnosti na rokovanie MsZ, MsR,
-          komisií a výboru,
-        </li>
-        <li>vypracúva písomné vyhotovenia rozhodnutí mesta,</li>
-        <li>pripravuje návrhy a vykonáva uznesenia MsZ a rozhodnutia mesta,</li>
-        <li>
-          odborne a metodicky usmerňuje mestom zriadené organizácie a založené
-          spoločnosti.
-        </li>
-      </ul>
-
-      <div>
-        <a
-          :href="require('@/assets/pdf/test.pdf')"
-          target="_blank"
-          title="Štatút mesta Trebišov"
-          class="govuk-link-custom link"
+      <ul class="m-0 p-0 list-none mt-30 mb-30">
+        <li
+          v-for="(person, i) in personsData"
+          :key="i"
+          class="item pb-30 pt-30"
         >
-          Organizačná štruktúra mestského úradu
-        </a>
+          <div class="bold">{{ person.name }}</div>
+          <div>{{ person.position }}</div>
+        </li>
+      </ul>
 
-        <span class="link_size"> (PDF, 181.32 kB)</span>
-      </div>
+      <SubPagesMenuVertical :subpages="subpages" />
     </div>
   </div>
 </template>
@@ -114,63 +25,67 @@
 <script>
 import { useMeta } from "vue-meta";
 import MapComponent from "@/components/MapComponent.vue";
+import SubPagesMenuVertical from "@/components/SubPagesMenuVertical.vue";
 
 export default {
   name: "OkresneRiaditelstvoView",
   data() {
     return {
       dataMap: {
-        name: "Mestská polícia Trebišov",
-        street: "M. R. Štefánika 862/204",
-        city: "075 25 Trebišov",
-        text: "Prízemie v budove Mestského úradu v Trebišove",
-        img: "mestsky-urad.jpg",
+        name: "Okresné riaditeľstvo PZ v Trebišove",
+        floor: "",
+        street: "M. R. Štefánika 2319/180",
+        city: "Trebišov",
+        mapUrl:
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1318.720605213585!2d21.71765875817752!3d48.62053851787241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47392ac9adf1db69%3A0xd6e1190baa0f2517!2zRG9wcmF2bsO9IGluxaFwZWt0b3LDoXQgT1IgUFo!5e0!3m2!1sru!2ssk!4v1668002928915!5m2!1sru!2ssk",
       },
+      personsData: [
+        {
+          name: "plk. JUDr. Radoslav Fedor",
+          position: "Riaditeľ okresného riaditeľstva",
+        },
+        {
+          name: "plk. Ing. Imrich Jurko",
+          position: "Zástupca riaditeľa pre výkon služby",
+        },
+        {
+          name: "plk. Ing. Marcel Hurčík",
+          position: "Riaditeľ odboru kriminálnej polície",
+        },
+        {
+          name: "mjr. Ing. Martin Telepovský",
+          position: "Riaditeľ okresného dopravného inšpektorátu",
+        },
+        {
+          name: "pplk. Ing. Jozef Matys",
+          position: "Riaditeľ odboru poriadkovej polície",
+        },
+      ],
       subpages: [
         {
-          title: "O mestskom úrade",
-          route: "/o-mestskom-urade",
+          title: "Stránkové hodiny",
+          route: "/strankove-hodiny",
         },
         {
-          title: "Prednosta",
+          title: "Rady a informácie",
           route: "/",
         },
         {
-          title: "Oddelenia",
-          route: "/",
-        },
-        { title: "Strediská", route: "/" },
-        { title: "Oznamy", route: "/" },
-        { title: "Oznamy o úmrtiach", route: "/" },
-        { title: "Strategické dokumenty", route: "/" },
-        { title: "Všeobecne záväzné nariadenia", route: "/" },
-        { title: "Cenník", route: "/" },
-      ],
-      scheduleData: [
-        {
-          day: "pondelok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
+          title: "Krimi správy",
+          route: "/krimi-spravy",
         },
         {
-          day: "utorok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
+          title: "Pátranie",
+          route: "/patranie",
         },
         {
-          day: "streda:",
-          time: "nestránkový deň",
-        },
-        {
-          day: "štvrtok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
-        },
-        {
-          day: "piatok:",
-          time: "7.30 - 11.30 h	 	12.00 - 15.30 h",
+          title: "Kontakty",
+          route: "/kontakty",
         },
       ],
     };
   },
-  components: { MapComponent },
+  components: { MapComponent, SubPagesMenuVertical },
   setup() {
     useMeta({
       title: "Domov",
@@ -202,47 +117,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.cover {
-  padding-bottom: 30px;
-}
-.label {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 20px;
-  color: #024497;
-}
-
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
+.item {
+  border-bottom: 1px solid #bfc1c3;
 }
 
 .item:first-child {
-  margin-right: 72px;
-}
-
-.mb-24 {
-  margin-bottom: 24px;
-}
-
-.list_identifikacne {
-  flex-direction: column;
-}
-
-.list_schedule {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.item_schedule {
-  width: 100%;
-  max-width: 430px;
-  display: flex;
-  justify-content: space-between;
+  border-top: 1px solid #bfc1c3;
 }
 </style>

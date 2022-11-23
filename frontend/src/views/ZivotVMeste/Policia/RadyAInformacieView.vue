@@ -3,7 +3,9 @@
   <div>
     <div v-if="!articleId" class="govuk-width-container">
       <div class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
-        <h1 class="govuk-heading-l">{{ type ? type.value : "Aktuality" }}</h1>
+        <h1 class="govuk-heading-l">
+          {{ type ? type.value : "Rady a informácie" }}
+        </h1>
         <Loader v-if="!loaded"></Loader>
         <div v-if="loaded && articles.length > 0">
           <div class="govuk-grid-row height-grid" v-if="page == 1">

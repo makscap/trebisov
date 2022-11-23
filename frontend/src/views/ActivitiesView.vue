@@ -16,16 +16,17 @@
                     articles[0].attributes.name
                   "
                 >
-                  <img
-                    style="object-fit: cover"
-                    class="idsk-card-img idsk-card-img-hero hero-img"
-                    width="100%"
-                    :src="
+                  <!-- :src="
                       articles[0].attributes.titleImage.data
                         ? 'https://strapi.becep.sk/' +
                           articles[0].attributes.titleImage.data.attributes.url
                         : require('@/assets/becep_logo.svg')
-                    "
+                    " -->
+                  <img
+                    style="object-fit: cover"
+                    class="idsk-card-img idsk-card-img-hero hero-img"
+                    width="100%"
+                    src="https://picsum.photos/200/300"
                     :alt="
                       articles[0].attributes.titleImage.data
                         ? 'Alternatívny popis obrázka je nasledujúci. ' +
@@ -111,15 +112,16 @@
                       article.attributes.name
                     "
                   >
-                    <img
-                      class="idsk-card-img idsk-card-img-secondary item-img"
-                      style="width: 100%; object-fit: cover"
-                      :src="
+                    <!-- :src="
                         article.attributes.titleImage.data
                           ? 'https://strapi.becep.sk/' +
                             article.attributes.titleImage.data.attributes.url
                           : require('@/assets/becep_logo.svg')
-                      "
+                      " -->
+                    <img
+                      class="idsk-card-img idsk-card-img-secondary item-img"
+                      style="width: 100%; object-fit: cover"
+                      src="https://picsum.photos/200/300"
                       :alt="
                         article.attributes.titleImage.data
                           ? 'Alternatívny popis obrázka je nasledujúci. ' +

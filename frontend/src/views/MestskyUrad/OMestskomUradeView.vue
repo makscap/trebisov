@@ -120,11 +120,12 @@ export default {
   data() {
     return {
       dataMap: {
-        name: "Mestská polícia Trebišov",
+        name: "Mestský úrad",
+        floor: "",
         street: "M. R. Štefánika 862/204",
         city: "075 25 Trebišov",
-        text: "Prízemie v budove Mestského úradu v Trebišove",
-        img: "mestsky-urad.jpg",
+        mapUrl:
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2637.510204801416!2d21.714839729909027!3d48.61921805915961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47392ac828a6a2af%3A0xe9c581bb8eaabc11!2zTWVzdHNrw70gw7pyYWQ!5e0!3m2!1sru!2ssk!4v1668003475745!5m2!1sru!2ssk",
       },
       subpages: [
         {

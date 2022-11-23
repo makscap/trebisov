@@ -120,11 +120,12 @@ export default {
   data() {
     return {
       dataMap: {
-        name: "Mestská polícia Trebišov",
-        street: "M. R. Štefánika 862/204",
+        name: "Bytový podnik Trebišov, s.r.o.",
+        floor: "",
+        street: "Puškinova 18",
         city: "075 25 Trebišov",
-        text: "Prízemie v budove Mestského úradu v Trebišove",
-        img: "mestsky-urad.jpg",
+        mapUrl:
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2637.011952771874!2d21.708647915395346!3d48.62875332480236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ed532fe69e423%3A0xe8fe65cdcf495b1e!2sBytov%C3%BD%20Podnik%20Trebi%C5%A1ov%20s.r.o.!5e0!3m2!1sru!2ssk!4v1668003270658!5m2!1sru!2ssk",
       },
       subpages: [
         {

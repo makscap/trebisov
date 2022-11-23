@@ -130,16 +130,34 @@ a:hover, .govuk-link-custom:hover {
     margin-bottom: 30px !important;
 }
 
+.mt-30 {
+    margin-top: 30px !important;
+}
+
+.pb-30 {
+    padding-bottom: 30px !important;
+}
+
+.pt-30 {
+    padding-top: 30px !important;
+}
+
 .mb-end {
 margin-bottom: 50px !important;
 }
 
 .w-75 {
     width: 75% !important;
+    max-width: 712px;
 }
 
 .list-none {
     list-style: none;
+}
+
+.font-24 {
+    font-size: 24px !important;
+        line-height: 30px !important;
 }
 
 
@@ -191,7 +209,6 @@ font-weight: 700 !important;
     font-size: 19px;
     line-height: 25px;
     color: #0b0c0c;
-    margin-bottom: 5px;
 }
 
 .content ul {

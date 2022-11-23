@@ -2,7 +2,10 @@
   <div class="govuk-width-container">
     <div class="content w-75">
       <h1 class="govuk-heading-l">Harmonogram vývozu komunálneho odpadu</h1>
-
+      <h2>
+        HARMONOGRAM VÝVOZU KOMUNÁLNEHO ODPADU - 110/120 L ZBERNÉ NÁDOBY –
+        RODINNÉ DOMY
+      </h2>
       <ul class="list">
         <li v-for="(day, i) in days" :key="i" class="item">
           <h3>{{ day.name }}</h3>

@@ -3,109 +3,39 @@
     <div class="content w-75">
       <h1 class="govuk-heading-l">Mestská polícia</h1>
       <MapComponent :dataMap="dataMap" />
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <div class="cover">
-        <h4 class="label">Kontaktné informácie</h4>
-        <div class="mb-24">
-          <span class="bold">E-mail:</span>
-          <a href="mailto:trebisov@trebisov.sk"> trebisov@trebisov.sk </a>
-        </div>
-        <div class="mb-24">
-          <div><span class="bold">Informátor - vrátnica</span></div>
-          <div>
-            Tel.:
-            <a href="tel:+421566713339"> +421 56 6713 339 </a>
-          </div>
-        </div>
+      <h2 class="label">Kontaktné informácie</h2>
 
-        <ul class="list">
-          <li class="item">
-            <div><span class="bold">Sekretariát prednostu</span></div>
-            <div>Tel.: <a href="tel:+421566722157"> +421 56 672 2157 </a></div>
-            <div>Mobil: <a href="tel:+421915790360"> +421 915 790 360 </a></div>
-            <div>
-              E-mail:
-              <a href="mailto:vaskova@trebisov.sk"> vaskova@trebisov.sk </a>
-            </div>
-          </li>
+      <ContactCard :contactsData="contactsData" />
 
-          <li class="item">
-            <div><span class="bold">Sekretariát primátora</span></div>
-            <div>Tel.: <a href="tel:+421566722665"> +421 56 672 2665 </a></div>
-            <div>
-              Mobil:
-
-              <a href="tel:+421905592107"> +421 905 592 107 </a>
-            </div>
-            <div>
-              E-mail:
-              <a href="mailto:hippova.katarina@trebisov.sk">
-                hippova.katarina@trebisov.sk
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <div class="cover">
-        <h4 class="label">Identifikačné údaje</h4>
-        <ul class="list list_identifikacne">
-          <li class="item">
-            <span class="bold">Bankové spojenie:</span> Všeobecná úverová banka,
-            a.s. pobočka Trebišov
-          </li>
-          <li><span class="bold">Číslo účtu:</span> 19325622/0200</li>
-          <li><span class="bold">IBAN:</span> SK39 0200 0000 0000 1932 5622</li>
-          <li><span class="bold">SWIFT/BIC:</span> SUBASKBX</li>
-        </ul>
-      </div>
-      <hr class="idsk-crossroad-line" aria-hidden="true" />
-      <h4 class="label">Úradné hodiny</h4>
-      <ul class="list_schedule">
-        <li class="item_schedule" v-for="(oneDay, i) in scheduleData" :key="i">
-          <span>{{ oneDay.day }}</span>
-          <span>{{ oneDay.time }}</span>
-        </li>
-      </ul>
-      <h4 class="label">Doplňujúce infromácie</h4>
+      <h2 class="label">Doplňujúce infromácie</h2>
 
       <p>
-        Mestský úrad zabezpečuje organizačné, administratívne a hospodárske veci
-        mestského zastupiteľstva, primátora, mestskej rady, komisií MsZ a Výboru
-        mestskej časti Milhostov.
-        <br /><br />Mestský úrad zabezpečuje výkon originálnej pôsobnosti
-        samosprávy (originálne kompetencie) aj výkon prenesenej pôsobnosti
-        štátnej správy (prenesené kompetencie). <br /><br />Mestský úrad najmä
+        Mestská polícia vykonáva svoju služobnú činnosť denne v rámci pracovných
+        zmien takto:
       </p>
+      <p>
+        1. zmena <span>06.00 - 18.00</span> h<br />
+        2. zmena <span>18.00 - 22.00</span> h<br />
+        Podľa potreby nočná zmena 18.00 - 06.00 h
+      </p>
+      <hr class="idsk-crossroad-line mb-30" aria-hidden="true" />
 
-      <ul>
-        <li>
-          zabezpečuje písomnú agendu všetkých orgánov mesta a je podateľňou a
-          výpravňou písomností,
-        </li>
-        <li>
-          zabezpečuje odborné podklady a iné písomnosti na rokovanie MsZ, MsR,
-          komisií a výboru,
-        </li>
-        <li>vypracúva písomné vyhotovenia rozhodnutí mesta,</li>
-        <li>pripravuje návrhy a vykonáva uznesenia MsZ a rozhodnutia mesta,</li>
-        <li>
-          odborne a metodicky usmerňuje mestom zriadené organizácie a založené
-          spoločnosti.
-        </li>
-      </ul>
-
-      <div>
-        <a
-          :href="require('@/assets/pdf/test.pdf')"
-          target="_blank"
-          title="Štatút mesta Trebišov"
-          class="govuk-link-custom link"
-        >
-          Organizačná štruktúra mestského úradu
-        </a>
-
-        <span class="link_size"> (PDF, 181.32 kB)</span>
+      <div class="phones-wrap">
+        <div class="phones-item">
+          <p class="blue bold font-24">Čísla tiesňového volania</p>
+          <div class="bold"><span class="blue">SOS</span> 112</div>
+          <div class="bold"><span class="blue">Hasiči</span> 150</div>
+          <div class="bold"><span class="blue">Lekárska služba</span> 155</div>
+          <div class="bold"><span class="blue">Polícia</span> 158</div>
+        </div>
+        <div class="phones-item">
+          <p class="blue bold font-24">Poruchy - telefónne čísla</p>
+          <div class="bold">
+            <span class="blue">Elektrina</span> 0850 12 33 33
+          </div>
+          <div class="bold"><span class="blue">Plyn</span> 0850 11 17 27</div>
+          <div class="bold"><span class="blue">Voda</span> 056 671 24 20</div>
+        </div>
       </div>
     </div>
   </div>
@@ -114,6 +44,7 @@
 <script>
 import { useMeta } from "vue-meta";
 import MapComponent from "@/components/MapComponent.vue";
+import ContactCard from "@/components/ContactCard.vue";
 
 export default {
   name: "MestskaPoliciaVIew",
@@ -121,30 +52,38 @@ export default {
     return {
       dataMap: {
         name: "Mestská polícia Trebišov",
+        floor: "",
         street: "M. R. Štefánika 862/204",
         city: "075 25 Trebišov",
         text: "Prízemie v budove Mestského úradu v Trebišove",
-        img: "mestsky-urad.jpg",
+        mapUrl:
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2637.5684959092014!2d21.717158915395018!3d48.61810242554974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47392ac828a6bd4d%3A0x5072021515176a92!2zTWVzdHNrw6EgcG9sw61jaWEgVHJlYmnFoW92!5e0!3m2!1sru!2ssk!4v1668003156585!5m2!1sru!2ssk",
       },
-      subpages: [
+      contactsData: [
         {
-          title: "O mestskom úrade",
-          route: "/o-mestskom-urade",
+          name: "JUDr. Martin Galgoczy",
+          position: "vedúci kancelárie",
+          location: "Mestský úrad, 3. poschodie, kancelária č. 314",
+          mobil: ["+421 56 6713 345"],
+          fax: ["+421 918 501 259"],
+          email: ["galgoczy@trebisov.sk"],
         },
         {
-          title: "Prednosta",
-          route: "/",
+          name: "JUDr. Martin Galgoczy",
+          position: "vedúci kancelárie",
+          location: "Mestský úrad, 3. poschodie, kancelária č. 314",
+          mobil: ["+421 56 6713 345"],
+          fax: ["+421 918 501 259"],
+          email: ["galgoczy@trebisov.sk"],
         },
         {
-          title: "Oddelenia",
-          route: "/",
+          name: "JUDr. Martin Galgoczy",
+          position: "vedúci kancelárie",
+          location: "Mestský úrad, 3. poschodie, kancelária č. 314",
+          mobil: ["+421 56 6713 345"],
+          fax: ["+421 918 501 259"],
+          email: ["galgoczy@trebisov.sk"],
         },
-        { title: "Strediská", route: "/" },
-        { title: "Oznamy", route: "/" },
-        { title: "Oznamy o úmrtiach", route: "/" },
-        { title: "Strategické dokumenty", route: "/" },
-        { title: "Všeobecne záväzné nariadenia", route: "/" },
-        { title: "Cenník", route: "/" },
       ],
       scheduleData: [
         {
@@ -170,7 +109,7 @@ export default {
       ],
     };
   },
-  components: { MapComponent },
+  components: { MapComponent, ContactCard },
   setup() {
     useMeta({
       title: "Domov",
@@ -244,5 +183,21 @@ export default {
   max-width: 430px;
   display: flex;
   justify-content: space-between;
+}
+
+.phones-wrap {
+  display: flex;
+  // justify-content: space-between;
+  align-items: flex-start;
+  padding: 45px 52px;
+  background-color: #f3f2f1;
+  border-radius: 4px;
+}
+
+.phones-item {
+  margin-right: 52px;
+}
+.phones-item:last-child {
+  margin-right: 0px;
 }
 </style>

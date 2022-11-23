@@ -15,7 +15,7 @@
                 >
                   <div class="idsk-card idsk-card-simple">
                     <router-link
-                      :to="getCrazyUrl(article)"
+                      :to="this.$route.path + getCrazyUrl(article)"
                       :title="article.attributes.name"
                     >
                       <img
@@ -71,7 +71,7 @@
 
                       <div class="idsk-heading idsk-heading-simple">
                         <router-link
-                          :to="getCrazyUrl(article)"
+                          :to="this.$route.path + getCrazyUrl(article)"
                           :title="article.attributes.name"
                           class="idsk-card-title govuk-link"
                         >
@@ -90,7 +90,7 @@
                   class="page-link"
                   href="#"
                   @click="
-                    falseFunction;
+                    falseFunction();
                     setPageFunction(-1);
                   "
                   >«</a
@@ -101,7 +101,7 @@
                   :class="i === page ? 'activated' : 'page-link'"
                   href="#"
                   @click="
-                    falseFunction;
+                    falseFunction();
                     setPage(i);
                   "
                   >{{ i }}</a
@@ -114,7 +114,7 @@
                   :class="page == pages ? 'disabled ' : ''"
                   href="#"
                   @click="
-                    falseFunction;
+                    falseFunction();
                     setPageFunction(1);
                   "
                   >»</a
@@ -136,7 +136,7 @@
 </template>
 <script>
 import LoadingSpin from "@/components/Loader";
-import ArticleView from "../views/ArticleView.vue";
+import ArticleView from "@/views/ArticleView.vue";
 import { useMeta } from "vue-meta";
 
 export default {
@@ -258,7 +258,7 @@ export default {
     },
 
     getCrazyUrl(article) {
-      return `/galeria?id=${article.id}&name=${this.toNormalForm(
+      return `?id=${article.id}&name=${this.toNormalForm(
         article.attributes.name
       )}`;
     },

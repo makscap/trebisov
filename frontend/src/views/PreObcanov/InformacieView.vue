@@ -1,7 +1,7 @@
 <template>
-  <div class="govuk-width-container parent">
+  <div class="govuk-width-container">
     <div class="content">
-      <SubPagesMenu :subpages="subpages" title="Karty" />
+      <SubPagesMenu :subpages="subpages" title="Informácie" />
     </div>
   </div>
 </template>
@@ -17,27 +17,28 @@ export default {
       subpages: [
         {
           title: "Dôležité telefónne čísla",
-          route: "/",
+          route: "/dolezite-telefonne-cisla",
         },
         {
           title: "Poruchy dodávky teplej vody",
-          route: "/",
+          route: "/v-pripade-poruch-s-dodavkou-tepla",
         },
         {
           title: "Lekárenská pohotovostná služba",
-          route: "/",
+          route: "",
+          url: "https://www.e-vuc.sk/ksk/lekarenska-pohotovostna-sluzba-v-ksk.html?page_id=87105&okres=Okres+Trebi%C5%A1ov",
         },
         {
           title: "Postup mesta pri vybavovaní žiadostí",
-          route: "/",
+          route: "/postup-mesta-pri-vybavovani-ziadosti",
         },
         {
           title: "Postup pri sprístupňovaní informácií",
-          route: "/",
+          route: "/postup-pri-spristupnovani-informacii",
         },
         {
           title: "Ako podať opravný prostriedok",
-          route: "/",
+          route: "/ako-podat-opravny-prostriedok",
         },
       ],
     };

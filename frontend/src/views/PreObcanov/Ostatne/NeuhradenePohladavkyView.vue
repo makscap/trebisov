@@ -1,20 +1,33 @@
 <template>
-  <div class="govuk-width-container parent">
-    <h2 class="govuk-heading-l title">Podujatia v meste</h2>
-    <PodujatiaComponent />
+  <div class="govuk-width-container">
+    <div class="content w-75">
+      <h1 class="govuk-heading-l">Neuhradené pohladávky za nájomné</h1>
+
+      <h4 class="label">Prílohy:</h4>
+      <LinksAndSizeComponent :files="files" />
+    </div>
   </div>
 </template>
 
 <script>
 import { useMeta } from "vue-meta";
-import PodujatiaComponent from "@/components/MainPage/PodujatiaComponent.vue";
+import LinksAndSizeComponent from "@/components/LinksAndSizeComponent.vue";
 
 export default {
-  name: "PodujatiaView",
+  name: "NeuhradenePohladavkyView",
   data() {
-    return {};
+    return {
+      files: [
+        {
+          name: "Neuhradené faktúry za nájomné a prevádz. náklady k dátumu splatnosti 30.06.2022",
+          size: "93.56 kB",
+          ext: "PDF",
+          urlFile: "/",
+        },
+      ],
+    };
   },
-  components: { PodujatiaComponent },
+  components: { LinksAndSizeComponent },
   setup() {
     useMeta({
       title: "Domov",

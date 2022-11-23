@@ -17,7 +17,7 @@ export default {
       subpages: [
         {
           title: "Aktuality v školstve",
-          route: "/",
+          route: "/actuaility-v-skolstve",
         },
         {
           title: "Školy a školské zariadenia",
@@ -29,7 +29,7 @@ export default {
         },
         {
           title: "Pracovné miesta",
-          route: "/",
+          route: "/pracovne-miesta",
         },
         {
           title: "Testovanie",
